@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "twilight_spellbooks:item/fiery_spell_book_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "twilight_spellbooks:item/fiery_spell_book_gui"
+    }
+  }
+}

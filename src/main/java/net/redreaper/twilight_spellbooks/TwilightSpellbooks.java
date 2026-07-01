@@ -1,5 +1,11 @@
 package net.redreaper.twilight_spellbooks;
 
+import net.minecraft.resources.ResourceLocation;
+import net.redreaper.twilight_spellbooks.init.ModEntities;
+import net.redreaper.twilight_spellbooks.init.ModItems;
+import net.redreaper.twilight_spellbooks.init.ModSpells;
+import net.redreaper.twilight_spellbooks.init.ModTabs;
+import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -22,6 +28,10 @@ public class TwilightSpellbooks {
     public TwilightSpellbooks(IEventBus modEventBus, ModContainer modContainer) {
         modEventBus.addListener(this::commonSetup);
 
+        ModItems.register(modEventBus);
+        ModTabs.register(modEventBus);
+        ModEntities.register(modEventBus);
+        ModSpells.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -38,5 +48,10 @@ public class TwilightSpellbooks {
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
 
+    }
+
+    public static ResourceLocation id(@NotNull String path)
+    {
+        return ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, path);
     }
 }

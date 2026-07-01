@@ -1,0 +1,9 @@
+{
+  "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
+
+  "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Blood Spell Damage inflicts 3s of burn",
+  "creative_tab.twilight_spellbooks.backported_spellbooks": "ISS:Spellbooks Of Twilight",
+
+  "spell.twilight_spellbooks.twilight_bolt": "Twilight Bolt",
+  "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs"
+}
