@@ -1,7 +1,13 @@
 {
-  "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
+  "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Spellbook",
+  "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming damage by 15%",
 
-  "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Blood Spell Damage inflicts 3s of burn",
+  "item.twilight_spellbooks.knightmetal_spellbook": "Knightmetal Spellbook",
+  "item.twilight_spellbooks.knightmetal_spellbook.desc": "Deal 10% extra spell damage to armored targets",
+
+  "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
+  "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Blood Spell Damage inflicts 1s of burn",
+
   "creative_tab.twilight_spellbooks.backported_spellbooks": "ISS:Spellbooks Of Twilight",
 
   "spell.twilight_spellbooks.twilight_bolt": "Twilight Bolt",

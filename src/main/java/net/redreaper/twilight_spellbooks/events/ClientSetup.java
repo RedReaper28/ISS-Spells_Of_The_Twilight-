@@ -5,6 +5,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
+import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 
@@ -14,5 +15,8 @@ public class ClientSetup {
     @SubscribeEvent
     public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
+
+        event.registerEntityRenderer(ModEntities.ADVANCED_DRUID.get(), AdvancedDruidRenderer::new);
+
     }
 }

@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "textures": {
+      "book": "twilight_spellbooks:item/spell_book_models/knightmetal_spellbook",
+      "particle": "twilight_spellbooks:item/spell_book_models/knightmetal_spellbook"
+    },
+    "parent": "irons_spellbooks:item/template_spell_book_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "twilight_spellbooks:item/knightmetal_spellbook"
+      }
+    },
+    "head": {
+      "textures": {
+        "book": "twilight_spellbooks:item/spell_book_models/knightmetal_spellbook",
+        "particle": "twilight_spellbooks:item/spell_book_models/knightmetal_spellbook"
+      },
+      "parent": "irons_spellbooks:item/template_spell_book_model_open"
+    }
+  }
+}

@@ -19,6 +19,8 @@ public class ModTabs {
             ()-> CreativeModeTab.builder().icon(()->new ItemStack(ModItems.FIERY_SPELL_BOOK.get()))
                     .title(Component.translatable("creative_tab.twilight_spellbooks.backported_spellbooks"))
                     .displayItems((itemDisplayParameters, output) ->{
+                        output.accept(ModItems.IRONWOOD_SPELLBOOK.get());
+                        output.accept(ModItems.KNIGHTMETAL_SPELLBOOK.get());
                         output.accept(ModItems.FIERY_SPELL_BOOK.get());
 
                     }).build());

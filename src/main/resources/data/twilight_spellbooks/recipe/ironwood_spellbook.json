@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CLL",
+    "CPP",
+    "CLL"
+  ],
+  "key": {
+    "C": {
+      "item": "twilightforest:ironwood_ingot"
+    },
+    "L": {
+      "item": "twilightforest:tanned_leather"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:ironwood_spellbook",
+    "count": 1
+  }
+}

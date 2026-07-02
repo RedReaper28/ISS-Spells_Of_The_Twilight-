@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "twilight_spellbooks:ironwood_spellbook",
+    "twilight_spellbooks:knightmetal_spellbook",
     "twilight_spellbooks:fiery_spell_book"
   ]
 }

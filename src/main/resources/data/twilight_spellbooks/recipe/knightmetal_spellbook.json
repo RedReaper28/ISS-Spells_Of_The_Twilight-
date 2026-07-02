@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CLL",
+    "CPP",
+    "CLL"
+  ],
+  "key": {
+    "C": {
+      "item": "twilightforest:knightmetal_ingot"
+    },
+    "L": {
+      "item": "twilightforest:naga_scale"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:knightmetal_spellbook",
+    "count": 1
+  }
+}
