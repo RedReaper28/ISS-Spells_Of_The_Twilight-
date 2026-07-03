@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " PL",
+    " PP",
+    "N  "
+  ],
+  "key": {
+    "N": {
+      "item": "twilightforest:dark_log"
+    },
+    "L": {
+      "item": "irons_spellbooks:arcane_ingot"
+    },
+    "P": {
+      "item": "twilightforest:knightmetal_ingot"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:knightmetal_staff",
+    "count": 1
+  }
+}
