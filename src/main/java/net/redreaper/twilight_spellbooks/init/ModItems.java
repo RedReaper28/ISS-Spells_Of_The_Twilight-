@@ -8,6 +8,7 @@ import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.item.curios.IronwoodSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.KnightMetalSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.fierySpellbook.FierySpellbookItem;
+import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
 
 import java.util.Collection;
 
@@ -20,6 +21,9 @@ public class ModItems {
             KnightMetalSpellbookItem::new);
     public static final DeferredHolder<Item, Item> FIERY_SPELL_BOOK = ITEMS.register("fiery_spell_book",
             FierySpellbookItem::new);
+
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_STAFF = ITEMS.register("knightmetal_staff",
+            KnightmetalStaff::new);
 
 
     public static void register(IEventBus eventBus){
