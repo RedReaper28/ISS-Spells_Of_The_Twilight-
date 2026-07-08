@@ -1,0 +1,23 @@
+{
+  "type": "irons_spellbooks:append_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:labyrinth_vault"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:troll_vault"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:labyrinth_dead_end"
+        }
+      ]
+    }
+  ],
+  "key": "irons_spellbooks:chests/additional_good_loot"
+}

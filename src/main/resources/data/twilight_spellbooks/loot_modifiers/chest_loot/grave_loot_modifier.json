@@ -1,0 +1,23 @@
+{
+  "type": "irons_spellbooks:append_loot",
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:chests/tower_grave_lower"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:chests/tower_grave_upper"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:chests/casket_loot"
+        }
+      ]
+    }
+  ],
+  "key": "irons_spellbooks:chests/catacombs/wall_loot"
+}
