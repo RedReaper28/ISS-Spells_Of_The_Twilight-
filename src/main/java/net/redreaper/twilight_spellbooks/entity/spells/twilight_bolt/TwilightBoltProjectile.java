@@ -1,15 +1,16 @@
 package net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.core.particles.ColorParticleOption;
+import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
@@ -19,12 +20,15 @@ import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModSpells;
 import org.jetbrains.annotations.NotNull;
+import twilightforest.init.TFDamageTypes;
 import twilightforest.init.TFParticleType;
 import twilightforest.init.TFSounds;
 
 import java.util.Optional;
 
 public class TwilightBoltProjectile extends AbstractMagicProjectile {
+    private DamageSource damageSource;
+
     public TwilightBoltProjectile(EntityType<? extends TwilightBoltProjectile> entityType, Level level) {
         super(entityType, level);
         this.setNoGravity(true);
@@ -60,13 +64,21 @@ public class TwilightBoltProjectile extends AbstractMagicProjectile {
     protected void onHitEntity(@NotNull EntityHitResult entityHitResult) {
         super.onHitEntity(entityHitResult);
         var target = entityHitResult.getEntity();
-        DamageSources.applyDamage(target, getDamage(), ModSpells.TWILIGHT_BOLT.get().getDamageSource(this, getOwner()));
+        var source = new DamageSource(level().damageSources().damageTypes.getHolderOrThrow(TFDamageTypes.TWILIGHT_SCEPTER));
+
+        if (damageSource == null) {
+            damageSource = new DamageSource(DamageSources.getHolderFromResource(target, TFDamageTypes.TWILIGHT_SCEPTER), this, getOwner());
+        }
+
+        target.hurt(TFDamageTypes.getIndirectEntityDamageSource(this.level(), TFDamageTypes.TWILIGHT_SCEPTER, this, this.getOwner(), new EntityType[0]), getDamage());
         consumeEntityImpact(entityHitResult, true);
+
+
     }
 
     @Override
     public void impactParticles(double x, double y, double z) {
-        MagicManager.spawnParticles(level(), ParticleHelper.ENDER_SPARKS, x, y, z, 5, .1, .1, .1, .25, true);
+        this.level().addParticle((ParticleOptions)TFParticleType.TWILIGHT_ORB.get(), false, this.getX(), this.getY(), this.getZ(), this.random.nextGaussian() * 0.05, this.random.nextDouble() * 0.2, this.random.nextGaussian() * 0.05);
     }
 
     @Override

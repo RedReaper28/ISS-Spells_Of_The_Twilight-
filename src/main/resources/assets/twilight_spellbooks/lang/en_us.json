@@ -11,8 +11,15 @@
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% extra spell damage to unarmored targets",
 
+  "entity.twilight_spellbooks.advanced_druid": "Advanced Druid",
+
+
   "creative_tab.twilight_spellbooks.backported_spellbooks": "ISS:Spellbooks Of Twilight",
 
   "spell.twilight_spellbooks.twilight_bolt": "Twilight Bolt",
-  "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs"
+  "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
+  "spell.twilight_spellbooks.ice_bomb": "Ice Bomb",
+  "spell.twilight_spellbooks.ice_bomb.guide": "Launch a bomb made from ice, damaging and freezing entries it passes though and leaving a small freeze area on block impact ",
+  "spell.twilight_spellbooks.summon_winter_wolves": "Summon Winter Wolves",
+  "spell.twilight_spellbooks.summon_winter_wolves.guide": "Cast to summon a pack of winter wolves to follow and protect you "
 }

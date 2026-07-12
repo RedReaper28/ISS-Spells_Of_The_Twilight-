@@ -1,0 +1,120 @@
+package net.redreaper.twilight_spellbooks.entity.living.summon;
+
+import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.entity.mobs.IMagicSummon;
+import io.redspace.ironsspellbooks.entity.mobs.goals.*;
+import io.redspace.ironsspellbooks.util.OwnerHelper;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
+import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
+import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.level.Level;
+import net.redreaper.twilight_spellbooks.init.ModEntities;
+import twilightforest.entity.monster.WinterWolf;
+import twilightforest.init.TFParticleType;
+
+import java.util.UUID;
+
+public class SummonedWinterWolf extends WinterWolf implements IMagicSummon {
+    protected LivingEntity cachedSummoner;
+    protected UUID summonerUUID;
+
+    public SummonedWinterWolf(EntityType entity, Level world) {
+        super(entity, world);
+        xpReward = 0;
+    }
+
+    public SummonedWinterWolf(Level level, LivingEntity owner) {
+        this(ModEntities.SUMMONED_WINTER_WOLF.get(), level);
+    }
+
+    @Override
+    protected void registerGoals() {
+
+        this.goalSelector.addGoal(3, new GenericFollowOwnerGoal(this, this::getSummoner, 1.0f, 10, 2, false, 50));
+        this.goalSelector.addGoal(7, new LookAtPlayerGoal(this, Player.class, 8.0F, 1.0F));
+        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Mob.class, 9.0F));
+        this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1.0, 80));
+
+        this.targetSelector.addGoal(1, new GenericOwnerHurtByTargetGoal(this, this::getSummoner));
+        this.targetSelector.addGoal(2, new GenericOwnerHurtTargetGoal(this, this::getSummoner));
+        this.targetSelector.addGoal(3, new GenericCopyOwnerTargetGoal(this, this::getSummoner));
+        this.targetSelector.addGoal(4, (new GenericHurtByTargetGoal(this, (entity) -> entity == getSummoner())).setAlertOthers());
+        super.registerGoals();
+
+        this.goalSelector.getAvailableGoals().removeIf(goal ->
+                goal.getGoal() instanceof HurtByTargetGoal || goal.getGoal() instanceof NearestAttackableTargetGoal
+        );
+    }
+
+    // Attacks and Death
+    public boolean hurt(DamageSource pSource, float pAmount) {
+        return this.shouldIgnoreDamage(pSource) ? false : super.hurt(pSource, pAmount);
+    }
+
+    @Override
+    public void die(DamageSource pDamageSource) {
+        this.onDeathHelper();
+        super.die(pDamageSource);
+    }
+
+    @Override
+    protected boolean shouldDropLoot() {
+        return false;
+    }
+
+    @Override
+    public void onUnSummon() {
+        if (!level().isClientSide)
+        {
+            MagicManager.spawnParticles(level(), TFParticleType.SNOW_GUARDIAN.get(),
+                    getX(), getY(), getZ(),
+                    25,
+                    level().random.nextGaussian() * 0.007D,
+                    level().random.nextGaussian() * 0.009D,
+                    level().random.nextGaussian() * 0.007D,
+                    0.1, false);
+            discard();
+        }
+    }
+
+    @Override
+    public boolean isAlliedTo(Entity entityIn) {
+        if (entityIn == this)
+        {
+            return true;
+        }
+        else if (entityIn == getSummoner() || this.isAlliedHelper(entityIn))
+        {
+            return true;
+        }
+        else if (getSummoner() != null && !entityIn.isAlliedTo(getSummoner()))
+        {
+            return false;
+        }
+        else
+        {
+            return this.getTeam() == null && entityIn.getTeam() == null;
+        }
+    }
+
+    // NBT
+    @Override
+    public void readAdditionalSaveData(CompoundTag pCompound) {
+        super.readAdditionalSaveData(pCompound);
+        this.summonerUUID = OwnerHelper.deserializeOwner(pCompound);
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag pCompound) {
+        super.addAdditionalSaveData(pCompound);
+        OwnerHelper.serializeOwner(pCompound, summonerUUID);
+    }
+}

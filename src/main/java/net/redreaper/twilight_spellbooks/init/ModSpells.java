@@ -4,6 +4,8 @@ import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
+import net.redreaper.twilight_spellbooks.spells.IceBombSpell;
+import net.redreaper.twilight_spellbooks.spells.SummonWinterWolvesSpell;
 import net.redreaper.twilight_spellbooks.spells.TwilightBoltSpell;
 
 import java.util.function.Supplier;
@@ -20,6 +22,8 @@ public class ModSpells  {
 
     //NATURE
     public static final Supplier<AbstractSpell> TWILIGHT_BOLT = registerSpell(new TwilightBoltSpell());
+    public static final Supplier<AbstractSpell> ICE_BOMB = registerSpell(new IceBombSpell());
+    public static final Supplier<AbstractSpell> SUMMON_WINTER_WOLVES = registerSpell(new SummonWinterWolvesSpell());
 
     public static void register(IEventBus eventBus)
     {

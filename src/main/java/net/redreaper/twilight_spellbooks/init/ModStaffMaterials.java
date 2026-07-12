@@ -34,7 +34,7 @@ public class ModStaffMaterials  implements IronsWeaponTier {
     static {
         KNIGHTMETAL = new ModStaffMaterials(9.0F, -3.0F, new AttributeContainer[]{
                 new AttributeContainer(IronsLibRegistries.AttributeRegistry.ARMOR_PIERCE, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
     }
 }
 
