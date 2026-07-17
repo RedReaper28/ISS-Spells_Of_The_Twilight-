@@ -12,14 +12,19 @@
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% extra spell damage to unarmored targets",
 
   "entity.twilight_spellbooks.advanced_druid": "Advanced Druid",
-
+  "entity.twilight_spellbooks.summoned_winter_wolf": "Summoned Winter Wolf",
+  "entity.twilight_spellbooks.summoned_carminite_golem": "Summoned Carminite Golem",
 
   "creative_tab.twilight_spellbooks.backported_spellbooks": "ISS:Spellbooks Of Twilight",
 
+  "spell.twilight_spellbooks.druid_bolt": "Druid Bolt",
+  "spell.twilight_spellbooks.druid_bolt.guide": "Shot nature infused seeds that ,poisoning whatever it hits ",
   "spell.twilight_spellbooks.twilight_bolt": "Twilight Bolt",
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
   "spell.twilight_spellbooks.ice_bomb": "Ice Bomb",
   "spell.twilight_spellbooks.ice_bomb.guide": "Launch a bomb made from ice, damaging and freezing entries it passes though and leaving a small freeze area on block impact ",
   "spell.twilight_spellbooks.summon_winter_wolves": "Summon Winter Wolves",
-  "spell.twilight_spellbooks.summon_winter_wolves.guide": "Cast to summon a pack of winter wolves to follow and protect you "
+  "spell.twilight_spellbooks.summon_winter_wolves.guide": "Cast to summon a pack of Winter Wolves to follow and protect you ",
+  "spell.twilight_spellbooks.summon_carminite_golem": "Summon Carminite Golem",
+  "spell.twilight_spellbooks.summon_carminite_golem.guide": "Cast to summon a squad of Carminite Golems to follow and protect you "
 }

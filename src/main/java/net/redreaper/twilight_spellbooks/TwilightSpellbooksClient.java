@@ -24,8 +24,9 @@ public class TwilightSpellbooksClient {
 
 
         event.enqueueWork(() -> {
-            CuriosRendererRegistry.register(ModItems.FIERY_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
             CuriosRendererRegistry.register(ModItems.IRONWOOD_SPELLBOOK.get(), SpellBookCurioRenderer::new);
+            CuriosRendererRegistry.register(ModItems.FIERY_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
+            CuriosRendererRegistry.register(ModItems.KNIGHTMETAL_SPELLBOOK.get(), SpellBookCurioRenderer::new);
         });
 
         AzItemRendererRegistry.register(FierySpellbookRenderer::new, ModItems.FIERY_SPELL_BOOK.get());

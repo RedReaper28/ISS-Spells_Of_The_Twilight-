@@ -1,7 +1,5 @@
 package net.redreaper.twilight_spellbooks.entity.spells.ice_bomb;
 
-import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.entity.spells.magma_ball.FireField;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleOptions;
 import net.minecraft.nbt.CompoundTag;

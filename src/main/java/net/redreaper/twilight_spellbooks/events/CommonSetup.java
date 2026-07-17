@@ -9,8 +9,8 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
-import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
+import twilightforest.entity.monster.CarminiteGolem;
 import twilightforest.entity.monster.WinterWolf;
 
 @SuppressWarnings("removal")
@@ -22,6 +22,7 @@ public class CommonSetup {
         event.put(ModEntities.ADVANCED_DRUID.get(), AdvancedDruidEntity.createAttributes().build());
 
         event.put(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolf.registerAttributes().build());
+        event.put(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), CarminiteGolem.registerAttributes().build());
     }
 
     @SubscribeEvent

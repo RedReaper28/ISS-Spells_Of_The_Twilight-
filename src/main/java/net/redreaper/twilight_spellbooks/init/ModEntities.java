@@ -1,7 +1,5 @@
 package net.redreaper.twilight_spellbooks.init;
 
-import io.redspace.ironsspellbooks.IronsSpellbooks;
-import io.redspace.ironsspellbooks.entity.spells.snowball.FrostField;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -10,9 +8,10 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
+import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolem;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
+import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
-import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceZone;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltProjectile;
 
 import static net.minecraft.core.registries.Registries.ENTITY_TYPE;
@@ -35,23 +34,31 @@ public class ModEntities {
                             ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_winter_wolf").toString()
                     ));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<SummonedCarminiteGolem>> SUMMONED_CARMINITE_GOLEM =
+            ENTITIES.register("summoned_carminite_golem", () -> EntityType.Builder.<SummonedCarminiteGolem>of
+                            (SummonedCarminiteGolem::new, MobCategory.MONSTER).
+                    sized(1.4F, 2.9F)
+                    .build(
+                            ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_carminite_golem").toString()
+                    ));
+
     public static final DeferredHolder<EntityType<?>, EntityType<TwilightBoltProjectile>> TWILIGHT_BOLT =
             ENTITIES.register("twilight_bolt", () -> EntityType.Builder.<TwilightBoltProjectile>of(TwilightBoltProjectile::new, MobCategory.MISC)
                     .sized(.5f, .5f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "twilight_bolt").toString()));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<ExtendedNatureBolt>> EXTENDED_NATURE_BOLT =
+            ENTITIES.register("extended_nature_bolt", () -> EntityType.Builder.<ExtendedNatureBolt>of(ExtendedNatureBolt::new, MobCategory.MISC)
+                    .sized(0.25F, 0.25F)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "extended_nature_bolt").toString()));
+
     public static final DeferredHolder<EntityType<?>, EntityType<ExtendedIceBomb>> EXTENDED_THROWN_ICE =
             ENTITIES.register("extended_ice_bomb", () -> EntityType.Builder.<ExtendedIceBomb>of(ExtendedIceBomb::new, MobCategory.MISC)
                     .sized(1.0F, 1.0F)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "extended_ice_bomb").toString()));
-
-    public static final DeferredHolder<EntityType<?>, EntityType<ExtendedIceZone>> EXTENDED_ICE_ZONE =
-            ENTITIES.register("extended_ice_zone", () -> EntityType.Builder.<ExtendedIceZone>of(ExtendedIceZone::new, MobCategory.MISC)
-                    .sized(4f, 1.2f)
-                    .clientTrackingRange(64)
-                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "extended_ice_zone").toString()));
 
     public static void register(IEventBus eventBus)
     {
