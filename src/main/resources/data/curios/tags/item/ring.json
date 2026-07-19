@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "twilight_spellbooks:thorn_rose_ring",
+    "twilight_spellbooks:fiery_ring"
 
   ]
 }

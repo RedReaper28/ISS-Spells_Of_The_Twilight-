@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "irons_spellbooks:nature_rune"
+    },
+    "X": {
+      "item": "irons_spellbooks:mithril_scrap"
+    },
+    "A": {
+      "item": "twilightforest:thorn_rose"
+    }
+  },
+  "pattern": [
+    "AM",
+    "MX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "twilight_spellbooks:thorn_rose_ring"
+  }
+}

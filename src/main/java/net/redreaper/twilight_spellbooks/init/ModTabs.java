@@ -22,6 +22,8 @@ public class ModTabs {
                         output.accept(ModItems.IRONWOOD_SPELLBOOK.get());
                         output.accept(ModItems.KNIGHTMETAL_SPELLBOOK.get());
                         output.accept(ModItems.FIERY_SPELL_BOOK.get());
+                        output.accept(ModItems.FIERY_RING.get());
+                        output.accept(ModItems.THORN_ROSE_RING.get());
                         output.accept(ModItems.KNIGHTMETAL_STAFF.get());
 
                     }).build());

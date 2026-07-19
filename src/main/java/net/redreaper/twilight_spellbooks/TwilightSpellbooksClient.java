@@ -9,7 +9,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.redreaper.twilight_spellbooks.init.ModItems;
-import net.redreaper.twilight_spellbooks.item.curios.fierySpellbook.FierySpellbookRenderer;
+import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookRenderer;
 import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 @Mod(value = TwilightSpellbooks.MOD_ID, dist = Dist.CLIENT)

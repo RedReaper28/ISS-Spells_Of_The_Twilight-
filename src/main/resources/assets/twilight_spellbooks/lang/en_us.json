@@ -8,6 +8,11 @@
   "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
   "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Blood Spell Damage inflicts 1s of burn",
 
+  "item.twilight_spellbooks.thorn_rose_ring": "Thorn Rose Ring",
+  "item.twilight_spellbooks.thorn_rose_ring.desc": "Deal small Twilight Thorn damage to attackers",
+  "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
+  "item.twilight_spellbooks.fiery_ring.desc": "Spell Damage Inflict Burns by 2s",
+
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% extra spell damage to unarmored targets",
 

@@ -1,8 +1,7 @@
-package net.redreaper.twilight_spellbooks.item.curios.fierySpellbook;
+package net.redreaper.twilight_spellbooks.item.curios.spellbooks;
 
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
@@ -16,19 +15,18 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.redreaper.twilight_spellbooks.init.ModItems;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 @EventBusSubscriber
-public class FierySpellbookItem extends PassiveAbilitySpellbook {
-    public FierySpellbookItem() {
-        super(12, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(ASRarities.ARID_RARITY_PROXY.getValue()));
-        withSpellbookAttributes(new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-                new AttributeContainer(AttributeRegistry.MAX_MANA, 250, AttributeModifier.Operation.ADD_VALUE));
+public class IronwoodSpellbookItem extends PassiveAbilitySpellbook {
+    public IronwoodSpellbookItem() {
+        super(8, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(ASRarities.VERDANT_RARITY_PROXY.getValue()));
+        withSpellbookAttributes(new AttributeContainer(AttributeRegistry.NATURE_MAGIC_RESIST, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MAX_MANA, 150, AttributeModifier.Operation.ADD_VALUE));
     }
 
     @Override
@@ -42,16 +40,16 @@ public class FierySpellbookItem extends PassiveAbilitySpellbook {
     }
 
     @SubscribeEvent
-    public static void livingDamageEventPost(LivingDamageEvent.Post event) {
-        var sourceEntity = event.getSource().getEntity();
-        var target = event.getEntity();
-        if (sourceEntity != null) {
-            if (sourceEntity instanceof Player player) {
-                if (ASUtils.hasCurio(player, ModItems.FIERY_SPELL_BOOK.get())) {
-                    if (event.getSource().is(ISSDamageTypes.BLOOD_MAGIC))
-                        target.setRemainingFireTicks(1*20);
-                }
+    public static void reduceDamage(LivingIncomingDamageEvent event) {
+        var entity = event.getEntity();
+        if (entity instanceof Player player) {
+            if (ASUtils.hasCurio(player, ModItems.IRONWOOD_SPELLBOOK.get())) {
+                float lvl = .15f;
+                float before = event.getAmount();
+                float multiplier = 1 - lvl;
+                event.setAmount(event.getAmount() * multiplier);
             }
         }
     }
+
 }

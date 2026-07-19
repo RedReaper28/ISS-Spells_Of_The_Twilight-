@@ -1,4 +1,4 @@
-package net.redreaper.twilight_spellbooks.item.curios;
+package net.redreaper.twilight_spellbooks.item.curios.spellbooks;
 
 import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;

@@ -1,4 +1,4 @@
-package net.redreaper.twilight_spellbooks.item.curios.fierySpellbook;
+package net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook;
 
 import mod.azure.azurelib.common.render.item.AzItemRenderer;
 import mod.azure.azurelib.common.render.item.AzItemRendererConfig;
