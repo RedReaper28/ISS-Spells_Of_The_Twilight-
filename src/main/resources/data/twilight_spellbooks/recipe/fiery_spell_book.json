@@ -1,37 +1,23 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "category": "equipment",
-  "ingredients": [
-    {
-      "item": "irons_spellbooks:iron_spell_book"
-    },
-    {
-      "tag": "twilightforest:fiery_vial"
-    },
-    {
-      "tag": "twilightforest:fiery_vial"
-    },
-    {
-      "tag": "twilightforest:fiery_vial"
-    },
-    {
-      "tag": "twilightforest:fiery_vial"
-    },
-    {
-      "tag": "twilightforest:fiery_vial"
-    },
-    {
-      "tag": "c:rods/blaze"
-    },
-    {
-      "tag": "c:rods/blaze"
-    },
-    {
-      "tag": "c:rods/blaze"
-    }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CLL",
+    "CPP",
+    "CLL"
   ],
+  "key": {
+    "C": {
+      "tag": "c:rods/blaze"
+    },
+    "L": {
+      "item": "twilightforest:fiery_ingot"
+    },
+    "P": {
+      "item": "minecraft:paper"
+    }
+  },
   "result": {
-    "count": 1,
-    "id": "twilight_spellbooks:fiery_spell_book"
+    "id": "twilight_spellbooks:fiery_spell_book",
+    "count": 1
   }
 }

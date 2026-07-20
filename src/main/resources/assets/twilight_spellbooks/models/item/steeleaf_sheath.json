@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "parent": "twilight_spellbooks:item/steeleaf_sheath_hand"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "twilight_spellbooks:item/steeleaf_sheath_gui"
+    },
+    "fixed": {
+      "parent": "twilight_spellbooks:item/steeleaf_sheath_fixed"
+    }
+  }
+}

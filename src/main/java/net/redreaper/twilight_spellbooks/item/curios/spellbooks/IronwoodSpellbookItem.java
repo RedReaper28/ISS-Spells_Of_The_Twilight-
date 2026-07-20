@@ -12,6 +12,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -24,7 +25,7 @@ import java.util.List;
 @EventBusSubscriber
 public class IronwoodSpellbookItem extends PassiveAbilitySpellbook {
     public IronwoodSpellbookItem() {
-        super(8, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(ASRarities.VERDANT_RARITY_PROXY.getValue()));
+        super(8, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(Rarity.RARE));
         withSpellbookAttributes(new AttributeContainer(AttributeRegistry.NATURE_MAGIC_RESIST, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150, AttributeModifier.Operation.ADD_VALUE));
     }

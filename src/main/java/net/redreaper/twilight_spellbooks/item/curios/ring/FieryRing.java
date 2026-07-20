@@ -11,6 +11,7 @@ import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -21,7 +22,7 @@ import twilightforest.init.TFDamageTypes;
 @EventBusSubscriber
 public class FieryRing extends SimpleDescriptiveCurio {
     public FieryRing() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1), Curios.RING_SLOT);
+        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), Curios.RING_SLOT);
     }
 
 

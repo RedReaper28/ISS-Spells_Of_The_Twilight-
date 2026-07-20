@@ -1,17 +1,12 @@
 package net.redreaper.twilight_spellbooks.init;
 
-import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.compat.Curios;
-import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
-import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.item.curios.ring.FieryRing;
+import net.redreaper.twilight_spellbooks.item.curios.sheath.SteeleafSheath;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.IronwoodSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.KnightMetalSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
@@ -19,10 +14,12 @@ import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
 import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
 
 import java.util.Collection;
-import java.util.function.Supplier;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS= DeferredRegister.createItems(TwilightSpellbooks.MOD_ID);
+
+    public static final DeferredHolder<Item, Item> AURORA_SHARD= ITEMS.register("aurora_shard",
+            ()->new Item(new Item.Properties()));
 
     public static final DeferredHolder<Item, Item> IRONWOOD_SPELLBOOK = ITEMS.register("ironwood_spellbook",
             IronwoodSpellbookItem::new);
@@ -38,6 +35,14 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_STAFF = ITEMS.register("knightmetal_staff",
             KnightmetalStaff::new);
+
+    public static final DeferredHolder<Item, Item> STEELEAF_SHEATH = ITEMS.register("steeleaf_sheath",
+            SteeleafSheath::new);
+
+    public static Collection<DeferredHolder<Item, ? extends Item>> getSOTItems()
+    {
+        return ITEMS.getEntries();
+    }
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

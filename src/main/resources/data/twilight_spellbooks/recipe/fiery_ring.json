@@ -6,11 +6,14 @@
       "item": "twilightforest:fiery_ingot"
     },
     "B": {
-      "item": "irons_spellbooks:silver_ring"
+      "item": "irons_spellbooks:mithril_scrap"
+    },
+    "C": {
+      "item": "minecraft:blaze_rod"
     }
   },
   "pattern": [
-    " A ",
+    "CA ",
     "ABA",
     " A "
   ],

@@ -1,4 +1,6 @@
 {
+  "item.twilight_spellbooks.aurora_shard": "Aurora Shard",
+
   "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Spellbook",
   "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming damage by 15%",
 
@@ -13,6 +15,9 @@
   "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
   "item.twilight_spellbooks.fiery_ring.desc": "Spell Damage Inflict Burns by 2s",
 
+  "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
+  "item.twilight_spellbooks.steeleaf_sheath.desc": "25% chance of Critting when dealing Nature Spell Damage for 1.25x DMG. Enters cooldown when Crit",
+
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% extra spell damage to unarmored targets",
 
@@ -20,7 +25,7 @@
   "entity.twilight_spellbooks.summoned_winter_wolf": "Summoned Winter Wolf",
   "entity.twilight_spellbooks.summoned_carminite_golem": "Summoned Carminite Golem",
 
-  "creative_tab.twilight_spellbooks.backported_spellbooks": "ISS:Spellbooks Of Twilight",
+  "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS:Spellbooks Of Twilight",
 
   "spell.twilight_spellbooks.druid_bolt": "Druid Bolt",
   "spell.twilight_spellbooks.druid_bolt.guide": "Shot nature infused seeds that ,poisoning whatever it hits ",

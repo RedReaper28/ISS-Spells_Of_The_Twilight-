@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "   ",
+    "mvm",
+    "vvv"
+  ],
+  "key": {
+    "m": {
+      "tag": "c:ingots/mithril"
+    },
+    "v": {
+      "item": "twilightforest:steeleaf_ingot"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "twilight_spellbooks:steeleaf_sheath"
+  }
+}
