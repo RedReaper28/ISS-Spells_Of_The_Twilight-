@@ -1,22 +1,20 @@
 {
   "item.twilight_spellbooks.aurora_shard": "Aurora Shard",
+  "item.twilight_spellbooks.aurora_shard.guide": "Dropped by the Snow Queen",
 
   "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Spellbook",
   "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming damage by 15%",
-
   "item.twilight_spellbooks.knightmetal_spellbook": "Knightmetal Spellbook",
   "item.twilight_spellbooks.knightmetal_spellbook.desc": "Deal 20% extra spell damage to armored targets",
-
   "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
-  "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Blood Spell Damage inflicts 1s of burn",
+  "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Spell Damage Inflict 2s of Burns",
 
   "item.twilight_spellbooks.thorn_rose_ring": "Thorn Rose Ring",
   "item.twilight_spellbooks.thorn_rose_ring.desc": "Deal small Twilight Thorn damage to attackers",
   "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
-  "item.twilight_spellbooks.fiery_ring.desc": "Spell Damage Inflict Burns by 2s",
-
+  "item.twilight_spellbooks.fiery_ring.desc": "15% More Melee Damage to Burning Targets",
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
-  "item.twilight_spellbooks.steeleaf_sheath.desc": "25% chance of Critting when dealing Nature Spell Damage for 1.25x DMG. Enters cooldown when Crit",
+  "item.twilight_spellbooks.steeleaf_sheath.desc": "25% chance of Critting when dealing Nature Spell  Damage for 1.25x DMG. Enters cooldown when Crit",
 
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% extra spell damage to unarmored targets",
@@ -37,4 +35,5 @@
   "spell.twilight_spellbooks.summon_winter_wolves.guide": "Cast to summon a pack of Winter Wolves to follow and protect you ",
   "spell.twilight_spellbooks.summon_carminite_golem": "Summon Carminite Golem",
   "spell.twilight_spellbooks.summon_carminite_golem.guide": "Cast to summon a squad of Carminite Golems to follow and protect you "
+
 }

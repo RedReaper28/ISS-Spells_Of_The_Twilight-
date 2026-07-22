@@ -30,8 +30,8 @@ import java.util.List;
 public class KnightMetalSpellbookItem extends PassiveAbilitySpellbook {
     private static final float KNIGHTMETAL_MULT_DAMAGE = 0.20F;
     public KnightMetalSpellbookItem() {
-        super(12, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1));
-        withSpellbookAttributes(new AttributeContainer(IronsLibRegistries.AttributeRegistry.ARMOR_PIERCE, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+        super(10, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1));
+        withSpellbookAttributes(new AttributeContainer(IronsLibRegistries.AttributeRegistry.ARMOR_PIERCE, 2.0, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE));
     }
 

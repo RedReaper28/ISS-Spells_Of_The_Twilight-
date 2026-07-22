@@ -1,0 +1,10 @@
+{
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "twilightforest:entities/snow_queen"
+    }
+  ],
+  "type":"twilight_spellbooks:add_to_table",
+  "loot_table": "twilight_spellbooks:entities/additional_snow_queen_loot"
+}

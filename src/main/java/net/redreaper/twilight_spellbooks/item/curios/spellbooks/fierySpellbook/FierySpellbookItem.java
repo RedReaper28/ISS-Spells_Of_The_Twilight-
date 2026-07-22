@@ -3,6 +3,7 @@ package net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
@@ -46,11 +47,16 @@ public class FierySpellbookItem extends PassiveAbilitySpellbook {
     public static void livingDamageEventPost(LivingDamageEvent.Post event) {
         var sourceEntity = event.getSource().getEntity();
         var target = event.getEntity();
+        var projectile = event.getSource().getDirectEntity();
+        // Curios
+
         if (sourceEntity != null) {
             if (sourceEntity instanceof Player player) {
+                // FIERY RING
                 if (ASUtils.hasCurio(player, ModItems.FIERY_SPELL_BOOK.get())) {
-                    if (event.getSource().is(ISSDamageTypes.BLOOD_MAGIC))
-                        target.setRemainingFireTicks(1*20);
+                    if (event.getSource() instanceof SpellDamageSource) {
+                        target.setRemainingFireTicks(2*20);
+                    }
                 }
             }
         }

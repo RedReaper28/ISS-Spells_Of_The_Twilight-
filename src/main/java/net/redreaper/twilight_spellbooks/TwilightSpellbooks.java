@@ -5,6 +5,7 @@ import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModItems;
 import net.redreaper.twilight_spellbooks.init.ModSpells;
 import net.redreaper.twilight_spellbooks.init.ModTabs;
+import net.redreaper.twilight_spellbooks.init.ModLootModifiers;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
@@ -32,6 +33,7 @@ public class TwilightSpellbooks {
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);
         ModSpells.register(modEventBus);
+        ModLootModifiers.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
