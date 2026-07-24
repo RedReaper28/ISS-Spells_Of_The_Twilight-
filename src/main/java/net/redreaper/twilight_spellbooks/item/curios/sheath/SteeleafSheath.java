@@ -8,7 +8,9 @@ import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import net.acetheeldritchking.aces_spell_utils.items.curios.SheathCurioItem;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
 import net.minecraft.core.Holder;
+import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -53,6 +55,7 @@ public class SteeleafSheath extends SheathCurioItem {
                             event.setAmount(event.getAmount() * multiplier);
                             player.getCooldowns().addCooldown(ModItems.STEELEAF_SHEATH.get(), SteeleafSheath.COOLDOWN);
                         }
+                        ((ServerLevel) target.level()).getChunkSource().broadcastAndSend(target, new ClientboundAnimatePacket(target, 5));
                     }
                 }
             }

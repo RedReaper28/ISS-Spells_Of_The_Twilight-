@@ -2,7 +2,8 @@
   "replace": false,
   "values": [
     "twilight_spellbooks:thorn_rose_ring",
-    "twilight_spellbooks:fiery_ring"
-
+    "twilight_spellbooks:fiery_ring",
+    "twilight_spellbooks:knightmetal_ring",
+    "twilight_spellbooks:ironwood_ring"
   ]
 }

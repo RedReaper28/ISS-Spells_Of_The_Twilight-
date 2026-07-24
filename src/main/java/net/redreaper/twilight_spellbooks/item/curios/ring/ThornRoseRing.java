@@ -28,7 +28,7 @@ public class ThornRoseRing extends SimpleDescriptiveCurio {
         if (entityTarget instanceof Player player) {
             if (ASUtils.hasCurio(player, ModItems.THORN_ROSE_RING.get())) {
                 if (entityAttacker instanceof LivingEntity) {
-                    entityAttacker.hurt(TFDamageTypes.getIndirectEntityDamageSource(player.level(), TFDamageTypes.THORNS, player, player), 2.5f);
+                    entityAttacker.hurt(TFDamageTypes.getIndirectEntityDamageSource(player.level(), TFDamageTypes.THORNS, player, player), 4);
                 }
             }
         }

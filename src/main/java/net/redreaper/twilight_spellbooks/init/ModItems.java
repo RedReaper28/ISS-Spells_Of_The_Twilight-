@@ -6,6 +6,8 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.item.curios.ring.FieryRing;
+import net.redreaper.twilight_spellbooks.item.curios.ring.IronwoodRing;
+import net.redreaper.twilight_spellbooks.item.curios.ring.KnightMetalRing;
 import net.redreaper.twilight_spellbooks.item.curios.sheath.SteeleafSheath;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.IronwoodSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.KnightMetalSpellbookItem;
@@ -28,10 +30,16 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> FIERY_SPELL_BOOK = ITEMS.register("fiery_spell_book",
             FierySpellbookItem::new);
 
-    public static final DeferredHolder<Item, Item> THORN_ROSE_RING = ITEMS.register("thorn_rose_ring",
-            ThornRoseRing::new);
+
+
+    public static final DeferredHolder<Item, Item> IRONWOOD_RING = ITEMS.register("ironwood_ring",
+            IronwoodRing::new);
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_RING = ITEMS.register("knightmetal_ring",
+            KnightMetalRing::new);
     public static final DeferredHolder<Item, Item> FIERY_RING = ITEMS.register("fiery_ring",
             FieryRing::new);
+    public static final DeferredHolder<Item, Item> THORN_ROSE_RING = ITEMS.register("thorn_rose_ring",
+            ThornRoseRing::new);
 
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_STAFF = ITEMS.register("knightmetal_staff",
             KnightmetalStaff::new);

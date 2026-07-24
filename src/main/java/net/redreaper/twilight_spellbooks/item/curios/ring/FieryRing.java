@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.compat.Curios;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
+import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -20,15 +21,17 @@ public class FieryRing extends SimpleDescriptiveCurio {
     @SubscribeEvent
     public static void increaseDamage(LivingIncomingDamageEvent event) {
         var attacker = event.getSource().getEntity();
-        var target  = event.getEntity();
+        var target = event.getEntity();
         if (attacker instanceof Player player) {
             if (ASUtils.hasCurio(player, ModItems.FIERY_RING.get())) {
-                if (target.isOnFire()) {
-                    float multiplier = 1 + 0.15f;
-                    event.setAmount(event.getAmount() * multiplier);
+                if (event.getSource().is(DamageTypes.PLAYER_ATTACK)) {
+
+                    if (target.isOnFire()) {
+                        float multiplier = 1 + 0.25f;
+                        event.setAmount(event.getAmount() * multiplier);
+                    }
                 }
             }
         }
     }
-
 }
