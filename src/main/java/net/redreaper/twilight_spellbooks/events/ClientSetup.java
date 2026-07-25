@@ -32,5 +32,7 @@ public class ClientSetup {
 
         event.registerEntityRenderer(ModEntities.EXTENDED_NATURE_BOLT.get(), ThrownItemRenderer::new);
 
+        event.registerEntityRenderer(ModEntities.CARMINITE_PULL_PROJECTILE.get(), NoopRenderer::new);
+
     }
 }

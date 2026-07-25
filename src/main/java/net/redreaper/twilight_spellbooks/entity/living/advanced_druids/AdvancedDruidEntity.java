@@ -42,7 +42,7 @@ public class AdvancedDruidEntity  extends AbstractSpellCastingMob implements Ene
     protected void registerGoals() {
         this.goalSelector.addGoal(4, new WizardAttackGoal(this, 1.25f, 35, 80)
                 .setSpells(
-                        List.of(ModSpells.TWILIGHT_BOLT.get(), SpellRegistry.POISON_ARROW_SPELL.get()),
+                        List.of(ModSpells.DRUID_BOLT.get(), SpellRegistry.POISON_ARROW_SPELL.get()),
                         List.of(),
                         List.of(),
                         List.of(SpellRegistry.OAKSKIN_SPELL.get())

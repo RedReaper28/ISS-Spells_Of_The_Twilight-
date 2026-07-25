@@ -18,6 +18,7 @@ public class ModSpells  {
         return SPELLS.register(spell.getSpellName(), () -> spell);
     }
 
+    public static final Supplier<AbstractSpell> CARMINITE_PULL = registerSpell(new CarminitePullSpell());
     public static final Supplier<AbstractSpell> DRUID_BOLT = registerSpell(new DruidBoltSpell());
     public static final Supplier<AbstractSpell> TWILIGHT_BOLT = registerSpell(new TwilightBoltSpell());
     public static final Supplier<AbstractSpell> ICE_BOMB = registerSpell(new IceBombSpell());

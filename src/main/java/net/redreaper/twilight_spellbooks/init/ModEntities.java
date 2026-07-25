@@ -13,6 +13,7 @@ import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltProjectile;
+import net.redreaper.twilight_spellbooks.entity.spells.carminite_trap_pull.CarminiteTrapPullProjectile;
 
 import static net.minecraft.core.registries.Registries.ENTITY_TYPE;
 
@@ -59,6 +60,13 @@ public class ModEntities {
                     .sized(1.0F, 1.0F)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "extended_ice_bomb").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<CarminiteTrapPullProjectile>> CARMINITE_PULL_PROJECTILE =
+            ENTITIES.register("carminite_pull", () -> EntityType.Builder.<CarminiteTrapPullProjectile>of(CarminiteTrapPullProjectile::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "carminite_pull").toString()));
+
 
     public static void register(IEventBus eventBus)
     {
