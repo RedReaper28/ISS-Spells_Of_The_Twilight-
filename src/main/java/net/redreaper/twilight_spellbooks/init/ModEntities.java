@@ -1,5 +1,7 @@
 package net.redreaper.twilight_spellbooks.init;
 
+import io.redspace.ironsspellbooks.IronsSpellbooks;
+import io.redspace.ironsspellbooks.entity.spells.firefly_swarm.FireflySwarmProjectile;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -12,6 +14,7 @@ import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteG
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
+import net.redreaper.twilight_spellbooks.entity.spells.mosquito_swarm.MosquitoSwarmProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.carminite_trap_pull.CarminiteTrapPullProjectile;
 
@@ -67,6 +70,11 @@ public class ModEntities {
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "carminite_pull").toString()));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<MosquitoSwarmProjectile>> MOSQUITO_SWARM =
+            ENTITIES.register("mosquito_swarm", () -> EntityType.Builder.<MosquitoSwarmProjectile>of(MosquitoSwarmProjectile::new, MobCategory.MISC)
+                    .sized(.9f, .9f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "mosquito_swarm").toString()));
 
     public static void register(IEventBus eventBus)
     {

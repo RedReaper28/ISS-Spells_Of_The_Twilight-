@@ -18,12 +18,23 @@ public class ModSpells  {
         return SPELLS.register(spell.getSpellName(), () -> spell);
     }
 
-    public static final Supplier<AbstractSpell> CARMINITE_PULL = registerSpell(new CarminitePullSpell());
-    public static final Supplier<AbstractSpell> DRUID_BOLT = registerSpell(new DruidBoltSpell());
+    //BLOOD
+    public static final Supplier<AbstractSpell> MOSQUITO_SWARM = registerSpell(new MosquitoSwarmSpell());
+
+    //ENDER
     public static final Supplier<AbstractSpell> TWILIGHT_BOLT = registerSpell(new TwilightBoltSpell());
+
+    //ICE
     public static final Supplier<AbstractSpell> ICE_BOMB = registerSpell(new IceBombSpell());
     public static final Supplier<AbstractSpell> SUMMON_WINTER_WOLVES = registerSpell(new SummonWinterWolvesSpell());
+
+
+    //LIGHTING
+    public static final Supplier<AbstractSpell> CARMINITE_PULL = registerSpell(new CarminitePullSpell());
     public static final Supplier<AbstractSpell> SUMMON_CARMINITE_GOLEMS = registerSpell(new SummonCarminiteGolemSpell());
+
+    //NATURE
+    public static final Supplier<AbstractSpell> DRUID_BOLT = registerSpell(new DruidBoltSpell());
 
     public static void register(IEventBus eventBus)
     {

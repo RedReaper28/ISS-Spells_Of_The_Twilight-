@@ -1,22 +1,15 @@
 package net.redreaper.twilight_spellbooks.entity.spells.carminite_trap_pull;
 
-import io.redspace.ironsspellbooks.api.util.Utils;
-import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractConeProjectile;
-import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
-import io.redspace.ironsspellbooks.util.ParticleHelper;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.Vec3;
-import net.neoforged.neoforge.network.PacketDistributor;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModSpells;
-import net.redreaper.twilight_spellbooks.particle.CarminiteTrapPullParticlePacket;
 import twilightforest.init.TFParticleType;
 
 public class CarminiteTrapPullProjectile extends AbstractConeProjectile {
@@ -62,6 +55,7 @@ public class CarminiteTrapPullProjectile extends AbstractConeProjectile {
         var resultEntity = entityHitResult.getEntity();
         if (entity != null && resultEntity instanceof LivingEntity target) {
             var knockback = new Vec3(entity.getX() - target.getX(), entity.getY() - target.getY(), entity.getZ() - target.getZ()).normalize().scale(-strength);
+            DamageSources.applyDamage(target, damage, ModSpells.CARMINITE_PULL.get().getDamageSource(this, getOwner()));
             if (!DamageSources.isFriendlyFireBetween(entity, target)) {
                 target.setDeltaMovement(target.getDeltaMovement().add(knockback));
                 target.hurtMarked = true;

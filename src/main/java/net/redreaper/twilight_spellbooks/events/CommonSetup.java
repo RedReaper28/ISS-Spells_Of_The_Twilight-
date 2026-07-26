@@ -1,6 +1,7 @@
 package net.redreaper.twilight_spellbooks.events;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.entity.spells.wisp.WispEntity;
 import net.minecraft.world.entity.SpawnPlacementTypes;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -23,6 +24,9 @@ public class CommonSetup {
 
         event.put(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolf.registerAttributes().build());
         event.put(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), CarminiteGolem.registerAttributes().build());
+
+        event.put(ModEntities.MOSQUITO_SWARM.get(), WispEntity.prepareAttributes().build());
+
     }
 
     @SubscribeEvent

@@ -1,11 +1,7 @@
 package net.redreaper.twilight_spellbooks;
 
 import net.minecraft.resources.ResourceLocation;
-import net.redreaper.twilight_spellbooks.init.ModEntities;
-import net.redreaper.twilight_spellbooks.init.ModItems;
-import net.redreaper.twilight_spellbooks.init.ModSpells;
-import net.redreaper.twilight_spellbooks.init.ModTabs;
-import net.redreaper.twilight_spellbooks.init.ModLootModifiers;
+import net.redreaper.twilight_spellbooks.init.*;
 import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
@@ -33,6 +29,7 @@ public class TwilightSpellbooks {
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);
         ModSpells.register(modEventBus);
+        ModParticles.register(modEventBus);
         ModLootModifiers.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);

@@ -1,17 +1,22 @@
 package net.redreaper.twilight_spellbooks.events;
 
+import io.redspace.ironsspellbooks.particle.FireflyParticle;
 import io.redspace.ironsspellbooks.registries.EntityRegistry;
+import io.redspace.ironsspellbooks.registries.ParticleRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
+import net.redreaper.twilight_spellbooks.init.ModParticles;
+import net.redreaper.twilight_spellbooks.particle.MosquitoParticle;
 import twilightforest.client.renderer.entity.ThrownIceRenderer;
 import twilightforest.client.renderer.entity.WinterWolfRenderer;
 
@@ -33,6 +38,13 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.EXTENDED_NATURE_BOLT.get(), ThrownItemRenderer::new);
 
         event.registerEntityRenderer(ModEntities.CARMINITE_PULL_PROJECTILE.get(), NoopRenderer::new);
+        event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
+
+    }
+
+    @SubscribeEvent
+    public static void registerParticles(RegisterParticleProvidersEvent event) {
+        event.registerSpriteSet(ModParticles.MOSQUITO_PARTICLE.get(), MosquitoParticle.Provider::new);
 
     }
 }
