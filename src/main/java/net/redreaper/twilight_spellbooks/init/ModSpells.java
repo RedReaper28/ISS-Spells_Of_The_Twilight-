@@ -34,6 +34,7 @@ public class ModSpells  {
     public static final Supplier<AbstractSpell> SUMMON_CARMINITE_GOLEMS = registerSpell(new SummonCarminiteGolemSpell());
 
     //NATURE
+    public static final Supplier<AbstractSpell> BEAST_LUNGE = registerSpell(new MinotaurLungeSpell());
     public static final Supplier<AbstractSpell> DRUID_BOLT = registerSpell(new DruidBoltSpell());
 
     public static void register(IEventBus eventBus)

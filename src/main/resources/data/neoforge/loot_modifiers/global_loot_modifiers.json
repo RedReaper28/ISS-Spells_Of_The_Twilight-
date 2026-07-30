@@ -9,6 +9,7 @@
     "twilight_spellbooks:chest_loot/twilight_good_loot_modifier",
     "twilight_spellbooks:chest_loot/twilight_library_loot_modifier",
 
+    "twilight_spellbooks:entities/lich_modifier",
     "twilight_spellbooks:entities/snow_queen_modifier"
 
   ]

@@ -27,7 +27,7 @@
 
   "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS:Spellbooks Of Twilight",
 
-  "spell.twilight_spellbooks.carminite_pull": "Carminite Pull",
+   "spell.twilight_spellbooks.carminite_pull": "Carminite Pull",
   "spell.twilight_spellbooks.carminite_pull.guide": "Use the same Technology as the Dark Towers Ghat Traps to attract its target to you while leaving them paralyzed ",
   "spell.twilight_spellbooks.druid_bolt": "Druid Bolt",
   "spell.twilight_spellbooks.druid_bolt.guide": "Shot nature infused seeds that ,poisoning whatever it hits ",
@@ -35,6 +35,10 @@
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
   "spell.twilight_spellbooks.ice_bomb": "Ice Bomb",
   "spell.twilight_spellbooks.ice_bomb.guide": "Launch a bomb made from ice, damaging and freezing entries it passes though and leaving a small freeze area on block impact ",
+  "spell.twilight_spellbooks.minotaur_lunge": "Minotaur Lunge",
+  "spell.twilight_spellbooks.minotaur_lunge.guide": "Quickly dash forward like a minotaur dealing damage to targets in front of you. Extra damage scales with movement speed",
+  "spell.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
+  "spell.twilight_spellbooks.mosquito_swarm.guide": "Emanate a swarm of blood thirsty mosquitoes ,following a targeted creature and dealing aoe damage and healing you for 25% of damage done",
   "spell.twilight_spellbooks.summon_winter_wolves": "Summon Winter Wolves",
   "spell.twilight_spellbooks.summon_winter_wolves.guide": "Cast to summon a pack of Winter Wolves to follow and protect you ",
   "spell.twilight_spellbooks.summon_carminite_golem": "Summon Carminite Golem",

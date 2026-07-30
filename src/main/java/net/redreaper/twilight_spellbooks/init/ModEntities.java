@@ -1,7 +1,5 @@
 package net.redreaper.twilight_spellbooks.init;
 
-import io.redspace.ironsspellbooks.IronsSpellbooks;
-import io.redspace.ironsspellbooks.entity.spells.firefly_swarm.FireflySwarmProjectile;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -9,7 +7,9 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
+import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
+import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolem;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
@@ -45,6 +45,19 @@ public class ModEntities {
                     .build(
                             ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_carminite_golem").toString()
                     ));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<LichSoulEntity>> LICH_SOUL =
+            ENTITIES.register("lich_soul", () -> EntityType.Builder.<LichSoulEntity>of(LichSoulEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "lich_soul").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<SnowQueenSoulEntity>> SNOW_QUEEN_SOUL =
+            ENTITIES.register("snow_queen_soul", () -> EntityType.Builder.<SnowQueenSoulEntity>of(SnowQueenSoulEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "snow_queen_soul").toString()));
+
 
     public static final DeferredHolder<EntityType<?>, EntityType<TwilightBoltProjectile>> TWILIGHT_BOLT =
             ENTITIES.register("twilight_bolt", () -> EntityType.Builder.<TwilightBoltProjectile>of(TwilightBoltProjectile::new, MobCategory.MISC)
