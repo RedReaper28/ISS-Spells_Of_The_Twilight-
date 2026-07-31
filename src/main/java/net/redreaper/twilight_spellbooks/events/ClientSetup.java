@@ -12,6 +12,7 @@ import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidRenderer;
+import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
@@ -31,6 +32,7 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
 
         event.registerEntityRenderer(ModEntities.ADVANCED_DRUID.get(), AdvancedDruidRenderer::new);
+        event.registerEntityRenderer(ModEntities.ADVANCED_LOYAL_ZOMBIE.get(), AdvancedLoyalZombieRenderer::new);
 
         event.registerEntityRenderer(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolfRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), SummonedCarminiteGolemRenderer::new);
@@ -44,6 +46,7 @@ public class ClientSetup {
 
         event.registerEntityRenderer(ModEntities.LICH_SOUL.get(), LichSoulRenderer::new);
         event.registerEntityRenderer(ModEntities.SNOW_QUEEN_SOUL.get(), SnowQueenSoulRenderer::new);
+
 
     }
 

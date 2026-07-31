@@ -10,6 +10,7 @@ import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
+import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieEntity;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import twilightforest.entity.monster.CarminiteGolem;
 import twilightforest.entity.monster.WinterWolf;
@@ -26,6 +27,8 @@ public class CommonSetup {
         event.put(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), CarminiteGolem.registerAttributes().build());
 
         event.put(ModEntities.MOSQUITO_SWARM.get(), WispEntity.prepareAttributes().build());
+
+        event.put(ModEntities.ADVANCED_LOYAL_ZOMBIE.get(), AdvancedLoyalZombieEntity.createAttributes().build());
 
     }
 

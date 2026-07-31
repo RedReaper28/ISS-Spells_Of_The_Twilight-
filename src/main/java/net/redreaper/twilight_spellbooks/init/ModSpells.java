@@ -20,6 +20,7 @@ public class ModSpells  {
 
     //BLOOD
     public static final Supplier<AbstractSpell> MOSQUITO_SWARM = registerSpell(new MosquitoSwarmSpell());
+    public static final Supplier<AbstractSpell> SUMMON_LOYAL_ZOMBIE = registerSpell(new SummonLoyalZombieSpell());
 
     //ENDER
     public static final Supplier<AbstractSpell> TWILIGHT_BOLT = registerSpell(new TwilightBoltSpell());

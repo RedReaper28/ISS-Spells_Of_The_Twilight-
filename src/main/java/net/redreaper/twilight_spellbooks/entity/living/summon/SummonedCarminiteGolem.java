@@ -1,5 +1,6 @@
 package net.redreaper.twilight_spellbooks.entity.living.summon;
 
+import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.entity.mobs.IMagicSummon;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
@@ -18,6 +19,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
+import net.redreaper.twilight_spellbooks.init.ModSpells;
 import twilightforest.entity.monster.CarminiteGolem;
 
 import java.util.UUID;
@@ -63,6 +65,11 @@ public class SummonedCarminiteGolem extends CarminiteGolem implements IMagicSumm
     public void die(DamageSource pDamageSource) {
         this.onDeathHelper();
         super.die(pDamageSource);
+    }
+
+    @Override
+    public boolean doHurtTarget(Entity pEntity) {
+        return Utils.doMeleeAttack(this, pEntity, ModSpells.SUMMON_CARMINITE_GOLEMS.get().getDamageSource(this, getSummoner()));
     }
 
     @Override

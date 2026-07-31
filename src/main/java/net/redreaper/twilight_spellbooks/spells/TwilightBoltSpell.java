@@ -34,6 +34,7 @@ public class TwilightBoltSpell extends AbstractSpell {
             .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
             .setMaxLevel(1)
             .setCooldownSeconds(0)
+            .setAllowCrafting(false)
             .build();
 
     public TwilightBoltSpell() {
@@ -42,6 +43,10 @@ public class TwilightBoltSpell extends AbstractSpell {
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
         this.baseManaCost = 25;
+    }
+
+    public boolean allowLooting() {
+        return false;
     }
 
     @Override

@@ -1,5 +1,6 @@
 package net.redreaper.twilight_spellbooks.entity.living.summon;
 
+import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.entity.mobs.IMagicSummon;
 import io.redspace.ironsspellbooks.entity.mobs.goals.*;
@@ -17,6 +18,7 @@ import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
+import net.redreaper.twilight_spellbooks.init.ModSpells;
 import twilightforest.entity.monster.WinterWolf;
 import twilightforest.init.TFParticleType;
 
@@ -103,6 +105,11 @@ public class SummonedWinterWolf extends WinterWolf implements IMagicSummon {
         {
             return this.getTeam() == null && entityIn.getTeam() == null;
         }
+    }
+
+    @Override
+    public boolean doHurtTarget(Entity pEntity) {
+        return Utils.doMeleeAttack(this, pEntity, ModSpells.SUMMON_WINTER_WOLVES.get().getDamageSource(this, getSummoner()));
     }
 
     // NBT

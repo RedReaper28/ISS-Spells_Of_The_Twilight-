@@ -7,6 +7,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
+import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieEntity;
 import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulEntity;
@@ -29,6 +30,13 @@ public class ModEntities {
                     .sized(.6f, 1.8f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "advanced_druid").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<AdvancedLoyalZombieEntity>> ADVANCED_LOYAL_ZOMBIE =
+            ENTITIES.register("advanced_loyal_zombie", () -> EntityType.Builder.<AdvancedLoyalZombieEntity>of(AdvancedLoyalZombieEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "advanced_loyal_zombie").toString()));
+
 
     public static final DeferredHolder<EntityType<?>, EntityType<SummonedWinterWolf>> SUMMONED_WINTER_WOLF =
             ENTITIES.register("summoned_winter_wolf", () -> EntityType.Builder.<SummonedWinterWolf>of
