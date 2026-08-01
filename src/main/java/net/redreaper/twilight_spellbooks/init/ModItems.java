@@ -1,6 +1,8 @@
 package net.redreaper.twilight_spellbooks.init;
 
+import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -21,7 +23,12 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS= DeferredRegister.createItems(TwilightSpellbooks.MOD_ID);
 
     public static final DeferredHolder<Item, Item> AURORA_SHARD= ITEMS.register("aurora_shard",
-            ()->new Item(new Item.Properties()));
+            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+
+    public static final DeferredHolder<Item, Item> LICH_PHYLACTERY= ITEMS.register("lich_phylactery",
+            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final DeferredHolder<Item, Item> AURORA_PHYLACTERY= ITEMS.register("aurora_phylactery",
+            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
 
     public static final DeferredHolder<Item, Item> IRONWOOD_SPELLBOOK = ITEMS.register("ironwood_spellbook",
             IronwoodSpellbookItem::new);

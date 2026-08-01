@@ -94,7 +94,45 @@
         {
           "condition": "minecraft:random_chance_with_enchanted_bonus",
           "enchantment": "minecraft:looting",
-          "unenchanted_chance": 0.70,
+          "unenchanted_chance": 0.33,
+          "enchanted_chance": {
+            "type": "minecraft:linear",
+            "base": 0.75,
+            "per_level_above_first": 0.05
+          }
+        }
+      ]
+    },
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "irons_spellbooks:scroll",
+          "functions": [
+            {
+              "function": "irons_spellbooks:randomize_spell",
+              "quality": {
+                "min": 0.0,
+                "max": 0.5
+              },
+              "spell_filter": {
+                "spells": [
+                  "twilight_spellbooks:summon_loyal_zombie"
+                ]
+              }
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:killed_by_player"
+        },
+        {
+          "condition": "minecraft:random_chance_with_enchanted_bonus",
+          "enchantment": "minecraft:looting",
+          "unenchanted_chance": 0.33,
           "enchanted_chance": {
             "type": "minecraft:linear",
             "base": 0.75,

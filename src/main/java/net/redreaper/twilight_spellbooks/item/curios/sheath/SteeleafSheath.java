@@ -51,7 +51,7 @@ public class SteeleafSheath extends SheathCurioItem {
                     if (event.getSource().is(ISSDamageTypes.NATURE_MAGIC)) {
                         int randomNum = (int) (Math.random() * 5); // 0 to 4
                         if (randomNum ==1 ) {
-                            float multiplier = 1 + 0.25f;
+                            float multiplier = 1 + 0.50f;
                             event.setAmount(event.getAmount() * multiplier);
                             player.getCooldowns().addCooldown(ModItems.STEELEAF_SHEATH.get(), SteeleafSheath.COOLDOWN);
                         }

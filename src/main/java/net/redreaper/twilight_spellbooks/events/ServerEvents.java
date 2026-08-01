@@ -36,7 +36,7 @@ public class ServerEvents {
             if (attacker instanceof Player livingAttacker) {
                 if (target instanceof Lich lich) {
                     if (lich.getSpawnType() != MobSpawnType.SPAWN_EGG) {
-                        Vec3 spawnPos = Vec3.atLowerCornerOf(lich.getRestrictionPoint().pos());
+                        Vec3 spawnPos = Vec3.atCenterOf(lich.getRestrictionPoint().pos());
                         if (spawnPos != null) {
                             var soul = new LichSoulEntity(lich.level(), Vec3.ZERO, lich.position());
                             soul.setRespawnPos(spawnPos);
@@ -47,7 +47,7 @@ public class ServerEvents {
                 }
                 if (target instanceof SnowQueen snowQueen) {
                     if (snowQueen.getSpawnType() != MobSpawnType.SPAWN_EGG) {
-                        Vec3 spawnPos = Vec3.atLowerCornerOf(snowQueen.getRestrictionPoint().pos());
+                        Vec3 spawnPos = Vec3.atCenterOf(snowQueen.getRestrictionPoint().pos());
                         if (spawnPos != null) {
                             var soul = new SnowQueenSoulEntity(snowQueen.level(), Vec3.ZERO, snowQueen.position());
                             soul.setRespawnPos(spawnPos);

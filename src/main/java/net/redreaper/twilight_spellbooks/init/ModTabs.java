@@ -28,7 +28,10 @@ public class ModTabs {
                         output.accept(ModItems.THORN_ROSE_RING.get());
                         output.accept(ModItems.STEELEAF_SHEATH.get());
                         output.accept(ModItems.KNIGHTMETAL_STAFF.get());
+                        output.accept(ModItems.LICH_PHYLACTERY.get());
+                        output.accept(ModItems.AURORA_PHYLACTERY.get());
                         output.accept(ModItems.AURORA_SHARD.get());
+
 
                     }).build());
 

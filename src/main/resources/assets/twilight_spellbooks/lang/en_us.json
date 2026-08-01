@@ -1,4 +1,9 @@
 {
+
+  "item.twilight_spellbooks.lich_phylactery": "Twilight Lich Phylactery",
+  "item.twilight_spellbooks.lich_phylactery.guide": "Used to resurrect the Twilight Lich Boss",
+  "item.twilight_spellbooks.aurora_phylactery": "Aurora Phylactery",
+  "item.twilight_spellbooks.aurora_phylactery.guide": "Used to resurrect the Snow Queen Boss",
   "item.twilight_spellbooks.aurora_shard": "Aurora Shard",
   "item.twilight_spellbooks.aurora_shard.guide": "Dropped by the Snow Queen",
 
@@ -8,7 +13,6 @@
   "item.twilight_spellbooks.knightmetal_spellbook.desc": "Deal 20% Extra Spell Damage to Armored Targets",
   "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
   "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Spell Damage Inflict 2s of Burns",
-
   "item.twilight_spellbooks.ironwood_ring": "Ironwood Ring",
   "item.twilight_spellbooks.knightmetal_ring": "Knightmetal Ring",
   "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
@@ -16,15 +20,18 @@
   "item.twilight_spellbooks.thorn_rose_ring.desc": "Deals Small Twilight Thorns Damage to Attackers",
   "item.twilight_spellbooks.fiery_ring.desc": "Deal 25% More Melee Damage to Burning Targets",
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
-  "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting When Dealing Nature Spell Damage for 1.25x DMG. Enters cooldown when Crit",
+  "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting When Dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",
 
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% Extra spell Damage to Unarmored Targets",
 
   "entity.twilight_spellbooks.advanced_druid": "Advanced Druid",
   "entity.twilight_spellbooks.advanced_loyal_zombie": "Advanced Loyal Zombie",
+  "entity.twilight_spellbooks.lich_soul": "Twilight Lich Soul",
+  "entity.twilight_spellbooks.snow_queen_soul": "Snow Queen Soul",
   "entity.twilight_spellbooks.summoned_winter_wolf": "Summoned Winter Wolf",
   "entity.twilight_spellbooks.summoned_carminite_golem": "Summoned Carminite Golem",
+  "entity.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
 
   "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS:Spellbooks Of Twilight",
 

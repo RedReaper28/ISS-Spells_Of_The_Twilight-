@@ -26,6 +26,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
+import net.redreaper.twilight_spellbooks.init.ModItems;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector3f;
 import twilightforest.entity.boss.Lich;
@@ -70,7 +71,7 @@ public class LichSoulEntity extends Entity implements AntiMagicSusceptible {
     @Override
     public @NotNull InteractionResult interactAt(@NotNull Player player, @NotNull Vec3 vec, @NotNull InteractionHand hand) {
         ItemStack itemStack = player.getItemInHand(hand);
-        if (isAtSpawn() && itemStack.is(ModTags.DEAD_KING_RESPAWNABLE)) {
+        if (isAtSpawn() && itemStack.is(ModItems.LICH_PHYLACTERY)) {
             if (player.level() instanceof ServerLevel serverLevel) {
                 if (!player.hasInfiniteMaterials()) {
                     Vec3 particlePos = player.getEyePosition().add(player.getForward()).subtract(0, 0.3, 0);

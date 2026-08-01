@@ -18,7 +18,10 @@ public class ModJeiPlugin implements IModPlugin {
 
     @Override
     public void registerRecipes(IRecipeRegistration registration) {
+        registration.addItemStackInfo(new ItemStack(ModItems.LICH_PHYLACTERY.get()), Component.translatable("item.twilight_spellbooks.lich_phylactery.guide"));
+        registration.addItemStackInfo(new ItemStack(ModItems.AURORA_PHYLACTERY.get()), Component.translatable("item.twilight_spellbooks.aurora_phylactery.guide"));
         registration.addItemStackInfo(new ItemStack(ModItems.AURORA_SHARD.get()), Component.translatable("item.twilight_spellbooks.aurora_shard.guide"));
+
 
     }
 }

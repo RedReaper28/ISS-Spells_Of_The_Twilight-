@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NLN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "twilightforest:exanimate_essence"
+    },
+    "L": {
+      "item": "twilightforest:wrought_iron_bar"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:lich_phylactery",
+    "count": 1
+  }
+}
