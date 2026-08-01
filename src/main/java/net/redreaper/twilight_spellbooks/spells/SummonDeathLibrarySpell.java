@@ -17,33 +17,37 @@ import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.common.NeoForge;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
-import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
+import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieEntity;
+import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedDeathTome;
 
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class SummonWinterWolvesSpell extends AbstractSpell {
-    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summon_winter_wolves");
+public class SummonDeathLibrarySpell extends AbstractSpell {
+    private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summon_death_library");
+
+    private final DefaultConfig defaultConfig = new DefaultConfig()
+            .setMinRarity(SpellRarity.UNCOMMON)
+            .setSchoolResource(SchoolRegistry.ENDER_RESOURCE)
+            .setMaxLevel(4)
+            .setCooldownSeconds(150)
+            .build();
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(Component.translatable("ui.irons_spellbooks.summon_count", getSummonCount(spellLevel, caster)));
     }
 
-    private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.RARE)
-            .setSchoolResource(SchoolRegistry.ICE_RESOURCE)
-            .setMaxLevel(5)
-            .setCooldownSeconds(80)
-            .build();
-
-    public SummonWinterWolvesSpell()
-    {
+    public SummonDeathLibrarySpell() {
         this.manaCostPerLevel = 10;
-        this.baseSpellPower = 5;
-        this.spellPowerPerLevel = 2;
+        this.baseSpellPower = 10;
+        this.spellPowerPerLevel = 3;
         this.castTime = 30;
-        this.baseManaCost = 75;
+        this.baseManaCost = 50;
+    }
+
+    public boolean allowLooting() {
+        return false;
     }
 
     @Override
@@ -86,7 +90,7 @@ public class SummonWinterWolvesSpell extends AbstractSpell {
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         PlayerRecasts recasts = playerMagicData.getPlayerRecasts();
 
-        if (!recasts.hasRecastForSpell(this))
+        if (!recasts.hasRecastsActive())
         {
             SummonedEntitiesCastData summonedEntitiesCastData = new SummonedEntitiesCastData();
             int summonTimer = 20 * 60 * 10;
@@ -110,7 +114,7 @@ public class SummonWinterWolvesSpell extends AbstractSpell {
 
     private void spawnKoboleton(double x, double y, double z, LivingEntity caster, Level level, int summonTimer, int spellLevel, SummonedEntitiesCastData castData)
     {
-        SummonedWinterWolf koboleton = new SummonedWinterWolf(level, caster);
+        SummonedDeathTome koboleton = new SummonedDeathTome(level, caster);
 
         var event = NeoForge.EVENT_BUS.post(new SpellSummonEvent<>(caster, koboleton, this.spellId, spellLevel)).getCreature();
 

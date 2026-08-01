@@ -12,6 +12,7 @@ import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolem;
+import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedDeathTome;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
@@ -37,22 +38,23 @@ public class ModEntities {
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "advanced_loyal_zombie").toString()));
 
-
     public static final DeferredHolder<EntityType<?>, EntityType<SummonedWinterWolf>> SUMMONED_WINTER_WOLF =
-            ENTITIES.register("summoned_winter_wolf", () -> EntityType.Builder.<SummonedWinterWolf>of
-                            (SummonedWinterWolf::new, MobCategory.MONSTER).
+            ENTITIES.register("summoned_winter_wolf", () -> EntityType.Builder.<SummonedWinterWolf>of(SummonedWinterWolf::new, MobCategory.MONSTER).
                     sized(1.4F, 1.9F).eyeHeight(1.45F)
-                    .build(
-                            ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_winter_wolf").toString()
-                    ));
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_winter_wolf").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<SummonedDeathTome>> SUMMONED_DEATH_TOME =
+            ENTITIES.register("summoned_death_tome", () -> EntityType.Builder.<SummonedDeathTome>of(SummonedDeathTome::new, MobCategory.MONSTER).
+                    sized(1.4F, 1.9F).eyeHeight(1.45F)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_death_tome").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<SummonedCarminiteGolem>> SUMMONED_CARMINITE_GOLEM =
-            ENTITIES.register("summoned_carminite_golem", () -> EntityType.Builder.<SummonedCarminiteGolem>of
-                            (SummonedCarminiteGolem::new, MobCategory.MONSTER).
+            ENTITIES.register("summoned_carminite_golem", () -> EntityType.Builder.<SummonedCarminiteGolem>of(SummonedCarminiteGolem::new, MobCategory.MONSTER).
                     sized(1.4F, 2.9F)
-                    .build(
-                            ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_carminite_golem").toString()
-                    ));
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_carminite_golem").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<LichSoulEntity>> LICH_SOUL =
             ENTITIES.register("lich_soul", () -> EntityType.Builder.<LichSoulEntity>of(LichSoulEntity::new, MobCategory.MISC)

@@ -27,7 +27,7 @@ public class SummonLoyalZombieSpell extends AbstractSpell {
 
     @Override
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
-        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", spellLevel));
+        return List.of(Component.translatable("ui.irons_spellbooks.summon_count", getSummonCount(spellLevel, caster)));
     }
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
@@ -35,6 +35,7 @@ public class SummonLoyalZombieSpell extends AbstractSpell {
             .setSchoolResource(SchoolRegistry.BLOOD_RESOURCE)
             .setMaxLevel(1)
             .setCooldownSeconds(10)
+            .setAllowCrafting(false)
             .build();
 
     public SummonLoyalZombieSpell()
@@ -46,9 +47,17 @@ public class SummonLoyalZombieSpell extends AbstractSpell {
         this.baseManaCost = 19;
     }
 
+    public boolean allowLooting() {
+        return false;
+    }
+
     @Override
     public ResourceLocation getSpellResource() {
         return spellId;
+    }
+
+    public int getSummonCount(int spellLevel, LivingEntity caster) {
+        return spellLevel;
     }
 
     @Override

@@ -38,8 +38,10 @@
   "spell.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
   "spell.twilight_spellbooks.mosquito_swarm.guide": "Emanate a swarm of blood thirsty mosquitoes ,following a targeted creature and dealing aoe damage and healing you for 25% of damage done",
   "spell.twilight_spellbooks.summon_loyal_zombie": "Summon Loyal Zombie",
-  "spell.twilight_spellbooks.summon_loyal_zombie.guide": "Cast to summon a single loyal zombie with a short summon lifetime but with a quick cooldown and mana cost compared to other summons ",
+  "spell.twilight_spellbooks.summon_loyal_zombie.guide": "Cast to summon a single loyal zombie with a short summon lifetime but with a quick cooldown and low mana cost compared to other summons ",
 
+  "spell.twilight_spellbooks.summon_death_library": "Summon Death Library",
+  "spell.twilight_spellbooks.summon_death_library.guide": "Cast to summon a bookshelf worth of Death Tomes to follow and protect you ",
   "spell.twilight_spellbooks.twilight_bolt": "Twilight Bolt",
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
 

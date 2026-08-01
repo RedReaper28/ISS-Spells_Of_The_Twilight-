@@ -23,6 +23,7 @@ public class ModSpells  {
     public static final Supplier<AbstractSpell> SUMMON_LOYAL_ZOMBIE = registerSpell(new SummonLoyalZombieSpell());
 
     //ENDER
+    public static final Supplier<AbstractSpell> SUMMON_DEATH_TOME = registerSpell(new SummonDeathLibrarySpell());
     public static final Supplier<AbstractSpell> TWILIGHT_BOLT = registerSpell(new TwilightBoltSpell());
 
     //ICE

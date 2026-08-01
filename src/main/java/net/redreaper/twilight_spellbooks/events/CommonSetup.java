@@ -13,6 +13,7 @@ import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedD
 import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieEntity;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import twilightforest.entity.monster.CarminiteGolem;
+import twilightforest.entity.monster.DeathTome;
 import twilightforest.entity.monster.WinterWolf;
 
 @SuppressWarnings("removal")
@@ -23,8 +24,10 @@ public class CommonSetup {
     public static void onAttributeCreate(EntityAttributeCreationEvent event) {
         event.put(ModEntities.ADVANCED_DRUID.get(), AdvancedDruidEntity.createAttributes().build());
 
-        event.put(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolf.registerAttributes().build());
         event.put(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), CarminiteGolem.registerAttributes().build());
+        event.put(ModEntities.SUMMONED_DEATH_TOME.get(), DeathTome.registerAttributes().build());
+        event.put(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolf.registerAttributes().build());
+
 
         event.put(ModEntities.MOSQUITO_SWARM.get(), WispEntity.prepareAttributes().build());
 
