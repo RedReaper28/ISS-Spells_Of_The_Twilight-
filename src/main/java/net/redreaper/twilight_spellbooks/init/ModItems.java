@@ -1,12 +1,21 @@
 package net.redreaper.twilight_spellbooks.init;
 
+import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
+import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
+import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
+import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
+import io.redspace.ironsspellbooks.item.armor.TarnishedCrownArmorItem;
+import io.redspace.ironsspellbooks.item.weapons.ExtendedWeaponTier;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
+import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
+import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
+import net.redreaper.twilight_spellbooks.item.curios.necklace.OminousBlazer;
 import net.redreaper.twilight_spellbooks.item.curios.ring.FieryRing;
 import net.redreaper.twilight_spellbooks.item.curios.ring.IronwoodRing;
 import net.redreaper.twilight_spellbooks.item.curios.ring.KnightMetalRing;
@@ -16,6 +25,7 @@ import net.redreaper.twilight_spellbooks.item.curios.spellbooks.KnightMetalSpell
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
 import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
+import net.redreaper.twilight_spellbooks.item.weapon.LichGreatswordItem;
 
 import java.util.Collection;
 
@@ -48,11 +58,21 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> THORN_ROSE_RING = ITEMS.register("thorn_rose_ring",
             ThornRoseRing::new);
 
+    public static final DeferredHolder<Item, Item> OMINOUS_BLAZER = ITEMS.register("ominous_blazer",
+            OminousBlazer::new);
+    public static final DeferredHolder<Item, Item> STEELEAF_SHEATH = ITEMS.register("steeleaf_sheath",
+            SteeleafSheath::new);
+
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_STAFF = ITEMS.register("knightmetal_staff",
             KnightmetalStaff::new);
 
-    public static final DeferredHolder<Item, Item> STEELEAF_SHEATH = ITEMS.register("steeleaf_sheath",
-            SteeleafSheath::new);
+    public static final DeferredHolder<Item, Item> LICH_GREATSWORD = ITEMS.register("lich_greatsword",
+            LichGreatswordItem::new);
+
+    public static final DeferredHolder<Item, Item> TARNISHED_LICH_CROWN = ITEMS.register("tarnished_lich_crown",
+            () -> new TarnishedLichCrownItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.HELMET.getDurability(48))));
+
+
 
     public static Collection<DeferredHolder<Item, ? extends Item>> getSOTItems()
     {

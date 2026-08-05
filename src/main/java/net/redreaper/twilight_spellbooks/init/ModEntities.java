@@ -1,5 +1,7 @@
 package net.redreaper.twilight_spellbooks.init;
 
+import io.redspace.ironsspellbooks.IronsSpellbooks;
+import io.redspace.ironsspellbooks.entity.spells.fireball.MagicFireball;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -10,11 +12,13 @@ import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieEntity;
 import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
+import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichEntity;
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolem;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedDeathTome;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
+import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballEntity;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
 import net.redreaper.twilight_spellbooks.entity.spells.mosquito_swarm.MosquitoSwarmProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltProjectile;
@@ -25,6 +29,13 @@ import static net.minecraft.core.registries.Registries.ENTITY_TYPE;
 public class ModEntities {
     private static final DeferredRegister<EntityType<?>> ENTITIES =
             DeferredRegister.create(ENTITY_TYPE, TwilightSpellbooks.MOD_ID);
+
+    public static final DeferredHolder<EntityType<?>, EntityType<OminousLichEntity>> OMINOUS_LICH =
+            ENTITIES.register("ominous_lich", () -> EntityType.Builder.<OminousLichEntity>of(OminousLichEntity::new, MobCategory.MONSTER)
+                    .sized(.6f, 1.8f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "ominous_lich").toString())
+            );
 
     public static final DeferredHolder<EntityType<?>, EntityType<AdvancedDruidEntity>> ADVANCED_DRUID =
             ENTITIES.register("advanced_druid", () -> EntityType.Builder.of(AdvancedDruidEntity::new, MobCategory.MONSTER)
@@ -98,6 +109,12 @@ public class ModEntities {
                     .sized(.9f, .9f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "mosquito_swarm").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<ExanimatedFireballEntity>> EXANIMATED_FIREBALL =
+            ENTITIES.register("exanimated_fireball", () -> EntityType.Builder.<ExanimatedFireballEntity>of(ExanimatedFireballEntity::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(4)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_fireball").toString()));
 
     public static void register(IEventBus eventBus)
     {

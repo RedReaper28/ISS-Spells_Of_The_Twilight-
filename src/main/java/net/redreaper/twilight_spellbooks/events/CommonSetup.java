@@ -11,6 +11,7 @@ import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieEntity;
+import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichEntity;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import twilightforest.entity.monster.CarminiteGolem;
 import twilightforest.entity.monster.DeathTome;
@@ -23,6 +24,8 @@ public class CommonSetup {
     @SubscribeEvent
     public static void onAttributeCreate(EntityAttributeCreationEvent event) {
         event.put(ModEntities.ADVANCED_DRUID.get(), AdvancedDruidEntity.createAttributes().build());
+        event.put(ModEntities.ADVANCED_LOYAL_ZOMBIE.get(), AdvancedLoyalZombieEntity.createAttributes().build());
+        event.put(ModEntities.OMINOUS_LICH.get(), OminousLichEntity.createAttributes().build());
 
         event.put(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), CarminiteGolem.registerAttributes().build());
         event.put(ModEntities.SUMMONED_DEATH_TOME.get(), DeathTome.registerAttributes().build());
@@ -31,7 +34,6 @@ public class CommonSetup {
 
         event.put(ModEntities.MOSQUITO_SWARM.get(), WispEntity.prepareAttributes().build());
 
-        event.put(ModEntities.ADVANCED_LOYAL_ZOMBIE.get(), AdvancedLoyalZombieEntity.createAttributes().build());
 
     }
 

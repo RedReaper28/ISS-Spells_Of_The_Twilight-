@@ -11,8 +11,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 16.0,
-                "min": 8.0
+                "max": 32.0,
+                "min": 64.0
               },
               "function": "minecraft:set_count"
             },
@@ -41,8 +41,8 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 8.0,
-                "min": 1.0
+                "max": 16.0,
+                "min": 8.0
               },
               "function": "minecraft:set_count"
             },
@@ -60,6 +60,24 @@
         }
       ],
       "rolls": 2
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "twilight_spellbooks:ominous_blazer"
+        }
+      ],
+      "rolls": 1
+    },
+    {
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "twilight_spellbooks:lich_greatsword"
+        }
+      ],
+      "rolls": 1
     }
   ]
 }

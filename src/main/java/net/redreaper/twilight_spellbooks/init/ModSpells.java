@@ -26,6 +26,13 @@ public class ModSpells  {
     public static final Supplier<AbstractSpell> SUMMON_DEATH_TOME = registerSpell(new SummonDeathLibrarySpell());
     public static final Supplier<AbstractSpell> TWILIGHT_BOLT = registerSpell(new TwilightBoltSpell());
 
+    //FIRE
+    public static final Supplier<AbstractSpell> EXANIMATED_FIREBALL = registerSpell(new ExanimatedFireballSpell());
+
+
+    //HOLY
+    public static final Supplier<AbstractSpell> FORTIFYING_SHIELDS = registerSpell(new FortifyingShieldsSpell());
+
     //ICE
     public static final Supplier<AbstractSpell> ICE_BOMB = registerSpell(new IceBombSpell());
     public static final Supplier<AbstractSpell> SUMMON_WINTER_WOLVES = registerSpell(new SummonWinterWolvesSpell());
@@ -36,8 +43,8 @@ public class ModSpells  {
     public static final Supplier<AbstractSpell> SUMMON_CARMINITE_GOLEMS = registerSpell(new SummonCarminiteGolemSpell());
 
     //NATURE
-    public static final Supplier<AbstractSpell> BEAST_LUNGE = registerSpell(new MinotaurLungeSpell());
     public static final Supplier<AbstractSpell> DRUID_BOLT = registerSpell(new DruidBoltSpell());
+    public static final Supplier<AbstractSpell> BEAST_LUNGE = registerSpell(new MinotaurLungeSpell());
 
     public static void register(IEventBus eventBus)
     {

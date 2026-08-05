@@ -8,25 +8,32 @@
   "item.twilight_spellbooks.aurora_shard.guide": "Dropped by the Snow Queen",
 
   "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Spellbook",
-  "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces Incoming Damage by 15%",
+  "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming Damage by 15%",
   "item.twilight_spellbooks.knightmetal_spellbook": "Knightmetal Spellbook",
-  "item.twilight_spellbooks.knightmetal_spellbook.desc": "Deal 20% Extra Spell Damage to Armored Targets",
+  "item.twilight_spellbooks.knightmetal_spellbook.desc": "Deal 20% Extra Spell Damage to armored targets",
   "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
   "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Spell Damage Inflict 2s of Burns",
   "item.twilight_spellbooks.ironwood_ring": "Ironwood Ring",
   "item.twilight_spellbooks.knightmetal_ring": "Knightmetal Ring",
   "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
   "item.twilight_spellbooks.thorn_rose_ring": "Thorn Rose Ring",
-  "item.twilight_spellbooks.thorn_rose_ring.desc": "Deals Small Twilight Thorns Damage to Attackers",
-  "item.twilight_spellbooks.fiery_ring.desc": "Deal 25% More Melee Damage to Burning Targets",
+  "item.twilight_spellbooks.thorn_rose_ring.desc": "Deals small Twilight Thorns Damage to Attackers",
+  "item.twilight_spellbooks.fiery_ring.desc": "Deal 25% more Melee Damage to Burning Targets",
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
-  "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting When Dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",
+  "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting when dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",
+  "item.twilight_spellbooks.ominous_blazer": "Ominous Blazer",
+  "item.twilight_spellbooks.ominous_blazer.desc": "Summons inflict Ominous Burn on hit to reduce in 50% the targets healing and deal small damage over time",
 
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% Extra spell Damage to Unarmored Targets",
 
+  "item.twilight_spellbooks.lich_greatsword": "Lich Greatsword",
+
+  "item.twilight_spellbooks.tarnished_lich_crown": "Tarnished Lich Crown",
+
   "entity.twilight_spellbooks.advanced_druid": "Advanced Druid",
   "entity.twilight_spellbooks.advanced_loyal_zombie": "Advanced Loyal Zombie",
+  "entity.twilight_spellbooks.ominous_lich": "Ominous Twilight Lich ",
   "entity.twilight_spellbooks.lich_soul": "Twilight Lich Soul",
   "entity.twilight_spellbooks.snow_queen_soul": "Snow Queen Soul",
   "entity.twilight_spellbooks.summoned_winter_wolf": "Summoned Winter Wolf",
@@ -34,6 +41,8 @@
   "entity.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
 
   "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS:Spellbooks Of Twilight",
+
+  "effect.twilight_spellbooks.ominous_burn": "Ominous Burn",
 
   "spell.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
   "spell.twilight_spellbooks.mosquito_swarm.guide": "Emanate a swarm of blood thirsty mosquitoes ,following a targeted creature and dealing aoe damage and healing you for 25% of damage done",
@@ -45,6 +54,12 @@
   "spell.twilight_spellbooks.twilight_bolt": "Twilight Bolt",
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
 
+  "spell.twilight_spellbooks.exanimated_fireball": "Exanimated Fireball",
+  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich ",
+
+  "spell.twilight_spellbooks.fortifying_shields": "Fortifying Shields",
+  "spell.twilight_spellbooks.fortifying_shields.guide": "Cast to summon 6 Lich shields around you that block one hit per shield",
+
   "spell.twilight_spellbooks.ice_bomb": "Ice Bomb",
   "spell.twilight_spellbooks.ice_bomb.guide": "Launch a bomb made from ice, damaging and freezing entries it passes though and leaving a small freeze area on block impact ",
   "spell.twilight_spellbooks.summon_winter_wolves": "Summon Winter Wolves",
@@ -52,11 +67,16 @@
 
   "spell.twilight_spellbooks.carminite_pull": "Carminite Pull",
   "spell.twilight_spellbooks.carminite_pull.guide": "Use the same Technology as the Dark Towers Ghat Traps to attract its target to you while leaving them paralyzed ",
-   "spell.twilight_spellbooks.summon_carminite_golem": "Summon Carminite Golem",
+  "spell.twilight_spellbooks.summon_carminite_golem": "Summon Carminite Golem",
   "spell.twilight_spellbooks.summon_carminite_golem.guide": "Cast to summon a squad of Carminite Golems to follow and protect you ",
 
   "spell.twilight_spellbooks.druid_bolt": "Druid Bolt",
   "spell.twilight_spellbooks.druid_bolt.guide": "Shot nature infused seeds that ,poisoning whatever it hits ",
   "spell.twilight_spellbooks.minotaur_lunge": "Minotaur Lunge",
-  "spell.twilight_spellbooks.minotaur_lunge.guide": "Quickly dash forward like a minotaur dealing damage to targets in front of you. Extra damage scales with movement speed"
+  "spell.twilight_spellbooks.minotaur_lunge.guide": "Quickly dash forward like a minotaur dealing damage to targets in front of you. Extra damage scales with movement speed",
+
+  "display.twilight_spellbooks.spawn": "Back to life once again",
+  "display.twilight_spellbooks.phase_2": "Perish, Mortal",
+
+  "ui.twilight_spellbooks.shields": "Shields"
 }

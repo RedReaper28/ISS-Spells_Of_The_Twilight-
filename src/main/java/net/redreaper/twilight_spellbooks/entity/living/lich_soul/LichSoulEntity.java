@@ -4,6 +4,7 @@ import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.entity.mobs.AntiMagicSusceptible;
+import io.redspace.ironsspellbooks.entity.mobs.dead_king_boss.DeadKingBoss;
 import io.redspace.ironsspellbooks.util.ModTags;
 import io.redspace.ironsspellbooks.util.NBT;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
@@ -20,11 +21,13 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
+import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichEntity;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModItems;
 import org.jetbrains.annotations.NotNull;
@@ -72,31 +75,43 @@ public class LichSoulEntity extends Entity implements AntiMagicSusceptible {
     public @NotNull InteractionResult interactAt(@NotNull Player player, @NotNull Vec3 vec, @NotNull InteractionHand hand) {
         ItemStack itemStack = player.getItemInHand(hand);
         if (isAtSpawn() && itemStack.is(ModItems.LICH_PHYLACTERY)) {
-            if (player.level() instanceof ServerLevel serverLevel) {
-                if (!player.hasInfiniteMaterials()) {
-                    Vec3 particlePos = player.getEyePosition().add(player.getForward()).subtract(0, 0.3, 0);
-                    MagicManager.spawnParticles(serverLevel, new ItemParticleOption(ParticleTypes.ITEM, itemStack), particlePos.x, particlePos.y, particlePos.z, 9, .15, .15, .15, 0.08, false);
-                    itemStack.shrink(1);
-                    player.setItemInHand(hand, itemStack);
+                if (player.level() instanceof ServerLevel serverLevel) {
+                    if (!player.hasInfiniteMaterials()) {
+                        Vec3 particlePos = player.getEyePosition().add(player.getForward()).subtract(0, 0.3, 0);
+                        MagicManager.spawnParticles(serverLevel, new ItemParticleOption(ParticleTypes.ITEM, itemStack), particlePos.x, particlePos.y, particlePos.z, 9, .15, .15, .15, 0.08, false);
+                        itemStack.shrink(1);
+                        player.setItemInHand(hand, itemStack);
+                    }
+                    this.playSound(SoundEvents.DECORATED_POT_SHATTER, 2, 0.75f);
+                    this.playSound(SoundEvents.ELDER_GUARDIAN_CURSE, 2, 0.75f);
+                    MagicManager.spawnParticles(level(), TFParticleType.OMINOUS_FLAME.get(), getX(), getY(), getZ(), 50, .1, .1, .1, 0.3, false);
+
+
+                    float f = player.getYRot() + 180;
+                    if (!player.hasEffect(MobEffects.BAD_OMEN)) {
+
+                    Lich myCreature = new Lich(TFEntities.LICH.get(), serverLevel);
+                    myCreature.moveTo(this.position());
+                    // set the y rot dammit
+                    myCreature.setAttackCooldown(40);
+                    myCreature.setExtinguishTimer();
+                    myCreature.setRestrictionPoint(GlobalPos.of(myCreature.level().dimension(), BlockPos.containing(this.position())));
+
+                    serverLevel.addFreshEntity(myCreature);
+                    this.discard();
+                    }
+                    if (player.hasEffect(MobEffects.BAD_OMEN)) {
+                        OminousLichEntity boss = new OminousLichEntity(level());
+                        boss.moveTo(this.position().add(0, 0, 0));
+                        boss.setSpawnPos(boss.position());
+                        boss.finalizeSpawn((ServerLevel) level(), level().getCurrentDifficultyAt(boss.getOnPos()), MobSpawnType.TRIGGERED, null);
+                        boss.setPersistenceRequired();
+                        level().addFreshEntity(boss);
+                        serverLevel.addFreshEntity(boss);
+                        this.discard();
+                    }
+                    return InteractionResult.SUCCESS;
                 }
-                this.playSound(SoundEvents.DECORATED_POT_SHATTER, 2, 0.75f);
-                this.playSound(SoundEvents.ELDER_GUARDIAN_CURSE, 2, 0.75f);
-                MagicManager.spawnParticles(level(), TFParticleType.OMINOUS_FLAME.get(), getX(), getY(), getZ(), 50, .1, .1, .1, 0.3, false);
-
-
-                float f = player.getYRot() + 180;
-
-                Lich myCreature = new Lich(TFEntities.LICH.get(), serverLevel);
-                myCreature.moveTo(this.position());
-                // set the y rot dammit
-                myCreature.setAttackCooldown(40);
-                myCreature.setExtinguishTimer();
-                myCreature.setRestrictionPoint(GlobalPos.of(myCreature.level().dimension(), BlockPos.containing(this.position())));
-
-                serverLevel.addFreshEntity(myCreature);
-                this.discard();
-            }
-            return InteractionResult.SUCCESS;
         }
         return super.interactAt(player, vec, hand);
     }

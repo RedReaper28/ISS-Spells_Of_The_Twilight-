@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NLN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "tag": "irons_spellbooks:ice_focus"
+    },
+    "L": {
+      "item": "twilight_spellbooks:aurora_shard"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:aurora_phylactery",
+    "count": 1
+  }
+}

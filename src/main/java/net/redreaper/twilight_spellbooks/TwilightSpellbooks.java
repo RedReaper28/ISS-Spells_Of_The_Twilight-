@@ -29,6 +29,7 @@ public class TwilightSpellbooks {
         ModTabs.register(modEventBus);
         ModEntities.register(modEventBus);
         ModSpells.register(modEventBus);
+        ModMobEffects.register(modEventBus);
         ModParticles.register(modEventBus);
         ModLootModifiers.register(modEventBus);
 
