@@ -1,0 +1,27 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:entities/ice_crystal"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:entities/stable_ice_core"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:entities/unstable_ice_core"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:entities/snow_guardian"
+        }
+      ]
+    }
+  ],
+  "type":"twilight_spellbooks:add_to_table",
+  "loot_table": "twilight_spellbooks:entities/additional_ice_mob_loot"
+}

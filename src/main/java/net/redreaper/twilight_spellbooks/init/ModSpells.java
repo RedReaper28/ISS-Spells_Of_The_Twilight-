@@ -19,6 +19,7 @@ public class ModSpells  {
     }
 
     //BLOOD
+    public static final Supplier<AbstractSpell> LIFE_SACRIFICE = registerSpell(new LifeSacrificeSpell());
     public static final Supplier<AbstractSpell> MOSQUITO_SWARM = registerSpell(new MosquitoSwarmSpell());
     public static final Supplier<AbstractSpell> SUMMON_LOYAL_ZOMBIE = registerSpell(new SummonLoyalZombieSpell());
 

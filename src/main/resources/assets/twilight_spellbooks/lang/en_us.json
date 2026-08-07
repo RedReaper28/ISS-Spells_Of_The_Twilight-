@@ -1,4 +1,7 @@
 {
+  "item.twilight_spellbooks.frost_essence": "Frost Essence",
+  "item.twilight_spellbooks.frost_essence.guide": "Dropped by the Aurora Palace Mobs",
+  "item.twilight_spellbooks.snow_silver_ingot": "Snow Silver Ingot  ",
 
   "item.twilight_spellbooks.lich_phylactery": "Twilight Lich Phylactery",
   "item.twilight_spellbooks.lich_phylactery.guide": "Used to resurrect the Twilight Lich Boss",
@@ -21,19 +24,19 @@
   "item.twilight_spellbooks.fiery_ring.desc": "Deal 25% more Melee Damage to Burning Targets",
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
   "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting when dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",
-  "item.twilight_spellbooks.ominous_blazer": "Ominous Blazer",
-  "item.twilight_spellbooks.ominous_blazer.desc": "Summons inflict Ominous Burn on hit to reduce in 50% the targets healing and deal small damage over time",
+  "item.twilight_spellbooks.ominous_blazer": "Exanimated Blazer",
+  "item.twilight_spellbooks.ominous_blazer.desc": "Summons inflict Exanimating Burn on hit to reduce 50% of the targets healing and deal small damage over time",
 
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% Extra spell Damage to Unarmored Targets",
 
   "item.twilight_spellbooks.lich_greatsword": "Lich Greatsword",
 
-  "item.twilight_spellbooks.tarnished_lich_crown": "Tarnished Lich Crown",
+  "item.twilight_spellbooks.tarnished_lich_crown": "Exanimated Crown",
 
   "entity.twilight_spellbooks.advanced_druid": "Advanced Druid",
   "entity.twilight_spellbooks.advanced_loyal_zombie": "Advanced Loyal Zombie",
-  "entity.twilight_spellbooks.ominous_lich": "Ominous Twilight Lich ",
+  "entity.twilight_spellbooks.ominous_lich": "Exanimated Twilight Lich ",
   "entity.twilight_spellbooks.lich_soul": "Twilight Lich Soul",
   "entity.twilight_spellbooks.snow_queen_soul": "Snow Queen Soul",
   "entity.twilight_spellbooks.summoned_winter_wolf": "Summoned Winter Wolf",
@@ -42,8 +45,10 @@
 
   "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS:Spellbooks Of Twilight",
 
-  "effect.twilight_spellbooks.ominous_burn": "Ominous Burn",
+  "effect.twilight_spellbooks.ominous_burn": "Exanimating Burn",
 
+  "spell.twilight_spellbooks.life_sacrifice": "Life Sacrifice",
+  "spell.twilight_spellbooks.life_sacrifice.guide": "Target one of your magic summons to drain their life, killing them instantly and healing you a 100% of their remaining HP. Target another entity to deal 5% of their current HP and healing 50% of damage done",
   "spell.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
   "spell.twilight_spellbooks.mosquito_swarm.guide": "Emanate a swarm of blood thirsty mosquitoes ,following a targeted creature and dealing aoe damage and healing you for 25% of damage done",
   "spell.twilight_spellbooks.summon_loyal_zombie": "Summon Loyal Zombie",

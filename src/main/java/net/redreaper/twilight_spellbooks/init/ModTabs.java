@@ -31,6 +31,8 @@ public class ModTabs {
                         output.accept(ModItems.KNIGHTMETAL_STAFF.get());
                         output.accept(ModItems.LICH_GREATSWORD.get());
                         output.accept(ModItems.TARNISHED_LICH_CROWN.get());
+                        output.accept(ModItems.FROST_ESSENCE.get());
+                        output.accept(ModItems.SNOW_SILVER_INGOT.get());
                         output.accept(ModItems.LICH_PHYLACTERY.get());
                         output.accept(ModItems.AURORA_PHYLACTERY.get());
                         output.accept(ModItems.AURORA_SHARD.get());

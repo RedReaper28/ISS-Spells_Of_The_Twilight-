@@ -1,0 +1,19 @@
+{
+  "conditions": [
+    {
+      "condition": "minecraft:any_of",
+      "terms": [
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:aurora_cache"
+        },
+        {
+          "condition": "neoforge:loot_table_id",
+          "loot_table_id": "twilightforest:aurora_room"
+        }
+      ]
+    }
+  ],
+  "type":"twilight_spellbooks:add_to_table",
+  "loot_table": "twilight_spellbooks:chests/additional_aurora_palace_loot"
+}

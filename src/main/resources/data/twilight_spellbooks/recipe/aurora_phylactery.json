@@ -7,10 +7,10 @@
   ],
   "key": {
     "N": {
-      "tag": "irons_spellbooks:ice_focus"
+      "item": "twilight_spellbooks:frost_essence"
     },
     "L": {
-      "item": "twilight_spellbooks:aurora_shard"
+      "item": "twilight_spellbooks:snow_silver_ingot"
     }
   },
   "result": {

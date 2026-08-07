@@ -1,6 +1,7 @@
 {
   "replace": false,
   "entries": [
+    "twilight_spellbooks:chest_loot/additional_aurora_palace_loot_modifier",
     "twilight_spellbooks:chest_loot/aurora_loot_modifier",
     "twilight_spellbooks:chest_loot/basement_loot_modifier",
     "twilight_spellbooks:chest_loot/dark_tower_loot_modifier",
@@ -9,6 +10,7 @@
     "twilight_spellbooks:chest_loot/twilight_good_loot_modifier",
     "twilight_spellbooks:chest_loot/twilight_library_loot_modifier",
 
+    "twilight_spellbooks:entities/ice_mob_loot_modifier",
     "twilight_spellbooks:entities/lich_modifier",
     "twilight_spellbooks:entities/snow_queen_modifier"
 

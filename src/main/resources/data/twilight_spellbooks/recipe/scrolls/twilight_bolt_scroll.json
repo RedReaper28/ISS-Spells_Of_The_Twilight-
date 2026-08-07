@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "twilightforest:twilight_scepter"
+    },
+    "A": {
+      "item": "irons_spellbooks:magic_cloth"
+    }
+  },
+  "pattern": [
+      "AAA",
+      "ABA",
+      "AAA"
+    ],
+    "result": {
+      "count": 1,
+      "id": "irons_spellbooks:scroll",
+      "components": {
+        "irons_spellbooks:spell_container": {
+          "maxSpells": 1,
+          "spellWheel": false,
+          "mustEquip": false,
+          "data": [
+            {
+              "id": "twilight_spellbooks:twilight_bolt",
+              "index": 0,
+              "level": 1,
+              "locked": true
+            }
+          ]
+        }
+      }
+    }
+}
+

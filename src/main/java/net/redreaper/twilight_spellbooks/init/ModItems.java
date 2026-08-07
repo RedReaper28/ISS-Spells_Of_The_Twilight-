@@ -1,11 +1,5 @@
 package net.redreaper.twilight_spellbooks.init;
 
-import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
-import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
-import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
-import io.redspace.ironsspellbooks.item.armor.TarnishedCrownArmorItem;
-import io.redspace.ironsspellbooks.item.weapons.ExtendedWeaponTier;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
@@ -34,6 +28,12 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> AURORA_SHARD= ITEMS.register("aurora_shard",
             () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+
+    public static final DeferredHolder<Item, Item> FROST_ESSENCE = ITEMS.register("frost_essence",
+            () -> new Item(ItemPropertiesHelper.material()));
+    public static final DeferredHolder<Item, Item> SNOW_SILVER_INGOT = ITEMS.register("snow_silver_ingot",
+            () -> new Item(ItemPropertiesHelper.material()));
+
 
     public static final DeferredHolder<Item, Item> LICH_PHYLACTERY= ITEMS.register("lich_phylactery",
             () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));

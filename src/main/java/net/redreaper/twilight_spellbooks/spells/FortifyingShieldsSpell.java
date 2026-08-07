@@ -29,7 +29,7 @@ public class FortifyingShieldsSpell extends AbstractSpell {
     }
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
-            .setMinRarity(SpellRarity.UNCOMMON)
+            .setMinRarity(SpellRarity.LEGENDARY)
             .setSchoolResource(SchoolRegistry.HOLY_RESOURCE)
             .setMaxLevel(1)
             .setCooldownSeconds(25)
@@ -42,6 +42,10 @@ public class FortifyingShieldsSpell extends AbstractSpell {
         this.spellPowerPerLevel = 1;
         this.castTime = 30;
         this.baseManaCost = 120;
+    }
+
+    public boolean allowLooting() {
+        return false;
     }
 
     @Override
