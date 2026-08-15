@@ -8,6 +8,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
+import net.redreaper.twilight_spellbooks.item.armor.ExanimatedLichArmorItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
 import net.redreaper.twilight_spellbooks.item.curios.necklace.OminousBlazer;
 import net.redreaper.twilight_spellbooks.item.curios.ring.FieryRing;
@@ -16,6 +17,7 @@ import net.redreaper.twilight_spellbooks.item.curios.ring.KnightMetalRing;
 import net.redreaper.twilight_spellbooks.item.curios.sheath.SteeleafSheath;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.IronwoodSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.KnightMetalSpellbookItem;
+import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
 import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
@@ -46,6 +48,8 @@ public class ModItems {
             KnightMetalSpellbookItem::new);
     public static final DeferredHolder<Item, Item> FIERY_SPELL_BOOK = ITEMS.register("fiery_spell_book",
             FierySpellbookItem::new);
+    public static final DeferredHolder<Item, Item> SNOW_QUEEN_SPELL_BOOK = ITEMS.register("snow_queen_spell_book",
+            SnowQueenSpellbookItem::new);
 
 
 
@@ -68,6 +72,15 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> LICH_GREATSWORD = ITEMS.register("lich_greatsword",
             LichGreatswordItem::new);
+
+    public static final DeferredHolder<Item, Item> EXANIMATED_LICH_HELMET = ITEMS.register("exanimated_lich_helmet",
+            () -> new ExanimatedLichArmorItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.EPIC).durability(ArmorItem.Type.HELMET.getDurability(48))));
+    public static final DeferredHolder<Item, Item> EXANIMATED_LICH_CHESTPLATE = ITEMS.register("exanimated_lich_chestplate",
+            () -> new ExanimatedLichArmorItem(   ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).rarity(Rarity.EPIC).durability(ArmorItem.Type.CHESTPLATE.getDurability(48))));
+    public static final DeferredHolder<Item, Item> EXANIMATED_LICH_LEGGINGS = ITEMS.register("exanimated_lich_leggings",
+            () -> new ExanimatedLichArmorItem(   ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).rarity(Rarity.EPIC).durability(ArmorItem.Type.LEGGINGS.getDurability(48))));
+    public static final DeferredHolder<Item, Item> EXANIMATED_LICH_BOOTS = ITEMS.register("exanimated_lich_boots",
+            () -> new ExanimatedLichArmorItem(   ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).rarity(Rarity.EPIC).durability(ArmorItem.Type.BOOTS.getDurability(48))));
 
     public static final DeferredHolder<Item, Item> TARNISHED_LICH_CROWN = ITEMS.register("tarnished_lich_crown",
             () -> new TarnishedLichCrownItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.HELMET.getDurability(48))));

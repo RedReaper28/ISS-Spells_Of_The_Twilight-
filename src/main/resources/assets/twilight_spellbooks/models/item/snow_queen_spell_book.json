@@ -1,0 +1,26 @@
+{
+  "parent": "minecraft:item/handheld",
+  "loader": "neoforge:separate_transforms",
+  "base": {
+    "textures": {
+      "book": "twilight_spellbooks:item/spell_book_models/snow_queen_spell_book",
+      "particle": "twilight_spellbooks:item/spell_book_models/snow_queen_spell_book"
+    },
+    "parent": "irons_spellbooks:item/template_spell_book_model"
+  },
+  "perspectives": {
+    "gui": {
+      "parent": "item/generated",
+      "textures": {
+        "layer0": "twilight_spellbooks:item/snow_queen_spell_book"
+      }
+    },
+    "head": {
+      "textures": {
+        "book": "twilight_spellbooks:item/spell_book_models/snow_queen_spell_book",
+        "particle": "twilight_spellbooks:item/spell_book_models/snow_queen_spell_book"
+      },
+      "parent": "irons_spellbooks:item/template_spell_book_model_open"
+    }
+  }
+}

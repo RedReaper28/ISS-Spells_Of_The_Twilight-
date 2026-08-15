@@ -509,10 +509,16 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
     // Puts items on the boss like armors and weapons
     @Override
     protected void populateDefaultEquipmentSlots(RandomSource random, DifficultyInstance difficulty) {
-        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ModItems.TARNISHED_LICH_CROWN.get()));
+        this.setItemSlot(EquipmentSlot.HEAD, new ItemStack(ModItems.EXANIMATED_LICH_HELMET.get()));
+        this.setItemSlot(EquipmentSlot.CHEST, new ItemStack(ModItems.EXANIMATED_LICH_CHESTPLATE.get()));
+        this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(ModItems.EXANIMATED_LICH_LEGGINGS.get()));
+        this.setItemSlot(EquipmentSlot.FEET, new ItemStack(ModItems.EXANIMATED_LICH_BOOTS.get()));
         this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.LICH_GREATSWORD.get()));
         this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(ModItems.KNIGHTMETAL_STAFF.get()));
         this.setDropChance(EquipmentSlot.HEAD, 0.0F);
+        this.setDropChance(EquipmentSlot.CHEST, 0.0F);
+        this.setDropChance(EquipmentSlot.LEGS, 0.0F);
+        this.setDropChance(EquipmentSlot.FEET, 0.0F);
         this.setDropChance(EquipmentSlot.MAINHAND, 0.0F);
         this.setDropChance(EquipmentSlot.OFFHAND, 0.0F);
     }
