@@ -11,22 +11,22 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 32.0,
-                "min": 64.0
+                "max": 3.0,
+                "min": 2.0
               },
               "function": "minecraft:set_count"
             },
             {
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 2.0
+                "max": 5.0,
+                "min": 3.0
               },
               "function": "minecraft:enchanted_count_increase",
               "enchantment": "minecraft:looting"
             }
           ],
-          "name": "irons_spellbooks:arcane_essence"
+          "name": "twilight_spellbooks:deaths_essence"
         }
       ],
       "rolls": 2
@@ -41,34 +41,25 @@
               "add": false,
               "count": {
                 "type": "minecraft:uniform",
-                "max": 16.0,
-                "min": 8.0
+                "max": 6.0,
+                "min": 2.0
               },
               "function": "minecraft:set_count"
             },
             {
               "count": {
                 "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 2.0
+                "max": 10.0,
+                "min": 5.0
               },
               "function": "minecraft:enchanted_count_increase",
               "enchantment": "minecraft:looting"
             }
           ],
-          "name": "irons_spellbooks:blood_vial"
+          "name": "irons_spellbooks:legendary_ink"
         }
       ],
       "rolls": 2
-    },
-    {
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "twilight_spellbooks:ominous_blazer"
-        }
-      ],
-      "rolls": 1
     },
     {
       "entries": [

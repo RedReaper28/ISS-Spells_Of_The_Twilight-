@@ -17,7 +17,7 @@ import software.bernie.geckolib.renderer.GeoArmorRenderer;
 
 public class ExanimatedLichArmorItem extends ImbuableExtendedGeoArmorItem implements IArmorCapeProvider {
     public ExanimatedLichArmorItem(ArmorItem.Type slot, Properties settings) {
-        super(ArmorMaterialRegistry.SCHOOL, slot, settings,
+        super(ArmorMaterialRegistry.NETHERITE_BATTLEMAGE, slot, settings,
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 125, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),

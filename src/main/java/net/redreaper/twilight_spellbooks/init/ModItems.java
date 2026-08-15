@@ -15,6 +15,7 @@ import net.redreaper.twilight_spellbooks.item.curios.ring.FieryRing;
 import net.redreaper.twilight_spellbooks.item.curios.ring.IronwoodRing;
 import net.redreaper.twilight_spellbooks.item.curios.ring.KnightMetalRing;
 import net.redreaper.twilight_spellbooks.item.curios.sheath.SteeleafSheath;
+import net.redreaper.twilight_spellbooks.item.curios.spellbooks.CarminiteSpellBookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.IronwoodSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.KnightMetalSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbookItem;
@@ -29,6 +30,8 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS= DeferredRegister.createItems(TwilightSpellbooks.MOD_ID);
 
     public static final DeferredHolder<Item, Item> AURORA_SHARD= ITEMS.register("aurora_shard",
+            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final DeferredHolder<Item, Item> DEATHS_ESSENCE= ITEMS.register("deaths_essence",
             () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
 
     public static final DeferredHolder<Item, Item> FROST_ESSENCE = ITEMS.register("frost_essence",
@@ -46,6 +49,8 @@ public class ModItems {
             IronwoodSpellbookItem::new);
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_SPELLBOOK = ITEMS.register("knightmetal_spellbook",
             KnightMetalSpellbookItem::new);
+    public static final DeferredHolder<Item, Item> CARMINITE_SPELL_BOOK = ITEMS.register("carminite_spell_book",
+            CarminiteSpellBookItem::new);
     public static final DeferredHolder<Item, Item> FIERY_SPELL_BOOK = ITEMS.register("fiery_spell_book",
             FierySpellbookItem::new);
     public static final DeferredHolder<Item, Item> SNOW_QUEEN_SPELL_BOOK = ITEMS.register("snow_queen_spell_book",

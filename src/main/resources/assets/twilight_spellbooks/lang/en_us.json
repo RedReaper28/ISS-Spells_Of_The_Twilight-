@@ -9,12 +9,15 @@
   "item.twilight_spellbooks.aurora_phylactery.guide": "Used to resurrect the Snow Queen Boss",
   "item.twilight_spellbooks.aurora_shard": "Aurora Shard",
   "item.twilight_spellbooks.aurora_shard.guide": "Dropped by the Snow Queen",
+  "item.twilight_spellbooks.deaths_essence": "Deaths Essence",
 
-  "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Spellbook",
+
+  "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Rooted Spell Book",
   "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming Damage by 15%",
-  "item.twilight_spellbooks.knightmetal_spellbook": "Knightmetal Spellbook",
+  "item.twilight_spellbooks.knightmetal_spellbook": "Knights Honor Codex",
   "item.twilight_spellbooks.knightmetal_spellbook.desc": "Deal 20% Extra Spell Damage to armored targets",
-  "item.twilight_spellbooks.fiery_spell_book": "Fiery Spellbook",
+  "item.twilight_spellbooks.carminite_spell_book": "Carminite Golem Blueprint",
+  "item.twilight_spellbooks.fiery_spell_book": "Fiery Chronicles",
   "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Spell Damage Inflict 2s of Burns",
   "item.twilight_spellbooks.snow_queen_spell_book": "Snow Queen Diary",
   "item.twilight_spellbooks.snow_queen_spell_book.desc": "Dealing Ice Spell Damage Inflict Frosted for 5s",

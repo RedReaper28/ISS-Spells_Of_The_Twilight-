@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "irons_spellbooks:arcane_rune"
+  },
+  "base": {
+    "tag": "irons_spellbooks:wizard_base_chestplate"
+    },
+  "result": {
+    "components": {
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "twilight_spellbooks:exanimated_lich_chestplate"
+  },
+  "template": {
+    "item": "twilight_spellbooks:deaths_essence"
+  }
+}

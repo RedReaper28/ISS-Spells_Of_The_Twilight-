@@ -493,11 +493,15 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
     protected void tickDeath() {
         this.deathTime++;
         if (this.deathTime >= 20 && !this.level().isClientSide() && !this.isRemoved()) {
+
             this.level().broadcastEntityEvent(this, (byte) 60);
             this.remove(Entity.RemovalReason.KILLED);
             Vec3 spawnPos = getSpawnPos();
             if (spawnPos != null) {
-                deathLoot.getItems().forEach(this::spawnAtLocation);
+                if (this.deathLoot != null)
+                {
+                    deathLoot.getItems().forEach(this::spawnAtLocation);
+                }
                 var soul = new LichSoulEntity(level(), Vec3.ZERO, spawnPos);
                 soul.setRespawnPos(spawnPos);
                 soul.moveTo(this.getBoundingBox().getCenter());
