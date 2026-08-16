@@ -22,11 +22,12 @@
   "item.twilight_spellbooks.snow_queen_spell_book": "Snow Queen Diary",
   "item.twilight_spellbooks.snow_queen_spell_book.desc": "Dealing Ice Spell Damage Inflict Frosted for 5s",
   "item.twilight_spellbooks.ironwood_ring": "Ironwood Ring",
-  "item.twilight_spellbooks.knightmetal_ring": "Knightmetal Ring",
   "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
   "item.twilight_spellbooks.thorn_rose_ring": "Thorn Rose Ring",
   "item.twilight_spellbooks.thorn_rose_ring.desc": "Deals small Twilight Thorns Damage to Attackers",
   "item.twilight_spellbooks.fiery_ring.desc": "Deal 25% more Melee Damage to Burning Targets",
+  "item.twilight_spellbooks.knightmetal_brace": "Knightmetal Brace",
+
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
   "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting when dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",
   "item.twilight_spellbooks.ominous_blazer": "Exanimated Blazer",
@@ -69,7 +70,7 @@
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
 
   "spell.twilight_spellbooks.exanimated_fireball": "Exanimated Fireball",
-  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich ",
+  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich .Damage scales with Fire Spell Power and Emder Spell Power",
 
   "spell.twilight_spellbooks.fortifying_shields": "Fortifying Shields",
   "spell.twilight_spellbooks.fortifying_shields.guide": "Cast to summon 6 Lich shields around you that block one hit per shield",

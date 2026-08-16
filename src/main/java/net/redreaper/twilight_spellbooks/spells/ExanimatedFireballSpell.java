@@ -2,6 +2,7 @@ package net.redreaper.twilight_spellbooks.spells;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
@@ -13,6 +14,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
@@ -86,7 +88,13 @@ public class ExanimatedFireballSpell extends AbstractSpell {
     }
 
     public float getDamage(int spellLevel, LivingEntity caster) {
-        return 5 + 5 * getSpellPower(spellLevel, caster);
+        if (caster == null) {
+            return this.getSpellPower(spellLevel, (Entity)null) * 7.0F;
+        } else {
+            double firePower = caster.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
+            double bloodPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
+            return (float)((double)5.0F + (float)((double) 5 * (double)this.getSpellPower(spellLevel, caster) * ((double)0.5F * firePower + (double)0.5F * bloodPower)));
+        }
     }
 
     public int getRadius(int spellLevel, LivingEntity caster) {

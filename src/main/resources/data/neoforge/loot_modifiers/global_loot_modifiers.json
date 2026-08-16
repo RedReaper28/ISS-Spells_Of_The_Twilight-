@@ -12,6 +12,7 @@
 
     "twilight_spellbooks:entities/ice_mob_loot_modifier",
     "twilight_spellbooks:entities/lich_modifier",
+    "twilight_spellbooks:entities/hydra_modifier",
     "twilight_spellbooks:entities/snow_queen_modifier"
 
   ]

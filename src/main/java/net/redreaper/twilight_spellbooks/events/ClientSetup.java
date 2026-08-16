@@ -22,6 +22,9 @@ import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.Exanima
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModParticles;
+import net.redreaper.twilight_spellbooks.particle.ExanimatedEmbersParticle;
+import net.redreaper.twilight_spellbooks.particle.ExanimatedFireParticle;
+import net.redreaper.twilight_spellbooks.particle.ExanimatedSmokeParticle;
 import net.redreaper.twilight_spellbooks.particle.MosquitoParticle;
 import twilightforest.client.model.TFModelLayers;
 import twilightforest.client.model.entity.DeathTomeModel;
@@ -64,6 +67,10 @@ public class ClientSetup {
     @SubscribeEvent
     public static void registerParticles(RegisterParticleProvidersEvent event) {
         event.registerSpriteSet(ModParticles.MOSQUITO_PARTICLE.get(), MosquitoParticle.Provider::new);
+
+        event.registerSpriteSet(ModParticles.EXANIMATED_SMOKE_PARTICLE.get(), ExanimatedSmokeParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.EXANIMATED_FIRE_PARTICLE.get(), ExanimatedFireParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.EXANIMATED_EMBER_PARTICLE.get(), ExanimatedEmbersParticle.Provider::new);
 
     }
 }

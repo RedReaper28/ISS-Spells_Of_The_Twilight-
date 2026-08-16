@@ -47,13 +47,14 @@ public class ExtendedIceBomb extends IceBomb {
     @Override
     protected void onHitEntity(EntityHitResult hitResult) {
         super.onHitEntity(hitResult);
-        if (!this.level().isClientSide)
-        {
+        if (!this.level().isClientSide) {
             Entity entity = hitResult.getEntity();
             LivingEntity owner = (LivingEntity) this.getOwner();
-            if (!entity.getType().is(EntityTypeTags.FREEZE_IMMUNE_ENTITY_TYPES)) {
-                entity.hurt(TFDamageTypes.getIndirectEntityDamageSource(this.level(), TFDamageTypes.FROZEN, this, this.getOwner(), new EntityType[0]), getDamage());
-                ApplyFrostedEffect.doChillAuraEffect((LivingEntity) entity, 5 * 20, 0, true);
+            if (entity instanceof LivingEntity livingEntity) {
+                if (!livingEntity.getType().is(EntityTypeTags.FREEZE_IMMUNE_ENTITY_TYPES)) {
+                    livingEntity.hurt(TFDamageTypes.getIndirectEntityDamageSource(this.level(), TFDamageTypes.FROZEN, this, this.getOwner(), new EntityType[0]), getDamage());
+                    ApplyFrostedEffect.doChillAuraEffect(livingEntity, 5 * 20, 0, true);
+                }
             }
         }
     }

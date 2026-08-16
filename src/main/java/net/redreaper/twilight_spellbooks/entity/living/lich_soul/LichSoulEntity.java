@@ -30,6 +30,7 @@ import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichEntity;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModItems;
+import net.redreaper.twilight_spellbooks.particle.ModParticleHelper;
 import org.jetbrains.annotations.NotNull;
 import org.joml.Vector3f;
 import twilightforest.entity.boss.Lich;
@@ -84,7 +85,7 @@ public class LichSoulEntity extends Entity implements AntiMagicSusceptible {
                     }
                     this.playSound(SoundEvents.DECORATED_POT_SHATTER, 2, 0.75f);
                     this.playSound(SoundEvents.ELDER_GUARDIAN_CURSE, 2, 0.75f);
-                    MagicManager.spawnParticles(level(), TFParticleType.OMINOUS_FLAME.get(), getX(), getY(), getZ(), 50, .1, .1, .1, 0.3, false);
+                    MagicManager.spawnParticles(level(), ModParticleHelper.EXANIMATED_FIRE, getX(), getY(), getZ(), 50, .1, .1, .1, 0.3, false);
 
 
                     float f = player.getYRot() + 180;

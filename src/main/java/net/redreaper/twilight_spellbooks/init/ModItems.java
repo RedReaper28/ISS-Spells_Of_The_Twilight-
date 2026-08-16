@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.item.armor.ExanimatedLichArmorItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
+import net.redreaper.twilight_spellbooks.item.braces.KnightMetalBrace;
 import net.redreaper.twilight_spellbooks.item.curios.necklace.OminousBlazer;
 import net.redreaper.twilight_spellbooks.item.curios.ring.FieryRing;
 import net.redreaper.twilight_spellbooks.item.curios.ring.IronwoodRing;
@@ -67,6 +68,8 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> THORN_ROSE_RING = ITEMS.register("thorn_rose_ring",
             ThornRoseRing::new);
 
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_BRACE = ITEMS.register("knightmetal_brace",
+            KnightMetalBrace::new);
     public static final DeferredHolder<Item, Item> OMINOUS_BLAZER = ITEMS.register("ominous_blazer",
             OminousBlazer::new);
     public static final DeferredHolder<Item, Item> STEELEAF_SHEATH = ITEMS.register("steeleaf_sheath",

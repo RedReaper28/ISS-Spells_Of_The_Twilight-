@@ -10,12 +10,12 @@
     }
   },
   "pattern": [
-    " A ",
+    " AA",
     "ABA",
-    " A "
+    "AA "
   ],
   "result": {
     "count": 1,
-    "id": "twilight_spellbooks:knightmetal_ring"
+    "id": "twilight_spellbooks:knightmetal_brace"
   }
 }
