@@ -30,14 +30,13 @@ public class ModSpells  {
     //FIRE
     public static final Supplier<AbstractSpell> EXANIMATED_FIREBALL = registerSpell(new ExanimatedFireballSpell());
 
-
     //HOLY
     public static final Supplier<AbstractSpell> FORTIFYING_SHIELDS = registerSpell(new FortifyingShieldsSpell());
 
     //ICE
+    public static final Supplier<AbstractSpell> AVALANCHE = registerSpell(new AvalancheSpell());
     public static final Supplier<AbstractSpell> ICE_BOMB = registerSpell(new IceBombSpell());
     public static final Supplier<AbstractSpell> SUMMON_WINTER_WOLVES = registerSpell(new SummonWinterWolvesSpell());
-
 
     //LIGHTING
     public static final Supplier<AbstractSpell> CARMINITE_PULL = registerSpell(new CarminitePullSpell());

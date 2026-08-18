@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
-    "twilight_spellbooks:knightmetal_brace"
+    "twilight_spellbooks:knightmetal_brace",
+    "twilight_spellbooks:yeti_brace"
   ]
 }

@@ -1,10 +1,7 @@
 package net.redreaper.twilight_spellbooks.events;
 
-import io.redspace.ironsspellbooks.entity.spells.comet.CometRenderer;
-import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
-import net.minecraft.world.entity.EntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -18,6 +15,7 @@ import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichR
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.DeathTomeRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
+import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
@@ -26,12 +24,9 @@ import net.redreaper.twilight_spellbooks.particle.ExanimatedEmbersParticle;
 import net.redreaper.twilight_spellbooks.particle.ExanimatedFireParticle;
 import net.redreaper.twilight_spellbooks.particle.ExanimatedSmokeParticle;
 import net.redreaper.twilight_spellbooks.particle.MosquitoParticle;
-import twilightforest.client.model.TFModelLayers;
-import twilightforest.client.model.entity.DeathTomeModel;
-import twilightforest.client.renderer.entity.TFGenericMobRenderer;
 import twilightforest.client.renderer.entity.ThrownIceRenderer;
 import twilightforest.client.renderer.entity.WinterWolfRenderer;
-import twilightforest.init.TFEntities;
+
 
 
 @SuppressWarnings("removal")
@@ -56,6 +51,8 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.EXANIMATED_FIREBALL.get(), (context) -> new ExanimatedFireballRenderer(context, 1.25f));
         event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
+        event.registerEntityRenderer(ModEntities.ICE_CHUNK.get(), IceChunkRenderer::new);
+
 
 
         event.registerEntityRenderer(ModEntities.LICH_SOUL.get(), LichSoulRenderer::new);

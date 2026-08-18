@@ -2,6 +2,7 @@ package net.redreaper.twilight_spellbooks.init;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
 import io.redspace.ironsspellbooks.entity.spells.fireball.MagicFireball;
+import io.redspace.ironsspellbooks.entity.spells.snowball.Snowball;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -17,6 +18,7 @@ import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueen
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolem;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedDeathTome;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
+import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballEntity;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
@@ -115,6 +117,12 @@ public class ModEntities {
                     .sized(1f, 1f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_fireball").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<IceChunkProjectile>> ICE_CHUNK =
+            ENTITIES.register("ice_chunk", () -> EntityType.Builder.<IceChunkProjectile>of(IceChunkProjectile::new, MobCategory.MISC)
+                    .sized(0.75F, 0.75F)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "ice_chunk").toString()));
 
     public static void register(IEventBus eventBus)
     {

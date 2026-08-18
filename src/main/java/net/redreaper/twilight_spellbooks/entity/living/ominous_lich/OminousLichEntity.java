@@ -246,7 +246,8 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                                 SpellRegistry.HEARTSTOP_SPELL.get(),
                                 SpellRegistry.FORTIFY_SPELL.get(),
                                 SpellRegistry.OAKSKIN_SPELL.get(),
-                                SpellRegistry.HEAT_SURGE_SPELL.get()
+                                SpellRegistry.HEAT_SURGE_SPELL.get(),
+                                ModSpells.FORTIFYING_SHIELDS.get()
                         ),
                         // Movement
                         List.of(
@@ -257,7 +258,7 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                                 ModSpells.SUMMON_LOYAL_ZOMBIE.get(),
                                 ModSpells.SUMMON_DEATH_TOME.get(),
                                 SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.SACRIFICE_SPELL.get()
+                                ModSpells.LIFE_SACRIFICE.get()
                         )
                 ).setSingleUseSpell(SpellRegistry.FIREBALL_SPELL.get(), 70, 100, 3, 5)
                 .setSpellQuality(1.0f, 1.0f));
@@ -309,7 +310,8 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                                 SpellRegistry.FORTIFY_SPELL.get(),
                                 SpellRegistry.OAKSKIN_SPELL.get(),
                                 SpellRegistry.ABYSSAL_SHROUD_SPELL.get(),
-                                SpellRegistry.HEAT_SURGE_SPELL.get()
+                                SpellRegistry.HEAT_SURGE_SPELL.get(),
+                                ModSpells.FORTIFYING_SHIELDS.get()
                         ),
                         // Movement
                         List.of(
@@ -320,7 +322,7 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                                 ModSpells.SUMMON_LOYAL_ZOMBIE.get(),
                                 ModSpells.SUMMON_DEATH_TOME.get(),
                                 SpellRegistry.COUNTERSPELL_SPELL.get(),
-                                SpellRegistry.SACRIFICE_SPELL.get()
+                                ModSpells.LIFE_SACRIFICE.get()
                         )
                 ).setSingleUseSpell(ModSpells.SUMMON_LOYAL_ZOMBIE.get(), 100, 100, 8, 9)
                 .setSpellQuality(1.2f, 1.2f));

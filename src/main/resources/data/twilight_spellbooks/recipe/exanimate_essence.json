@@ -1,0 +1,40 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "equipment",
+  "ingredients": [
+    {
+      "item": "irons_spellbooks:cinder_essence"
+    },
+    {
+      "item": "irons_spellbooks:arcane_essence"
+    },
+    {
+      "item": "irons_spellbooks:arcane_essence"
+    },
+    {
+      "item": "irons_spellbooks:arcane_essence"
+    },
+    {
+      "item": "irons_spellbooks:arcane_essence"
+    },
+    {
+      "item": "twilightforest:exanimate_essence"
+    },
+    {
+      "item": "twilightforest:exanimate_essence"
+    },
+    {
+      "item": "twilightforest:exanimate_essence"
+    },
+    {
+      "item": "twilightforest:exanimate_essence"
+    },
+    {
+      "item": "twilightforest:exanimate_essence"
+    }
+  ],
+  "result": {
+    "count": 5,
+    "id": "twilightforest:exanimate_essence"
+  }
+}

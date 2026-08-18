@@ -27,7 +27,9 @@ public class ModTabs {
                         output.accept(ModItems.IRONWOOD_RING.get());
                         output.accept(ModItems.FIERY_RING.get());
                         output.accept(ModItems.THORN_ROSE_RING.get());
+                        output.accept(ModItems.NAGA_MANTLE.get());
                         output.accept(ModItems.KNIGHTMETAL_BRACE.get());
+                        output.accept(ModItems.YETI_BRACE.get());
                         output.accept(ModItems.OMINOUS_BLAZER.get());
                         output.accept(ModItems.STEELEAF_SHEATH.get());
                         output.accept(ModItems.KNIGHTMETAL_STAFF.get());

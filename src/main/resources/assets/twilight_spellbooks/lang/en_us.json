@@ -11,7 +11,6 @@
   "item.twilight_spellbooks.aurora_shard.guide": "Dropped by the Snow Queen",
   "item.twilight_spellbooks.deaths_essence": "Deaths Essence",
 
-
   "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Rooted Spell Book",
   "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming Damage by 15%",
   "item.twilight_spellbooks.knightmetal_spellbook": "Knights Honor Codex",
@@ -26,7 +25,11 @@
   "item.twilight_spellbooks.thorn_rose_ring": "Thorn Rose Ring",
   "item.twilight_spellbooks.thorn_rose_ring.desc": "Deals small Twilight Thorns Damage to Attackers",
   "item.twilight_spellbooks.fiery_ring.desc": "Deal 25% more Melee Damage to Burning Targets",
+  "item.twilight_spellbooks.naga_mantle": "Naga Scale Mantle",
+  "item.twilight_spellbooks.naga_mantle.desc": "Gain Resistance and Speed when suffering Fire Damage or Fire Spell Damage",
   "item.twilight_spellbooks.knightmetal_brace": "Knightmetal Brace",
+  "item.twilight_spellbooks.yeti_brace": "Yeti Wristband",
+  "item.twilight_spellbooks.yeti_brace.desc": "Force down an Ice Chunk to deal small damage on melee hit to freezing targets",
 
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
   "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting when dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",
@@ -75,6 +78,8 @@
   "spell.twilight_spellbooks.fortifying_shields": "Fortifying Shields",
   "spell.twilight_spellbooks.fortifying_shields.guide": "Cast to summon 6 Lich shields around you that block one hit per shield",
 
+  "spell.twilight_spellbooks.avalanche": "Avalanche",
+  "spell.twilight_spellbooks.avalanche.guide": "Create an avalanche to force down ice chunks into any creature inside the spells radius",
   "spell.twilight_spellbooks.ice_bomb": "Ice Bomb",
   "spell.twilight_spellbooks.ice_bomb.guide": "Launch a bomb made from ice, damaging and freezing entries it passes though and leaving a small freeze area on block impact ",
   "spell.twilight_spellbooks.summon_winter_wolves": "Summon Winter Wolves",

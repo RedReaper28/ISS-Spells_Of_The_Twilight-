@@ -1,4 +1,4 @@
-package net.redreaper.twilight_spellbooks.item.braces;
+package net.redreaper.twilight_spellbooks.item.curios.braces;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
