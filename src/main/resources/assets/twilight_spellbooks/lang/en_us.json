@@ -29,7 +29,7 @@
   "item.twilight_spellbooks.naga_mantle.desc": "Gain Resistance and Speed when suffering Fire Damage or Fire Spell Damage",
   "item.twilight_spellbooks.knightmetal_brace": "Knightmetal Brace",
   "item.twilight_spellbooks.yeti_brace": "Yeti Wristband",
-  "item.twilight_spellbooks.yeti_brace.desc": "Force down an Ice Chunk to deal small damage on melee hit to freezing targets",
+  "item.twilight_spellbooks.yeti_brace.desc": "Force down an Ice Chunk onto the target to deal small damage on melee hit",
 
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
   "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting when dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",

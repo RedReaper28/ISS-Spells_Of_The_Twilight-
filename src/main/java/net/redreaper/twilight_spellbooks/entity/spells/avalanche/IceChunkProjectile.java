@@ -10,7 +10,6 @@ import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.sounds.SoundEvent;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -59,7 +58,7 @@ public class IceChunkProjectile extends AbstractMagicProjectile {
 
     @Override
     public float getSpeed() {
-        return .65f;
+        return 1.5f;
     }
 
     @Override

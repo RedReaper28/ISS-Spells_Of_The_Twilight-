@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "twilightforest:naga_scale"
+    },
+    "B": {
+      "item": "irons_spellbooks:mithril_scrap"
+    }
+  },
+  "pattern": [
+    "A A",
+    "ABA",
+    " A "
+  ],
+  "result": {
+    "count": 1,
+    "id": "twilight_spellbooks:naga_mantle"
+  }
+}
