@@ -4,10 +4,12 @@ import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
+import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 
-public class ModStaffMaterials  implements IronsWeaponTier {
+public class ModStaffMaterials implements IronsWeaponTier {
     public static ModStaffMaterials KNIGHTMETAL;
+    public static ModStaffMaterials STEELEAF;
     float damage;
     float speed;
     AttributeContainer[] attributeContainers;
@@ -35,6 +37,13 @@ public class ModStaffMaterials  implements IronsWeaponTier {
         KNIGHTMETAL = new ModStaffMaterials(9.0F, -3.0F, new AttributeContainer[]{
                 new AttributeContainer(IronsLibRegistries.AttributeRegistry.ARMOR_PIERCE, 2, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
+    }
+
+    static {
+        STEELEAF = new ModStaffMaterials(6.0F, -2.5F, new AttributeContainer[]{
+                new AttributeContainer(ASAttributeRegistry.MAGIC_DAMAGE_CRIT_DAMAGE, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
     }
 }
 

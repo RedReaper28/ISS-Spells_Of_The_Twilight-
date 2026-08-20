@@ -29,7 +29,7 @@ import top.theillusivec4.curios.api.SlotContext;
 public class YetiBrace extends FlatCooldownPassiveAbilityCurio {
     public static final int COOLDOWN_IN_TICKS = 5 * 20;
     public YetiBrace() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1), Curios.NECKLACE_SLOT);
+        super(ItemPropertiesHelper.equipment().stacksTo(1), null);
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {

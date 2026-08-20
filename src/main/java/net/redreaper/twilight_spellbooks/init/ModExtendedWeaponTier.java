@@ -7,6 +7,8 @@ import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
@@ -20,6 +22,8 @@ public class ModExtendedWeaponTier implements Tier, IronsWeaponTier {
             new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
+    public static ExtendedWeaponTier MAZE_BUTCHERER = new ExtendedWeaponTier(2031, 11, -3.2F, 12, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, () -> Ingredient.of(TFItems.MAZE_SLIME_BALL),
+            new AttributeContainer(Attributes.MOVEMENT_SPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
     int uses;
     float damage;

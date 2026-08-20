@@ -1,4 +1,5 @@
 {
+  "item.twilight_spellbooks.ironwood_helve": "Ironwood Helve",
   "item.twilight_spellbooks.frost_essence": "Frost Essence",
   "item.twilight_spellbooks.frost_essence.guide": "Dropped by the Aurora Palace Mobs",
   "item.twilight_spellbooks.snow_silver_ingot": "Snow Silver Ingot  ",
@@ -27,6 +28,8 @@
   "item.twilight_spellbooks.fiery_ring.desc": "Deal 25% more Melee Damage to Burning Targets",
   "item.twilight_spellbooks.naga_mantle": "Naga Scale Mantle",
   "item.twilight_spellbooks.naga_mantle.desc": "Gain Resistance and Speed when suffering Fire Damage or Fire Spell Damage",
+  "item.twilight_spellbooks.carminite_mantle": "Vanishing Cloak",
+  "item.twilight_spellbooks.carminite_mantle.desc": "Gives 3s of True Invisibility and Charged when casting Lighting Spells",
   "item.twilight_spellbooks.knightmetal_brace": "Knightmetal Brace",
   "item.twilight_spellbooks.yeti_brace": "Yeti Wristband",
   "item.twilight_spellbooks.yeti_brace.desc": "Force down an Ice Chunk onto the target to deal small damage on melee hit",
@@ -36,9 +39,12 @@
   "item.twilight_spellbooks.ominous_blazer": "Exanimated Blazer",
   "item.twilight_spellbooks.ominous_blazer.desc": "Summons inflict Exanimating Burn on hit to reduce 50% of the targets healing and deal small damage over time",
 
+  "item.twilight_spellbooks.steeleaf_staff": "Razor Leaf",
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% Extra spell Damage to Unarmored Targets",
 
+
+  "item.twilight_spellbooks.maze_butcher": "Maze Butcher",
   "item.twilight_spellbooks.lich_greatsword": "Lich Greatsword",
 
   "item.twilight_spellbooks.tarnished_lich_crown": "Tarnished Mystical Crown",

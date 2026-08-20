@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.item.armor.ExanimatedLichArmorItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
+import net.redreaper.twilight_spellbooks.item.curios.body.CarminiteMantle;
 import net.redreaper.twilight_spellbooks.item.curios.body.NagaMantle;
 import net.redreaper.twilight_spellbooks.item.curios.braces.KnightMetalBrace;
 import net.redreaper.twilight_spellbooks.item.curios.braces.YetiBrace;
@@ -25,13 +26,17 @@ import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbo
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
 import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
+import net.redreaper.twilight_spellbooks.item.staffs.twilightStaff.SteeleafStaff;
 import net.redreaper.twilight_spellbooks.item.weapon.LichGreatswordItem;
+import net.redreaper.twilight_spellbooks.item.weapon.MazeButcherItem;
 
 import java.util.Collection;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS= DeferredRegister.createItems(TwilightSpellbooks.MOD_ID);
 
+    public static final DeferredHolder<Item, Item> IRONWOOD_HELVE= ITEMS.register("ironwood_helve",
+            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.RARE).fireResistant()));
     public static final DeferredHolder<Item, Item> AURORA_SHARD= ITEMS.register("aurora_shard",
             () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
     public static final DeferredHolder<Item, Item> DEATHS_ESSENCE= ITEMS.register("deaths_essence",
@@ -72,6 +77,8 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> NAGA_MANTLE = ITEMS.register("naga_mantle",
             NagaMantle::new);
+    public static final DeferredHolder<Item, Item> CARMINITE_MANTLE = ITEMS.register("carminite_mantle",
+            CarminiteMantle::new);
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_BRACE = ITEMS.register("knightmetal_brace",
             KnightMetalBrace::new);
     public static final DeferredHolder<Item, Item> YETI_BRACE = ITEMS.register("yeti_brace",
@@ -83,7 +90,11 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_STAFF = ITEMS.register("knightmetal_staff",
             KnightmetalStaff::new);
+    public static final DeferredHolder<Item, Item> STEELEAF_STAFF = ITEMS.register("steeleaf_staff",
+            SteeleafStaff::new);
 
+    public static final DeferredHolder<Item, Item> MAZE_BUTCHERER = ITEMS.register("maze_butcher",
+            MazeButcherItem::new);
     public static final DeferredHolder<Item, Item> LICH_GREATSWORD = ITEMS.register("lich_greatsword",
             LichGreatswordItem::new);
 

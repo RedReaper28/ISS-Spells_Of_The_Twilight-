@@ -24,23 +24,29 @@ public class ModTabs {
                         output.accept(ModItems.CARMINITE_SPELL_BOOK.get());
                         output.accept(ModItems.FIERY_SPELL_BOOK.get());
                         output.accept(ModItems.SNOW_QUEEN_SPELL_BOOK.get());
-                        output.accept(ModItems.IRONWOOD_RING.get());
-                        output.accept(ModItems.FIERY_RING.get());
-                        output.accept(ModItems.THORN_ROSE_RING.get());
-                        output.accept(ModItems.NAGA_MANTLE.get());
-                        output.accept(ModItems.KNIGHTMETAL_BRACE.get());
-                        output.accept(ModItems.YETI_BRACE.get());
-                        output.accept(ModItems.OMINOUS_BLAZER.get());
-                        output.accept(ModItems.STEELEAF_SHEATH.get());
-                        output.accept(ModItems.KNIGHTMETAL_STAFF.get());
-                        output.accept(ModItems.LICH_GREATSWORD.get());
-                        output.accept(ModItems.TARNISHED_LICH_CROWN.get());
 
+                        output.accept(ModItems.STEELEAF_STAFF.get());
+                        output.accept(ModItems.KNIGHTMETAL_STAFF.get());
+                        output.accept(ModItems.MAZE_BUTCHERER.get());
+                        output.accept(ModItems.LICH_GREATSWORD.get());
+
+                        output.accept(ModItems.TARNISHED_LICH_CROWN.get());
                         output.accept(ModItems.EXANIMATED_LICH_HELMET.get());
                         output.accept(ModItems.EXANIMATED_LICH_CHESTPLATE.get());
                         output.accept(ModItems.EXANIMATED_LICH_LEGGINGS.get());
                         output.accept(ModItems.EXANIMATED_LICH_BOOTS.get());
 
+                        output.accept(ModItems.IRONWOOD_RING.get());
+                        output.accept(ModItems.FIERY_RING.get());
+                        output.accept(ModItems.THORN_ROSE_RING.get());
+                        output.accept(ModItems.NAGA_MANTLE.get());
+                        output.accept(ModItems.CARMINITE_MANTLE.get());
+                        output.accept(ModItems.KNIGHTMETAL_BRACE.get());
+                        output.accept(ModItems.YETI_BRACE.get());
+                        output.accept(ModItems.OMINOUS_BLAZER.get());
+                        output.accept(ModItems.STEELEAF_SHEATH.get());
+
+                        output.accept(ModItems.IRONWOOD_HELVE.get());
                         output.accept(ModItems.FROST_ESSENCE.get());
                         output.accept(ModItems.SNOW_SILVER_INGOT.get());
                         output.accept(ModItems.LICH_PHYLACTERY.get());
