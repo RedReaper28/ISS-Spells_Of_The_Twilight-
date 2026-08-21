@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.item.armor.ExanimatedLichArmorItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
+import net.redreaper.twilight_spellbooks.item.armor.TarnishedQueenCrownItem;
 import net.redreaper.twilight_spellbooks.item.curios.body.CarminiteMantle;
 import net.redreaper.twilight_spellbooks.item.curios.body.NagaMantle;
 import net.redreaper.twilight_spellbooks.item.curios.braces.KnightMetalBrace;
@@ -109,6 +110,8 @@ public class ModItems {
 
     public static final DeferredHolder<Item, Item> TARNISHED_LICH_CROWN = ITEMS.register("tarnished_lich_crown",
             () -> new TarnishedLichCrownItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.HELMET.getDurability(48))));
+    public static final DeferredHolder<Item, Item> TARNISHED_QUEEN_CROWN = ITEMS.register("tarnished_queen_crown",
+            () -> new TarnishedQueenCrownItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.HELMET.getDurability(48))));
 
 
 

@@ -31,6 +31,7 @@ public class ModTabs {
                         output.accept(ModItems.LICH_GREATSWORD.get());
 
                         output.accept(ModItems.TARNISHED_LICH_CROWN.get());
+                        output.accept(ModItems.TARNISHED_QUEEN_CROWN.get());
                         output.accept(ModItems.EXANIMATED_LICH_HELMET.get());
                         output.accept(ModItems.EXANIMATED_LICH_CHESTPLATE.get());
                         output.accept(ModItems.EXANIMATED_LICH_LEGGINGS.get());
