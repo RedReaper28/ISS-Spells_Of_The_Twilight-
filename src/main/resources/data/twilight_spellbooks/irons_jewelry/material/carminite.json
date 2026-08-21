@@ -1,0 +1,32 @@
+{
+  "bonusParameters": {
+    "irons_jewelry:action": {
+      "action": {
+        "type": "irons_jewelry:apply_damage",
+        "amount": {
+          "base": 1.0,
+          "scalar": 1.0
+        },
+        "damageType": "minecraft:lightning_bolt"
+      },
+      "targetSelf": false
+    },
+    "irons_jewelry:attribute": {
+      "amount": 0.5,
+      "attribute": "minecraft:generic.movement_speed",
+      "operation": "add_multiplied_total"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "minecraft:slowness"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "minecraft:speed"
+    }
+  },
+  "descriptionId": "material.twilight_spellbooks.carminite",
+  "ingredient": {
+    "item": "twilightforest:carminite"
+  },
+  "paletteLocation": "twilight_spellbooks:palettes/carminite",
+  "quality": 1.5
+}

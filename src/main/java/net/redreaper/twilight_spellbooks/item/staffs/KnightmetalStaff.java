@@ -28,9 +28,15 @@ import java.util.List;
 public class KnightmetalStaff extends StaffItem {
     private static final float KNIGHTMETAL_MULT_DAMAGE = 0.20F;
     public KnightmetalStaff() {
-        super(ItemPropertiesHelper.equipment(1).fireResistant().rarity(ASRarities.FORBIDDEN_RARITY_PROXY.getValue())
-                .attributes(ExtendedSwordItem.createAttributes(ModStaffMaterials.KNIGHTMETAL)));
+        super(
+                new Properties()
+                        .stacksTo(1)
+                        .rarity(ASRarities.FORBIDDEN_RARITY_PROXY.getValue())
+                        .attributes(ExtendedSwordItem.createAttributes(ModStaffMaterials.KNIGHTMETAL)
+                        )
+        );
     }
+
 
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);

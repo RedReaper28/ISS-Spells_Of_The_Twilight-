@@ -17,6 +17,7 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
@@ -26,7 +27,7 @@ import top.theillusivec4.curios.api.SlotContext;
 @EventBusSubscriber
 public class NagaMantle extends SimpleDescriptiveCurio {
     public NagaMantle() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1));
+        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.RARE));
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {

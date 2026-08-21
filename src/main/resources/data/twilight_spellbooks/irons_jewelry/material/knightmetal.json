@@ -1,0 +1,34 @@
+{
+  "bonusParameters": {
+    "irons_jewelry:action": {
+      "action": {
+        "type": "irons_jewelry:apply_effect",
+        "amplifier": {
+          "base": 0.0,
+          "max": 2.0,
+          "scalar": 1.0
+        },
+        "duration": {
+          "base": 80.0,
+          "scalar": 0.0
+        },
+        "effect": "minecraft:resistance"
+      },
+      "targetSelf": true
+    },
+    "irons_jewelry:attribute": {
+      "amount": 1,
+      "attribute": "irons_lib:armor_pierce",
+      "operation": "add_value"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "irons_spellbooks:rend"
+      }
+  },
+  "descriptionId": "material.twilight_spellbooks.knightmetal",
+  "ingredient": {
+    "item": "twilightforest:knightmetal_ingot"
+  },
+  "paletteLocation": "twilight_spellbooks:palettes/knightmetal",
+  "quality": 2.0
+}

@@ -26,7 +26,7 @@ import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbo
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
 import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
-import net.redreaper.twilight_spellbooks.item.staffs.twilightStaff.SteeleafStaff;
+import net.redreaper.twilight_spellbooks.item.staffs.SteeleafStaff;
 import net.redreaper.twilight_spellbooks.item.weapon.LichGreatswordItem;
 import net.redreaper.twilight_spellbooks.item.weapon.MazeButcherItem;
 

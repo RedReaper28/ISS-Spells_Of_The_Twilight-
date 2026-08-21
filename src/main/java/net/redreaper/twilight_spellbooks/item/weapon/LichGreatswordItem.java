@@ -21,10 +21,19 @@ public class LichGreatswordItem extends MagicSwordItem implements UniqueItem {
     public LichGreatswordItem() {
         super(
                 ModExtendedWeaponTier.LICH_GREATSWORD,
-                ItemPropertiesHelper.equipment(1).fireResistant().rarity(ASRarities.COSMIC_RARITY_PROXY.getValue()).attributes(ExtendedSwordItem.createAttributes(ModExtendedWeaponTier.LICH_GREATSWORD)),
-                SpellDataRegistryHolder.of(new SpellDataRegistryHolder(ModSpells.EXANIMATED_FIREBALL, 1))
+                new Properties()
+                        .stacksTo(1)
+                        .rarity(ASRarities.COSMIC_RARITY_PROXY.getValue())
+                        .fireResistant()
+                        .attributes(ExtendedSwordItem.createAttributes(ModExtendedWeaponTier.LICH_GREATSWORD)
+                        ),
+                SpellDataRegistryHolder.of(
+                        new SpellDataRegistryHolder(ModSpells.EXANIMATED_FIREBALL, 1)
+                )
         );
     }
+
+
 
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {

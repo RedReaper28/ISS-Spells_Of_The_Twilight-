@@ -51,6 +51,10 @@ public class ExanimatedFireballSpell extends AbstractSpell {
         this.baseManaCost = 60;
     }
 
+    public boolean allowLooting() {
+        return false;
+    }
+
     @Override
     public CastType getCastType() {
         return CastType.LONG;

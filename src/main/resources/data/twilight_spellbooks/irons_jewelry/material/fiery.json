@@ -1,0 +1,31 @@
+{
+  "bonusParameters": {
+    "irons_jewelry:action": {
+      "action": {
+        "type": "irons_jewelry:ignite",
+        "tickDuration": {
+          "base": 80.0,
+          "scalar": 0.0
+        }
+      },
+      "targetSelf": false
+    },
+    "irons_jewelry:attribute": {
+      "amount": 0.05,
+      "attribute": "minecraft:generic.attack_damage",
+      "operation": "add_multiplied_total"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "irons_spellbooks:rend"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "minecraft:fire_resistance"
+    }
+  },
+  "descriptionId": "material.twilight_spellbooks.fiery",
+  "ingredient": {
+    "item": "twilightforest:fiery_ingot"
+  },
+  "paletteLocation": "twilight_spellbooks:palettes/fiery",
+  "quality": 2.5
+}

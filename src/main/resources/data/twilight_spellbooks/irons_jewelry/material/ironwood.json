@@ -1,0 +1,15 @@
+{
+  "bonusParameters": {
+    "irons_jewelry:attribute": {
+      "amount": 1,
+      "attribute": "minecraft:generic.armor",
+      "operation": "add_value"
+    }
+  },
+  "descriptionId": "material.twilight_spellbooks.ironwood",
+  "ingredient": {
+    "item": "twilightforest:ironwood_ingot"
+  },
+  "paletteLocation": "twilight_spellbooks:palettes/ironwood",
+  "quality": 0.75
+}

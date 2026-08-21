@@ -2,8 +2,6 @@ package net.redreaper.twilight_spellbooks.item.curios.braces;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
-import io.redspace.ironsspellbooks.compat.Curios;
-import io.redspace.ironsspellbooks.item.curios.PassiveAbilityCurio;
 import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.items.curios.FlatCooldownPassiveAbilityCurio;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
@@ -16,10 +14,10 @@ import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkProjectile;
 import net.redreaper.twilight_spellbooks.init.ModItems;
@@ -29,7 +27,7 @@ import top.theillusivec4.curios.api.SlotContext;
 public class YetiBrace extends FlatCooldownPassiveAbilityCurio {
     public static final int COOLDOWN_IN_TICKS = 5 * 20;
     public YetiBrace() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1), null);
+        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.RARE), null);
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {

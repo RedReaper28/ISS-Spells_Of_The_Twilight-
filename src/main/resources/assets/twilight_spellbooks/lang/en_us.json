@@ -104,5 +104,14 @@
   "display.twilight_spellbooks.spawn": "Back to life once again",
   "display.twilight_spellbooks.phase_2": "Perish, Mortal",
 
+
+  "material.twilight_spellbooks.naga_scale": "Naga Scale",
+  "material.twilight_spellbooks.ironwood": "Ironwood",
+  "material.twilight_spellbooks.steeleaf": "Steeleaf",
+  "material.twilight_spellbooks.knightmetal": "Knightmetal",
+  "material.twilight_spellbooks.carminite": "Carminite",
+  "material.twilight_spellbooks.fiery": "Fiery",
+
+
   "ui.twilight_spellbooks.shields": "Shields"
 }

@@ -1,0 +1,34 @@
+{
+  "bonusParameters": {
+    "irons_jewelry:action": {
+      "action": {
+        "type": "irons_jewelry:apply_effect",
+        "amplifier": {
+          "base": 0.0,
+          "max": 2.0,
+          "scalar": 1.0
+        },
+        "duration": {
+          "base": 80.0,
+          "scalar": 0.0
+        },
+        "effect": "minecraft:fire_resistance"
+      },
+      "targetSelf": true
+    },
+    "irons_jewelry:attribute": {
+      "amount": -0.05,
+      "attribute": "minecraft:generic.burning_time",
+      "operation": "add_multiplied_total"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "minecraft:poison"
+    }
+  },
+  "descriptionId": "material.twilight_spellbooks.naga_scale",
+  "ingredient": {
+    "item": "twilightforest:naga_scale"
+  },
+  "paletteLocation": "twilight_spellbooks:palettes/naga_scale",
+  "quality": 1.5
+}

@@ -32,10 +32,18 @@ public class MazeButcherItem extends MagicSwordItem {
     public MazeButcherItem() {
         super(
                 ModExtendedWeaponTier.MAZE_BUTCHERER,
-                ItemPropertiesHelper.equipment(1).fireResistant().rarity(Rarity.EPIC).attributes(ExtendedSwordItem.createAttributes(ModExtendedWeaponTier.MAZE_BUTCHERER)),
-                SpellDataRegistryHolder.of(new SpellDataRegistryHolder(ModSpells.BEAST_LUNGE, 3))
+                new Properties()
+                        .stacksTo(1)
+                        .rarity(Rarity.EPIC)
+                        .fireResistant()
+                        .attributes(ExtendedSwordItem.createAttributes(ModExtendedWeaponTier.MAZE_BUTCHERER)
+                        ),
+                SpellDataRegistryHolder.of(
+                        new SpellDataRegistryHolder(ModSpells.BEAST_LUNGE, 3)
+                )
         );
     }
+
 
     @Override
     public void appendHoverText(@NotNull ItemStack itemStack, TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
