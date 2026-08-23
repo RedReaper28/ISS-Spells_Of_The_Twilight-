@@ -47,6 +47,8 @@ public class ModTabs {
                         output.accept(ModItems.OMINOUS_BLAZER.get());
                         output.accept(ModItems.STEELEAF_SHEATH.get());
 
+                        output.accept(ModItems.EXANIMATED_LICH_LOOT_BAG.get());
+
                         output.accept(ModItems.IRONWOOD_HELVE.get());
                         output.accept(ModItems.FROST_ESSENCE.get());
                         output.accept(ModItems.SNOW_SILVER_INGOT.get());

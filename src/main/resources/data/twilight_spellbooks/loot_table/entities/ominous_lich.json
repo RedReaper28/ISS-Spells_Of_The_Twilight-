@@ -2,70 +2,10 @@
   "type": "minecraft:entity",
   "pools": [
     {
-      "bonus_rolls": 0.0,
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 3.0,
-                "min": 2.0
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 5.0,
-                "min": 3.0
-              },
-              "function": "minecraft:enchanted_count_increase",
-              "enchantment": "minecraft:looting"
-            }
-          ],
-          "name": "twilight_spellbooks:deaths_essence"
-        }
-      ],
-      "rolls": 2
-    },
-    {
-      "bonus_rolls": 0.0,
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "functions": [
-            {
-              "add": false,
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 6.0,
-                "min": 2.0
-              },
-              "function": "minecraft:set_count"
-            },
-            {
-              "count": {
-                "type": "minecraft:uniform",
-                "max": 10.0,
-                "min": 5.0
-              },
-              "function": "minecraft:enchanted_count_increase",
-              "enchantment": "minecraft:looting"
-            }
-          ],
-          "name": "irons_spellbooks:legendary_ink"
-        }
-      ],
-      "rolls": 2
-    },
-    {
-      "entries": [
-        {
-          "type": "minecraft:item",
-          "name": "twilight_spellbooks:lich_greatsword"
+          "name": "twilight_spellbooks:exanimated_lich_loot_bag"
         }
       ],
       "rolls": 1

@@ -5,9 +5,11 @@ import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
 import io.redspace.ironsspellbooks.util.MinecraftInstanceHelper;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
+import net.minecraft.client.Minecraft;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.particle.ModParticleHelper;
+import net.redreaper.twilight_spellbooks.spells.ExanimatedStepSpell;
 import twilightforest.init.TFParticleType;
 
 public class ModClientSpellCastHelper {
@@ -56,5 +58,15 @@ public class ModClientSpellCastHelper {
                 level.addParticle(ParticleHelper.ENDER_SPARKS, x + posOffset.x * .5f, y + posOffset.y * .5f, z + posOffset.z * .5f, motion.x, motion.y, motion.z);
             }
         });
+    }
+
+    public static void handleClientboundThunderStep(Vec3 pos1, Vec3 pos2) {
+        var player = Minecraft.getInstance().player;
+
+        if (player != null) {
+            var level = Minecraft.getInstance().player.level();
+            ExanimatedStepSpell.particleCloud(level, pos1);
+            ExanimatedStepSpell.particleCloud(level, pos2);
+        }
     }
 }

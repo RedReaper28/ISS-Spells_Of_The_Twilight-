@@ -297,8 +297,7 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                                 SpellRegistry.BLAZE_STORM_SPELL.get(),
                                 SpellRegistry.RAY_OF_SIPHONING_SPELL.get(),
                                 SpellRegistry.ACUPUNCTURE_SPELL.get(),
-                                SpellRegistry.FIREBALL_SPELL.get(),
-                                SpellRegistry.WITHER_SKULL_SPELL.get(),
+                                ModSpells.EXANIMATED_FIREBALL.get(),
                                 ModSpells.TWILIGHT_BOLT.get()
                         ),
                         // Defense
@@ -315,7 +314,7 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                         ),
                         // Movement
                         List.of(
-                                SpellRegistry.BLOOD_STEP_SPELL.get()
+                                ModSpells.EXANIMATED_STEP.get()
                         ),
                         // Support
                         List.of(

@@ -1,0 +1,31 @@
+{
+  "bonusParameters": {
+    "irons_jewelry:action": {
+      "action": {
+        "type": "irons_jewelry:apply_freeze",
+        "amount": {
+          "base": 80.0,
+          "scalar": 0.0
+        }
+      },
+      "targetSelf": false
+    },
+    "irons_jewelry:attribute": {
+      "amount": 0.05,
+      "attribute": "minecraft:generic.attack_damage",
+      "operation": "add_multiplied_total"
+    },
+    "irons_jewelry:negative_effect": {
+      "effect": "irons_spellbooks:chilled"
+    },
+    "irons_jewelry:positive_effect": {
+      "effect": "irons_spellbooks:frostbite"
+    }
+  },
+  "descriptionId": "material.twilight_spellbooks.snow_silver",
+  "ingredient": {
+    "item": "twilight_spellbooks:snow_silver_ingot"
+  },
+  "paletteLocation": "twilight_spellbooks:palettes/snow_silver",
+  "quality": 2.5
+}

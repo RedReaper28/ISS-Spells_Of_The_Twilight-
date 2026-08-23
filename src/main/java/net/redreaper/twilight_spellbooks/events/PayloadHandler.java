@@ -6,6 +6,7 @@ import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.particle.ExanimatedExplosionParticlePacket;
+import net.redreaper.twilight_spellbooks.particle.ExanimatedStepParticlePacket;
 
 @EventBusSubscriber
 public class PayloadHandler {
@@ -16,6 +17,8 @@ public class PayloadHandler {
 
         //PARTICLES
         payloadRegistrar.playToClient(ExanimatedExplosionParticlePacket.TYPE, ExanimatedExplosionParticlePacket.STREAM_CODEC, ExanimatedExplosionParticlePacket::handle);
+
+        payloadRegistrar.playToClient(ExanimatedStepParticlePacket.TYPE, ExanimatedStepParticlePacket.STREAM_CODEC, ExanimatedStepParticlePacket::handle);
 
     }
 }

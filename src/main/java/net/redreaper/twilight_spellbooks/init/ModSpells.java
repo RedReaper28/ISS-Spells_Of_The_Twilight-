@@ -27,8 +27,9 @@ public class ModSpells  {
     public static final Supplier<AbstractSpell> SUMMON_DEATH_TOME = registerSpell(new SummonDeathLibrarySpell());
     public static final Supplier<AbstractSpell> TWILIGHT_BOLT = registerSpell(new TwilightBoltSpell());
 
-    //FIRE
+    //EXANIMATED?
     public static final Supplier<AbstractSpell> EXANIMATED_FIREBALL = registerSpell(new ExanimatedFireballSpell());
+    public static final Supplier<AbstractSpell> EXANIMATED_STEP = registerSpell(new ExanimatedStepSpell());
 
     //HOLY
     public static final Supplier<AbstractSpell> FORTIFYING_SHIELDS = registerSpell(new FortifyingShieldsSpell());

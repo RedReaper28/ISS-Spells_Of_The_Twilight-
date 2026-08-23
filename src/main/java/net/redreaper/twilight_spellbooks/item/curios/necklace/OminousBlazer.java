@@ -47,7 +47,9 @@ public class OminousBlazer extends SimpleDescriptiveCurio {
 
         if (entityAttacker instanceof IMagicSummon summon && summon.getSummoner() instanceof Player summoner) {
             if (ASUtils.hasCurio(summoner, ModItems.OMINOUS_BLAZER.get() )) {
-                entityTarget.addEffect(new MobEffectInstance(ModMobEffects.OMINOUS_BURN, 3*20, 0, true, true, true));
+                if (entityAttacker instanceof LivingEntity livingEntity) {
+                    livingEntity.addEffect(new MobEffectInstance(ModMobEffects.OMINOUS_BURN, 3 * 20, 0, true, true, true));
+                }
             }
         }
     }

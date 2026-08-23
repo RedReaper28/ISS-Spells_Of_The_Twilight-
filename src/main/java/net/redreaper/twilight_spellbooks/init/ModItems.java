@@ -26,6 +26,7 @@ import net.redreaper.twilight_spellbooks.item.curios.spellbooks.KnightMetalSpell
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
+import net.redreaper.twilight_spellbooks.item.misc.ExanimatedLichLootBagItem;
 import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
 import net.redreaper.twilight_spellbooks.item.staffs.SteeleafStaff;
 import net.redreaper.twilight_spellbooks.item.weapon.LichGreatswordItem;
@@ -65,6 +66,8 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> SNOW_QUEEN_SPELL_BOOK = ITEMS.register("snow_queen_spell_book",
             SnowQueenSpellbookItem::new);
 
+    public static final DeferredHolder<Item, Item> EXANIMATED_LICH_LOOT_BAG = ITEMS.register("exanimated_lich_loot_bag",
+            ExanimatedLichLootBagItem::new);
 
 
     public static final DeferredHolder<Item, Item> IRONWOOD_RING = ITEMS.register("ironwood_ring",

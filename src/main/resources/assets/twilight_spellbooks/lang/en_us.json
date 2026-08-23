@@ -12,6 +12,8 @@
   "item.twilight_spellbooks.aurora_shard.guide": "Dropped by the Snow Queen",
   "item.twilight_spellbooks.deaths_essence": "Deaths Essence",
 
+  "item.twilight_spellbooks.exanimated_lich_loot_bag": "Exanimated Lich Loot Bag",
+
   "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Rooted Spell Book",
   "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming Damage by 15%",
   "item.twilight_spellbooks.knightmetal_spellbook": "Knights Honor Codex",
@@ -80,7 +82,9 @@
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
 
   "spell.twilight_spellbooks.exanimated_fireball": "Exanimated Fireball",
-  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich .Damage scales with Fire Spell Power and Emder Spell Power",
+  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich .Damage scales with Fire Spell Power and Ender Spell Power",
+  "spell.twilight_spellbooks.exanimated_step": "Exanimated Step",
+  "spell.twilight_spellbooks.exanimated_step.guide": "Teleport to where you are looking, producing a explosion where you appear that ignite enemies and inflicts Exanimated Burn for 5s .Damage scales with Fire,Blood and Ender Spell Power",
 
   "spell.twilight_spellbooks.fortifying_shields": "Fortifying Shields",
   "spell.twilight_spellbooks.fortifying_shields.guide": "Cast to summon 6 Lich shields around you that block one hit per shield",
@@ -112,7 +116,7 @@
   "material.twilight_spellbooks.knightmetal": "Knightmetal",
   "material.twilight_spellbooks.carminite": "Carminite",
   "material.twilight_spellbooks.fiery": "Fiery",
-
+  "material.twilight_spellbooks.snow_silver": "Snow Silver",
 
   "ui.twilight_spellbooks.shields": "Shields"
 }
