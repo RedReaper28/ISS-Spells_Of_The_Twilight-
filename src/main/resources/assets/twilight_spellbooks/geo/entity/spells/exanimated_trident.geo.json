@@ -1,0 +1,92 @@
+	{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.water_trident",
+				"texture_width": 96,
+				"texture_height": 96,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0.5, 0]
+			},
+			"bones": [
+				{
+					"name": "all",
+					"pivot": [0, 0, -11],
+					"rotation": [90, 0, 0],
+					"cubes": [
+						{
+							"origin": [-2.5, 0, -11.5],
+							"size": [1, 4, 1],
+							"uv": {
+								"north": {"uv": [5, 4], "uv_size": [1, 4]},
+								"east": {"uv": [4, 4], "uv_size": [1, 4]},
+								"south": {"uv": [7, 4], "uv_size": [1, 4]},
+								"west": {"uv": [6, 4], "uv_size": [1, 4]},
+								"up": {"uv": [5, 3], "uv_size": [1, 1]},
+								"down": {"uv": [6, 4], "uv_size": [1, -1]}
+							}
+						},
+						{
+							"origin": [-0.5, 1, -11.5],
+							"size": [1, 4, 1],
+							"uv": {
+								"north": {"uv": [5, 4], "uv_size": [1, 4]},
+								"east": {"uv": [4, 4], "uv_size": [1, 4]},
+								"south": {"uv": [7, 4], "uv_size": [1, 4]},
+								"west": {"uv": [6, 4], "uv_size": [1, 4]},
+								"up": {"uv": [5, 3], "uv_size": [1, 1]},
+								"down": {"uv": [6, 4], "uv_size": [1, -1]}
+							}
+						},
+						{
+							"origin": [1.5, 0, -11.5],
+							"size": [1, 4, 1],
+							"uv": {
+								"north": {"uv": [6, 4], "uv_size": [-1, 4]},
+								"east": {"uv": [7, 4], "uv_size": [-1, 4]},
+								"south": {"uv": [8, 4], "uv_size": [-1, 4]},
+								"west": {"uv": [5, 4], "uv_size": [-1, 4]},
+								"up": {"uv": [6, 3], "uv_size": [-1, 1]},
+								"down": {"uv": [7, 4], "uv_size": [-1, -1]}
+							}
+						},
+						{"origin": [-1.5, -2, -11.5], "size": [3, 3, 1], "uv": [10, 0]},
+						{
+							"origin": [-0.5, -27, -11.5],
+							"size": [1, 25, 1],
+							"uv": {
+								"north": {"uv": [1, 1], "uv_size": [1, 25]},
+								"east": {"uv": [0, 1], "uv_size": [1, 25]},
+								"south": {"uv": [3, 1], "uv_size": [1, 25]},
+								"west": {"uv": [2, 1], "uv_size": [1, 25]},
+								"up": {"uv": [1, 0], "uv_size": [1, 1]},
+								"down": {"uv": [2, 1], "uv_size": [1, -1]}
+							}
+						}
+					]
+				},
+				{
+					"name": "riptide",
+					"parent": "all",
+					"pivot": [0, -11, -11],
+					"cubes": [
+						{
+							"origin": [-8, -31, -19],
+							"size": [16, 35, 16],
+							"uv": {
+								"north": {"uv": [16, 48], "uv_size": [16, 35]},
+								"east": {"uv": [0, 48], "uv_size": [16, 35]},
+								"south": {"uv": [48, 48], "uv_size": [16, 35]},
+								"west": {"uv": [32, 48], "uv_size": [16, 35]},
+								"up": {"uv": [16, 32], "uv_size": [16, 16]},
+								"down": {"uv": [32, 48], "uv_size": [16, -16]}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

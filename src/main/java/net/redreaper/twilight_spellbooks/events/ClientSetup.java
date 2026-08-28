@@ -16,6 +16,7 @@ import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueen
 import net.redreaper.twilight_spellbooks.entity.living.summon.DeathTomeRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRenderer;
+import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTridentRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
@@ -48,6 +49,7 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.CARMINITE_PULL_PROJECTILE.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.EXTENDED_THROWN_ICE.get(), ThrownIceRenderer::new);
         event.registerEntityRenderer(ModEntities.EXTENDED_NATURE_BOLT.get(), ThrownItemRenderer::new);
+        event.registerEntityRenderer(ModEntities.EXANIMATED_TRIDENT.get(), ExanimatedTridentRenderer::new);
         event.registerEntityRenderer(ModEntities.EXANIMATED_FIREBALL.get(), (context) -> new ExanimatedFireballRenderer(context, 1.25f));
         event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));

@@ -98,7 +98,7 @@ public class ExanimatedFireballSpell extends AbstractSpell {
             double firePower = caster.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
             double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
             double enderPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
-            return (float)((double)5.0F + (float)((double) 5 * (double)this.getSpellPower(spellLevel, caster) * ((double)0.3 * firePower + (double)0.3 * enderPower + (double)0.3 * bloodPower)));
+            return (float)((double)5.0F + (float)((double) 5 * (double)this.getSpellPower(spellLevel, caster) * (0.3 * firePower + 0.3 * enderPower + 0.3 * bloodPower)));
         }
     }
 

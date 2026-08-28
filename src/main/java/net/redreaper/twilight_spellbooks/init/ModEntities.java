@@ -20,6 +20,7 @@ import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedDeathTome;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
+import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTrident;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballEntity;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
 import net.redreaper.twilight_spellbooks.entity.spells.mosquito_swarm.MosquitoSwarmProjectile;
@@ -117,6 +118,12 @@ public class ModEntities {
                     .sized(1f, 1f)
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_fireball").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<ExanimatedTrident>> EXANIMATED_TRIDENT =
+            ENTITIES.register("exanimated_trident", () -> EntityType.Builder.<ExanimatedTrident>of(ExanimatedTrident::new, MobCategory.MISC)
+                    .sized(3, 1.5f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_trident").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<IceChunkProjectile>> ICE_CHUNK =
             ENTITIES.register("ice_chunk", () -> EntityType.Builder.<IceChunkProjectile>of(IceChunkProjectile::new, MobCategory.MISC)

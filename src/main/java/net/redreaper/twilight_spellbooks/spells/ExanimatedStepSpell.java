@@ -187,7 +187,7 @@ public class ExanimatedStepSpell extends AbstractSpell {
             double firePower = caster.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
             double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
             double enderPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
-            return (float)((double)2  * ((double)0.33F * firePower + (double)0.33F * enderPower + (double)0.33F * bloodPower));
+            return (float)((double)5  * ((double)0.5F * firePower + (double)0.5F * enderPower + (double)0.5F * bloodPower));
         }
     }
 
