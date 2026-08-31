@@ -1,6 +1,5 @@
 package net.redreaper.twilight_spellbooks.entity.spells.examinated_trident;
 
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
@@ -30,7 +29,6 @@ import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
 import software.bernie.geckolib.util.GeckoLibUtil;
 
-import java.util.List;
 import java.util.Optional;
 
 public class ExanimatedTrident extends AbstractMagicProjectile implements GeoEntity {
@@ -89,8 +87,26 @@ public class ExanimatedTrident extends AbstractMagicProjectile implements GeoEnt
             super.tick();
         } else {
             if (tickCount > EXPIRE_TIME) {
-                discard();
-                return;
+                if (!this.level().isClientSide) {
+                    impactParticles(xOld, yOld, zOld);
+                    float explosionRadius = getExplosionRadius();
+                    var explosionRadiusSqr = explosionRadius * explosionRadius;
+                    var entities = level().getEntities(this, this.getBoundingBox().inflate(explosionRadius));
+                    Vec3 losPoint = Utils.raycastForBlock(level(), this.position(), this.position().add(0, 2, 0), ClipContext.Fluid.NONE).getLocation();
+                    for (Entity entity : entities) {
+                        double distanceSqr = entity.distanceToSqr(this.position());
+                        if (distanceSqr < explosionRadiusSqr && canHitEntity(entity) && Utils.hasLineOfSight(level(), losPoint, entity.getBoundingBox().getCenter(), true)) {
+                            double p = (1 - distanceSqr / explosionRadiusSqr);
+                            float damage = (float) (this.damage * p);
+                            DamageSources.applyDamage(entity, damage, ModSpells.EXANIMATED_TRIDENTS.get().getDamageSource(this, getOwner()));
+                        }
+                    }
+                    PacketDistributor.sendToPlayersTrackingEntity(this, new ExanimatedExplosionParticlePacket(this.position().subtract(getDeltaMovement().scale(0.5)), getExplosionRadius()));
+                    playSound(SoundEvents.GENERIC_EXPLODE.value(), 4.0F, (1.0F + (this.level().random.nextFloat() - this.level().random.nextFloat()) * 0.2F) * 0.7F);
+                    discard();
+                    return;
+                }
+
             }
             if (shouldFall()) {
                 inGround = false;
@@ -123,11 +139,14 @@ public class ExanimatedTrident extends AbstractMagicProjectile implements GeoEnt
         pierceOrDiscard();
     }
 
-
-
     @Override
-    protected void onHitBlock(BlockHitResult blockHitResult) {
-        super.onHitBlock(blockHitResult);
+    protected void onHitBlock(BlockHitResult pResult) {
+        super.onHitBlock(pResult);
+        Vec3 vec3 = pResult.getLocation().subtract(this.getX(), this.getY(), this.getZ());
+        this.setDeltaMovement(vec3);
+        Vec3 vec31 = vec3.normalize().scale(0.05F);
+        this.setPosRaw(this.getX() - vec31.x, this.getY() - vec31.y, this.getZ() - vec31.z);
+        this.playSound(SoundEvents.ARROW_HIT, 1.0F, 1.2F / (this.random.nextFloat() * 0.2F + 0.9F));
         this.inGround = true;
         this.shakeTime = 7;
     }

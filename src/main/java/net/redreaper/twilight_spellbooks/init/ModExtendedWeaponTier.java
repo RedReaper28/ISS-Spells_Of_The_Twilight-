@@ -18,8 +18,9 @@ import java.util.function.Supplier;
 
 public class ModExtendedWeaponTier implements Tier, IronsWeaponTier {
     public static ExtendedWeaponTier LICH_GREATSWORD = new ExtendedWeaponTier(2031, 12, -2.6f, 16, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(TFItems.EXANIMATE_ESSENCE.get()),
-            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
-            new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.FIRE_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
             new AttributeContainer(AttributeRegistry.ELDRITCH_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
 
     public static ExtendedWeaponTier MAZE_BUTCHERER = new ExtendedWeaponTier(2031, 11, -3.2F, 12, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, () -> Ingredient.of(TFItems.MAZE_SLIME_BALL),

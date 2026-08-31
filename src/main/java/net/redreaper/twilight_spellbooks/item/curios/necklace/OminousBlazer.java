@@ -3,7 +3,7 @@ package net.redreaper.twilight_spellbooks.item.curios.necklace;
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.util.Utils;
+
 import io.redspace.ironsspellbooks.compat.Curios;
 import io.redspace.ironsspellbooks.entity.mobs.IMagicSummon;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
@@ -47,7 +47,7 @@ public class OminousBlazer extends SimpleDescriptiveCurio {
 
         if (entityAttacker instanceof IMagicSummon summon && summon.getSummoner() instanceof Player summoner) {
             if (ASUtils.hasCurio(summoner, ModItems.OMINOUS_BLAZER.get() )) {
-                if (entityAttacker instanceof LivingEntity livingEntity) {
+                if (entityTarget instanceof LivingEntity livingEntity) {
                     livingEntity.addEffect(new MobEffectInstance(ModMobEffects.OMINOUS_BURN, 3 * 20, 0, true, true, true));
                 }
             }

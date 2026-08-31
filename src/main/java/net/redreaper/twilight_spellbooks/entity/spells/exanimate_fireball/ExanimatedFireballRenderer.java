@@ -1,4 +1,4 @@
-package net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce;
+package net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball;
 
 import io.redspace.ironsspellbooks.entity.spells.fireball.FireballRenderer;
 import net.minecraft.client.renderer.entity.EntityRendererProvider;

@@ -2,6 +2,7 @@ package net.redreaper.twilight_spellbooks.spells;
 
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
+import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.*;
 import io.redspace.ironsspellbooks.api.util.AnimationHolder;
@@ -18,12 +19,13 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTrident;
+import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ExanimatedTridentsSpell extends AbstractSpell {
+public class ExanimatedTridentsSpell extends ExanimatedAbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_trident");
 
     @Override
@@ -36,7 +38,7 @@ public class ExanimatedTridentsSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.EPIC)
-            .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
+            .setSchoolResource(ModSpellSubSchool.EXANIMATED_RESOURCE)
             .setMaxLevel(4)
             .setCooldownSeconds(8)
             .build();
@@ -94,11 +96,23 @@ public class ExanimatedTridentsSpell extends AbstractSpell {
     }
 
     public float getDamage(int spellLevel, LivingEntity caster) {
-        return getSpellPower(spellLevel, caster);
+        if (caster == null) {
+            return this.getSpellPower(spellLevel, null) * 2;
+        } else {
+            double firePower = caster.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
+            double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
+            double enderPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
+            if (firePower == bloodPower && bloodPower == enderPower) {
+                return (float)((double)5 * ((double)0.75F * firePower + (double)0.75F * enderPower + (double)0.75F * bloodPower));
+            }
+            else {
+                return (float)((double)5 * ((double)0.5F * firePower + (double)0.5F * enderPower + (double)0.5F * bloodPower));
+            }
+        }
     }
 
     public float getRadius(int spellLevel, LivingEntity caster) {
-        return 6;
+        return 5;
     }
 
     @Override

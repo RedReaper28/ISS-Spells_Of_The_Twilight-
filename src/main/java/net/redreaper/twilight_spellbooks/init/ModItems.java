@@ -9,6 +9,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.item.armor.ExanimatedLichArmorItem;
+import net.redreaper.twilight_spellbooks.item.armor.KnightmetalWarmageArmorItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedQueenCrownItem;
 import net.redreaper.twilight_spellbooks.item.curios.body.CarminiteMantle;
@@ -101,6 +102,15 @@ public class ModItems {
             MazeButcherItem::new);
     public static final DeferredHolder<Item, Item> LICH_GREATSWORD = ITEMS.register("lich_greatsword",
             LichGreatswordItem::new);
+
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_MAGE_HELMET = ITEMS.register("knightmetal_mage_helmet",
+            () -> new KnightmetalWarmageArmorItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).durability(ArmorItem.Type.HELMET.getDurability(48))));
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_MAGE_CHESTPLATE = ITEMS.register("knightmetal_mage_chestplate",
+            () -> new KnightmetalWarmageArmorItem(   ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).durability(ArmorItem.Type.CHESTPLATE.getDurability(48))));
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_MAGE_LEGGINGS = ITEMS.register("knightmetal_mage_leggings",
+            () -> new KnightmetalWarmageArmorItem(   ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).durability(ArmorItem.Type.LEGGINGS.getDurability(48))));
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_MAGE_BOOTS = ITEMS.register("knightmetal_mage_boots",
+            () -> new KnightmetalWarmageArmorItem(   ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).durability(ArmorItem.Type.BOOTS.getDurability(48))));
 
     public static final DeferredHolder<Item, Item> EXANIMATED_LICH_HELMET = ITEMS.register("exanimated_lich_helmet",
             () -> new ExanimatedLichArmorItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.EPIC).durability(ArmorItem.Type.HELMET.getDurability(48))));

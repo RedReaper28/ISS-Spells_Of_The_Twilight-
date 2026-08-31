@@ -19,12 +19,13 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
-import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballEntity;
+import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballEntity;
+import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ExanimatedFireballSpell extends AbstractSpell {
+public class ExanimatedFireballSpell extends ExanimatedAbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_fireball");
 
     @Override
@@ -37,22 +38,17 @@ public class ExanimatedFireballSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.LEGENDARY)
-            .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
-            .setMaxLevel(1)
+            .setSchoolResource(ModSpellSubSchool.EXANIMATED_RESOURCE)
+            .setMaxLevel(5)
             .setCooldownSeconds(25)
-            .setAllowCrafting(false)
             .build();
 
     public ExanimatedFireballSpell() {
         this.manaCostPerLevel = 15;
-        this.baseSpellPower = 6;
+        this.baseSpellPower = 1;
         this.spellPowerPerLevel = 1;
         this.castTime = 40;
         this.baseManaCost = 60;
-    }
-
-    public boolean allowLooting() {
-        return false;
     }
 
     @Override
@@ -98,7 +94,12 @@ public class ExanimatedFireballSpell extends AbstractSpell {
             double firePower = caster.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
             double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
             double enderPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
-            return (float)((double)5.0F + (float)((double) 5 * (double)this.getSpellPower(spellLevel, caster) * (0.3 * firePower + 0.3 * enderPower + 0.3 * bloodPower)));
+            if (firePower == bloodPower && bloodPower == enderPower) {
+                return (float)((double)5+ 5  * ((double)1.5F * firePower + (double)1.5F * enderPower + (double)1.5F * bloodPower));
+            }
+            else {
+                return (float)((double)5+ 5  * (firePower + enderPower + bloodPower));
+            }
         }
     }
 

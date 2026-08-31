@@ -45,12 +45,16 @@
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% Extra spell Damage to Unarmored Targets",
 
-
   "item.twilight_spellbooks.maze_butcher": "Maze Butcher",
   "item.twilight_spellbooks.lich_greatsword": "Lich Greatsword",
+  "item.twilight_spellbooks.lich_greatsword.desc": "+1 to all Exanimated Spells",
 
   "item.twilight_spellbooks.tarnished_lich_crown": "Tarnished Mystical Crown",
   "item.twilight_spellbooks.tarnished_queen_crown": "Tarnished Aurora Crown",
+  "item.twilight_spellbooks.knightmetal_mage_helmet": "Knightmetal Warmage Mask",
+  "item.twilight_spellbooks.knightmetal_mage_chestplate": "Knightmetal Warmage Chestplate",
+  "item.twilight_spellbooks.knightmetal_mage_leggings": "Knightmetal Warmage Leggings ",
+  "item.twilight_spellbooks.knightmetal_mage_boots": "Knightmetal Warmage Boots",
   "item.twilight_spellbooks.exanimated_lich_helmet": "Exanimated Lich Crown",
   "item.twilight_spellbooks.exanimated_lich_chestplate": "Exanimated Lich Robe",
   "item.twilight_spellbooks.exanimated_lich_leggings": "Exanimated Lich Pants ",
@@ -82,9 +86,13 @@
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
 
   "spell.twilight_spellbooks.exanimated_fireball": "Exanimated Fireball",
-  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich .Damage scales with Fire Spell Power and Ender Spell Power",
+  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich .Damage scales with Fire Spell Power and Ender Spell Power.Reaches its full potential if thr 3 Spell Powers are equal",
+  "spell.twilight_spellbooks.exanimated_ray": "Exanimated Ray",
+  "spell.twilight_spellbooks.exanimated_ray.guide": "Fire a bean of pure Exanimated Flames dealing damage and applying Exanimated Burn .Damage scales with Fire,Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
   "spell.twilight_spellbooks.exanimated_step": "Exanimated Step",
-  "spell.twilight_spellbooks.exanimated_step.guide": "Teleport to where you are looking, producing a explosion where you appear that ignite enemies and inflicts Exanimated Burn for 5s .Damage scales with Fire,Blood and Ender Spell Power",
+  "spell.twilight_spellbooks.exanimated_step.guide": "Teleport to where you are looking, producing a explosion where you appear that ignite enemies and inflicts Exanimated Burn for 5s .Damage scales with Fire,Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
+  "spell.twilight_spellbooks.exanimated_trident": "Exanimated Trident",
+  "spell.twilight_spellbooks.exanimated_trident.guide": "Teleport to where you are looking, producing a explosion where you appear that ignite enemies and inflicts Exanimated Burn for 5s .Damage scales with Fire,Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
 
   "spell.twilight_spellbooks.fortifying_shields": "Fortifying Shields",
   "spell.twilight_spellbooks.fortifying_shields.guide": "Cast to summon 6 Lich shields around you that block one hit per shield",
@@ -118,5 +126,7 @@
   "material.twilight_spellbooks.fiery": "Fiery",
   "material.twilight_spellbooks.snow_silver": "Snow Silver",
 
-  "ui.twilight_spellbooks.shields": "Shields"
+  "ui.twilight_spellbooks.shields": "Shields",
+
+  "school.twilight_spellbooks.exanimated": "Exanimated Flame"
 }

@@ -4,7 +4,7 @@
     "item": "irons_spellbooks:arcane_rune"
   },
   "base": {
-    "tag": "irons_spellbooks:wizard_base_helmet"
+    "item": "irons_spellbooks:netherite_mage_helmet"
     },
   "result": {
     "components": {

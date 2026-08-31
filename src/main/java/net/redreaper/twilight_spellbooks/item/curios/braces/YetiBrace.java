@@ -9,7 +9,6 @@ import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attribute;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
@@ -43,18 +42,19 @@ public class YetiBrace extends FlatCooldownPassiveAbilityCurio {
         if (attacker instanceof ServerPlayer player) {
             if (ASUtils.hasCurio(player, ModItems.YETI_BRACE.get()) && (!player.getCooldowns().isOnCooldown(ModItems.YETI_BRACE.get()))) {
                 if (event.getSource().is(DamageTypes.PLAYER_ATTACK)) {
-                        IceChunkProjectile comet = new IceChunkProjectile(attacker.level(), (LivingEntity) attacker);
-                        comet.setDamage(5);
-                        comet.setPos(target.getX(), target.getY() + 5, target.getZ());
-                        var trajectory = new Vec3(0.05F, -0.85F, 0).normalize();
-                        comet.shoot(trajectory, 0.045F);
-                        comet.setExplosionRadius(4.5F);
-                        player.level().addFreshEntity(comet);
-                        player.getCooldowns().addCooldown(ModItems.YETI_BRACE.get(), YetiBrace.COOLDOWN_IN_TICKS);
-                    }
+                    target.invulnerableTime = 0;
+                    IceChunkProjectile comet = new IceChunkProjectile(player.level(), player);
+                    comet.setDamage(5);
+                    comet.setPos(target.getX(), target.getY() + 7, target.getZ());
+                    var trajectory = new Vec3(0.05F, -0.85F, 0).normalize();
+                    comet.shoot(trajectory, 0.045F);
+                    comet.setExplosionRadius(4.5F);
+                    player.level().addFreshEntity(comet);
+                    player.getCooldowns().addCooldown(ModItems.YETI_BRACE.get(), YetiBrace.COOLDOWN_IN_TICKS);
                 }
             }
         }
+    }
 
 
     @Override

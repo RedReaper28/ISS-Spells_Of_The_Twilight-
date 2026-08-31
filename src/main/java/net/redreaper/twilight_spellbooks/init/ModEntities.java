@@ -1,8 +1,5 @@
 package net.redreaper.twilight_spellbooks.init;
 
-import io.redspace.ironsspellbooks.IronsSpellbooks;
-import io.redspace.ironsspellbooks.entity.spells.fireball.MagicFireball;
-import io.redspace.ironsspellbooks.entity.spells.snowball.Snowball;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -21,7 +18,8 @@ import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
 import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTrident;
-import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballEntity;
+import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballEntity;
+import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.ExanimatedRayVisualEntity;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
 import net.redreaper.twilight_spellbooks.entity.spells.mosquito_swarm.MosquitoSwarmProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltProjectile;
@@ -121,9 +119,15 @@ public class ModEntities {
 
     public static final DeferredHolder<EntityType<?>, EntityType<ExanimatedTrident>> EXANIMATED_TRIDENT =
             ENTITIES.register("exanimated_trident", () -> EntityType.Builder.<ExanimatedTrident>of(ExanimatedTrident::new, MobCategory.MISC)
-                    .sized(3, 1.5f)
+                    .sized(1.25f, 1.25f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_trident").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<ExanimatedRayVisualEntity>> EXANIMATED_RAY =
+            ENTITIES.register("exanimated_ray", () -> EntityType.Builder.<ExanimatedRayVisualEntity>of(ExanimatedRayVisualEntity::new, MobCategory.MISC)
+                    .sized(1f, 1f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_ray").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<IceChunkProjectile>> ICE_CHUNK =
             ENTITIES.register("ice_chunk", () -> EntityType.Builder.<IceChunkProjectile>of(IceChunkProjectile::new, MobCategory.MISC)

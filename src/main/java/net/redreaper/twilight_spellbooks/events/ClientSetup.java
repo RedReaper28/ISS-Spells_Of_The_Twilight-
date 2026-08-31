@@ -1,5 +1,6 @@
 package net.redreaper.twilight_spellbooks.events;
 
+import io.redspace.ironsspellbooks.entity.spells.ray_of_frost.RayOfFrostRenderer;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -17,7 +18,8 @@ import net.redreaper.twilight_spellbooks.entity.living.summon.DeathTomeRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTridentRenderer;
-import net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce.ExanimatedFireballRenderer;
+import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballRenderer;
+import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.ExanimatedRayRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModParticles;
@@ -45,21 +47,23 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), SummonedCarminiteGolemRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolfRenderer::new);
 
-
         event.registerEntityRenderer(ModEntities.CARMINITE_PULL_PROJECTILE.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.EXTENDED_THROWN_ICE.get(), ThrownIceRenderer::new);
         event.registerEntityRenderer(ModEntities.EXTENDED_NATURE_BOLT.get(), ThrownItemRenderer::new);
         event.registerEntityRenderer(ModEntities.EXANIMATED_TRIDENT.get(), ExanimatedTridentRenderer::new);
         event.registerEntityRenderer(ModEntities.EXANIMATED_FIREBALL.get(), (context) -> new ExanimatedFireballRenderer(context, 1.25f));
+        event.registerEntityRenderer(ModEntities.EXANIMATED_RAY.get(), ExanimatedRayRenderer::new);
         event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
         event.registerEntityRenderer(ModEntities.ICE_CHUNK.get(), IceChunkRenderer::new);
 
-
-
         event.registerEntityRenderer(ModEntities.LICH_SOUL.get(), LichSoulRenderer::new);
         event.registerEntityRenderer(ModEntities.SNOW_QUEEN_SOUL.get(), SnowQueenSoulRenderer::new);
+    }
 
+    @SubscribeEvent
+    public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ExanimatedRayRenderer.MODEL_LAYER_LOCATION, ExanimatedRayRenderer::createBodyLayer);
 
     }
 

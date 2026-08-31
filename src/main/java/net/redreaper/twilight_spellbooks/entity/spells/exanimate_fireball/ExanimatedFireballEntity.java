@@ -1,4 +1,4 @@
-package net.redreaper.twilight_spellbooks.entity.spells.exanimate_essemce;
+package net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball;
 
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.DamageSources;

@@ -12,7 +12,7 @@
       "targetSelf": false
     },
     "irons_jewelry:attribute": {
-      "amount": 0.5,
+      "amount": 0.05,
       "attribute": "minecraft:generic.movement_speed",
       "operation": "add_multiplied_total"
     },

@@ -33,13 +33,14 @@ import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.init.ModMobEffects;
+import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
 import net.redreaper.twilight_spellbooks.particle.ExanimatedStepParticlePacket;
 import net.redreaper.twilight_spellbooks.particle.ModParticleHelper;
 
 import java.util.List;
 import java.util.Optional;
 
-public class ExanimatedStepSpell extends AbstractSpell {
+public class ExanimatedStepSpell extends ExanimatedAbstractSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_step");
 
     @Override
@@ -54,8 +55,8 @@ public class ExanimatedStepSpell extends AbstractSpell {
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.RARE)
-            .setSchoolResource(SchoolRegistry.FIRE_RESOURCE)
-            .setMaxLevel(3)
+            .setSchoolResource(ModSpellSubSchool.EXANIMATED_RESOURCE)
+                .setMaxLevel(3)
             .setCooldownSeconds(12)
             .build();
 
@@ -91,8 +92,6 @@ public class ExanimatedStepSpell extends AbstractSpell {
     public Optional<SoundEvent> getCastFinishSound() {
         return Optional.of(SoundRegistry.LIGHTNING_WOOSH_01.get());
     }
-
-
 
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
@@ -187,7 +186,12 @@ public class ExanimatedStepSpell extends AbstractSpell {
             double firePower = caster.getAttributeValue(AttributeRegistry.FIRE_SPELL_POWER);
             double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
             double enderPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
-            return (float)((double)5  * ((double)0.5F * firePower + (double)0.5F * enderPower + (double)0.5F * bloodPower));
+            if (firePower == bloodPower && bloodPower == enderPower) {
+                return (float)((double)5 * ((double)0.75F * firePower + (double)0.75F * enderPower + (double)0.75F * bloodPower));
+            }
+            else {
+                return (float)((double)5 * ((double)0.5F * firePower + (double)0.5F * enderPower + (double)0.5F * bloodPower));
+            }
         }
     }
 

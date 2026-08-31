@@ -32,6 +32,8 @@ public class TwilightSpellbooks {
         ModMobEffects.register(modEventBus);
         ModParticles.register(modEventBus);
         ModLootModifiers.register(modEventBus);
+        ModSpellSubSchool.register(modEventBus);
+
 
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);

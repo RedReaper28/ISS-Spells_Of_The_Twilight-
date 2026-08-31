@@ -41,8 +41,8 @@ public class ModStaffMaterials implements IronsWeaponTier {
 
     static {
         STEELEAF = new ModStaffMaterials(6.0F, -2.5F, new AttributeContainer[]{
-                new AttributeContainer(ASAttributeRegistry.MAGIC_DAMAGE_CRIT_DAMAGE, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(ASAttributeRegistry.MAGIC_DAMAGE_CRIT_DAMAGE, 0.25, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
     }
 }

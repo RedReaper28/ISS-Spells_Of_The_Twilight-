@@ -1,23 +1,28 @@
 package net.redreaper.twilight_spellbooks.item.weapon;
 
-import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
+import io.redspace.ironsspellbooks.api.events.ModifySpellLevelEvent;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.item.UniqueItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
-import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.redreaper.twilight_spellbooks.init.ModExtendedWeaponTier;
 import net.redreaper.twilight_spellbooks.init.ModSpells;
-import org.jetbrains.annotations.NotNull;
+import net.redreaper.twilight_spellbooks.spells.ExanimatedAbstractSpell;
 
 import java.util.List;
 
-public class LichGreatswordItem extends MagicSwordItem implements UniqueItem {
+public class LichGreatswordItem extends MagicSwordItem {
     public LichGreatswordItem() {
         super(
                 ModExtendedWeaponTier.LICH_GREATSWORD,
@@ -28,20 +33,37 @@ public class LichGreatswordItem extends MagicSwordItem implements UniqueItem {
                         .attributes(ExtendedSwordItem.createAttributes(ModExtendedWeaponTier.LICH_GREATSWORD)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(ModSpells.EXANIMATED_FIREBALL, 1)
+                        new SpellDataRegistryHolder(ModSpells.EXANIMATED_FIREBALL, 3)
                 )
         );
     }
 
+    @EventBusSubscriber(value = Dist.CLIENT)
+    public static class SpellEvents {
+        @SubscribeEvent
+        public static void onModifySpellLevel(ModifySpellLevelEvent event) {
+            LivingEntity caster = event.getEntity();
+            if (caster == null) return;
+
+            if (!(event.getSpell() instanceof ExanimatedAbstractSpell)) return;
+
+            boolean fullSet =caster.getItemBySlot(EquipmentSlot.MAINHAND).getItem() instanceof LichGreatswordItem;
+
+            if (fullSet) {
+                event.addLevels(1);
+            }
+        }
+    }
 
 
-    @Override
-    public void appendHoverText(@NotNull ItemStack itemStack, TooltipContext context, @NotNull List<Component> lines, @NotNull TooltipFlag flag) {
-        super.appendHoverText(itemStack, context, lines, flag);
-        var affinityData = AffinityData.getAffinityData(itemStack);
-        if (!affinityData.affinityData().isEmpty()) {
-            int i = TooltipsUtils.indexOfComponent(lines, "tooltip.irons_spellbooks.spellbook_spell_count");
-            lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
+    public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+        super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+        if (Screen.hasShiftDown()) {
+            tooltipComponents.add(Component.translatable("tooltip.irons_spellbooks.passive_ability_no_cooldown").withStyle(ChatFormatting.DARK_PURPLE));
+            tooltipComponents.add(Component.literal(" ").append(Component.translatable(this.getDescriptionId() + ".desc")).withStyle(ChatFormatting.YELLOW));
+        }
+        else {
+            tooltipComponents.add(Component.translatable("item.aces_spell_utils.more_details1").withStyle(ChatFormatting.GRAY));
         }
     }
 

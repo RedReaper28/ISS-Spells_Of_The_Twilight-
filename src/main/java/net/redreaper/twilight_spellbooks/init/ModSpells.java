@@ -29,6 +29,7 @@ public class ModSpells  {
 
     //EXANIMATED?
     public static final Supplier<AbstractSpell> EXANIMATED_FIREBALL = registerSpell(new ExanimatedFireballSpell());
+    public static final Supplier<AbstractSpell> EXANIMATED_RAY = registerSpell(new ExanimatedRaySpell());
     public static final Supplier<AbstractSpell> EXANIMATED_STEP = registerSpell(new ExanimatedStepSpell());
     public static final Supplier<AbstractSpell> EXANIMATED_TRIDENTS = registerSpell(new ExanimatedTridentsSpell());
 
