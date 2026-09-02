@@ -21,7 +21,7 @@ import twilightforest.init.TFSounds;
 import java.util.List;
 import java.util.Optional;
 
-public class TwilightBoltSpell extends AbstractSpell {
+public class TwilightBoltSpell extends AbstractScepterSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "twilight_bolt");
 
     @Override
@@ -43,10 +43,6 @@ public class TwilightBoltSpell extends AbstractSpell {
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
         this.baseManaCost = 25;
-    }
-
-    public boolean allowLooting() {
-        return false;
     }
 
     @Override

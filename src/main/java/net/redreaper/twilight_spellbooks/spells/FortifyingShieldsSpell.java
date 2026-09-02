@@ -18,7 +18,7 @@ import twilightforest.init.TFParticleType;
 
 import java.util.List;
 
-public class FortifyingShieldsSpell extends AbstractSpell {
+public class FortifyingShieldsSpell extends AbstractScepterSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "fortifying_shields");
 
     @Override
@@ -42,10 +42,6 @@ public class FortifyingShieldsSpell extends AbstractSpell {
         this.spellPowerPerLevel = 1;
         this.castTime = 30;
         this.baseManaCost = 120;
-    }
-
-    public boolean allowLooting() {
-        return false;
     }
 
     @Override

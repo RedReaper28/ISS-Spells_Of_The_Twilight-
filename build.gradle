@@ -186,7 +186,7 @@ dependencies {
     implementation "curse.maven:jade-324717:6853386"
 
     // Ace's Spell Utils (REQUIRED - It's literally my API mod)
-    implementation "curse.maven:aces-spell-utils-1299492:8079666"
+    implementation "curse.maven:aces-spell-utils-1299492:8789930"
 
     localRuntime "curse.maven:irons-jewelry-1101111:8365016"
     localRuntime "io.redspace:atlas_api:${atlas_api_version}"

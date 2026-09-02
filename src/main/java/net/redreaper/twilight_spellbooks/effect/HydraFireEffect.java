@@ -50,7 +50,7 @@ public class HydraFireEffect extends MagicMobEffect implements ISyncedMobEffect 
 
     public boolean shouldApplyEffectTickThisTick(int p_295629_, int p_295734_) {
         int i = 40 >> p_295734_;
-        return i > 0 ? p_295629_ % i == 0 : true;
+        return i == 0 || p_295629_ % i == 0;
     }
 
     @SubscribeEvent

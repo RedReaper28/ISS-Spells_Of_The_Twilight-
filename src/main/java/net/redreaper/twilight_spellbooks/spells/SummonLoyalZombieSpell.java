@@ -22,7 +22,7 @@ import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.Adv
 import javax.annotation.Nullable;
 import java.util.List;
 
-public class SummonLoyalZombieSpell extends AbstractSpell {
+public class SummonLoyalZombieSpell extends AbstractScepterSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summon_loyal_zombie");
 
     @Override
@@ -45,10 +45,6 @@ public class SummonLoyalZombieSpell extends AbstractSpell {
         this.spellPowerPerLevel = 1;
         this.castTime = 10;
         this.baseManaCost = 19;
-    }
-
-    public boolean allowLooting() {
-        return false;
     }
 
     @Override

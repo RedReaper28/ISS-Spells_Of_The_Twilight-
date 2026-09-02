@@ -45,7 +45,7 @@ import javax.annotation.Nullable;
 import java.util.List;
 import java.util.Optional;
 
-public class LifeSacrificeSpell extends AbstractSpell {
+public class LifeSacrificeSpell extends AbstractScepterSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "life_sacrifice");
 
     private final DefaultConfig defaultConfig = new DefaultConfig()
@@ -70,10 +70,6 @@ public class LifeSacrificeSpell extends AbstractSpell {
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
         this.baseManaCost = 35;
-    }
-
-    public boolean allowLooting() {
-        return false;
     }
 
     @Override

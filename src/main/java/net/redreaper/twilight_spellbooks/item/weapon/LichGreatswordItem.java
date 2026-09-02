@@ -18,7 +18,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.redreaper.twilight_spellbooks.init.ModExtendedWeaponTier;
 import net.redreaper.twilight_spellbooks.init.ModSpells;
-import net.redreaper.twilight_spellbooks.spells.ExanimatedAbstractSpell;
+import net.redreaper.twilight_spellbooks.spells.AbstractExanimatedSpell;
 
 import java.util.List;
 
@@ -45,7 +45,7 @@ public class LichGreatswordItem extends MagicSwordItem {
             LivingEntity caster = event.getEntity();
             if (caster == null) return;
 
-            if (!(event.getSpell() instanceof ExanimatedAbstractSpell)) return;
+            if (!(event.getSpell() instanceof AbstractExanimatedSpell)) return;
 
             boolean fullSet =caster.getItemBySlot(EquipmentSlot.MAINHAND).getItem() instanceof LichGreatswordItem;
 

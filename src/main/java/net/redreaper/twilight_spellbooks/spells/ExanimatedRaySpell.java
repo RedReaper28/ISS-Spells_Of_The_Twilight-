@@ -32,7 +32,7 @@ import net.redreaper.twilight_spellbooks.particle.ModParticleHelper;
 import java.util.List;
 import java.util.Optional;
 
-public class ExanimatedRaySpell  extends ExanimatedAbstractSpell {
+public class ExanimatedRaySpell  extends AbstractExanimatedSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_ray");
     private final DefaultConfig defaultConfig = new DefaultConfig()
             .setMinRarity(SpellRarity.RARE)

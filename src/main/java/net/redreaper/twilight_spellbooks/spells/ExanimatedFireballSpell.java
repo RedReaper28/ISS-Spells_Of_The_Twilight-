@@ -3,8 +3,6 @@ package net.redreaper.twilight_spellbooks.spells;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
@@ -25,7 +23,7 @@ import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
 import java.util.List;
 import java.util.Optional;
 
-public class ExanimatedFireballSpell extends ExanimatedAbstractSpell {
+public class ExanimatedFireballSpell extends AbstractExanimatedSpell {
     private final ResourceLocation spellId = ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_fireball");
 
     @Override
