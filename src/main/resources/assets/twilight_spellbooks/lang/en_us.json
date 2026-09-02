@@ -94,6 +94,9 @@
   "spell.twilight_spellbooks.exanimated_trident": "Exanimated Trident",
   "spell.twilight_spellbooks.exanimated_trident.guide": "Teleport to where you are looking, producing a explosion where you appear that ignite enemies and inflicts Exanimated Burn for 5s .Damage scales with Fire,Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
 
+  "spell.twilight_spellbooks.fire_bettle_spit": "Fire Bette Spit",
+  "spell.twilight_spellbooks.fire_bettle_spit.guide": "Spit a thin line of flammable fluid to ignite the targets for a long time",
+
   "spell.twilight_spellbooks.fortifying_shields": "Fortifying Shields",
   "spell.twilight_spellbooks.fortifying_shields.guide": "Cast to summon 6 Lich shields around you that block one hit per shield",
 
@@ -111,12 +114,13 @@
 
   "spell.twilight_spellbooks.druid_bolt": "Druid Bolt",
   "spell.twilight_spellbooks.druid_bolt.guide": "Shot nature infused seeds that ,poisoning whatever it hits ",
+  "spell.twilight_spellbooks.hydra_mortar": "Hydra Mortar Shot",
+  "spell.twilight_spellbooks.hydra_mortar.guide": "",
   "spell.twilight_spellbooks.minotaur_lunge": "Minotaur Lunge",
   "spell.twilight_spellbooks.minotaur_lunge.guide": "Quickly dash forward like a minotaur dealing damage to targets in front of you. Extra damage scales with movement speed",
 
   "display.twilight_spellbooks.spawn": "Back to life once again",
   "display.twilight_spellbooks.phase_2": "Perish, Mortal",
-
 
   "material.twilight_spellbooks.naga_scale": "Naga Scale",
   "material.twilight_spellbooks.ironwood": "Ironwood",
@@ -127,6 +131,7 @@
   "material.twilight_spellbooks.snow_silver": "Snow Silver",
 
   "ui.twilight_spellbooks.shields": "Shields",
+  "ui.twilight_spellbooks.burn_time": "%s Burn Time",
 
   "school.twilight_spellbooks.exanimated": "Exanimated Flame"
 }

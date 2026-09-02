@@ -1,6 +1,5 @@
 package net.redreaper.twilight_spellbooks.events;
 
-import io.redspace.ironsspellbooks.entity.spells.ray_of_frost.RayOfFrostRenderer;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -20,13 +19,11 @@ import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRendere
 import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTridentRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.ExanimatedRayRenderer;
+import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraMortarRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModParticles;
-import net.redreaper.twilight_spellbooks.particle.ExanimatedEmbersParticle;
-import net.redreaper.twilight_spellbooks.particle.ExanimatedFireParticle;
-import net.redreaper.twilight_spellbooks.particle.ExanimatedSmokeParticle;
-import net.redreaper.twilight_spellbooks.particle.MosquitoParticle;
+import net.redreaper.twilight_spellbooks.particle.*;
 import twilightforest.client.renderer.entity.ThrownIceRenderer;
 import twilightforest.client.renderer.entity.WinterWolfRenderer;
 
@@ -53,6 +50,7 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.EXANIMATED_TRIDENT.get(), ExanimatedTridentRenderer::new);
         event.registerEntityRenderer(ModEntities.EXANIMATED_FIREBALL.get(), (context) -> new ExanimatedFireballRenderer(context, 1.25f));
         event.registerEntityRenderer(ModEntities.EXANIMATED_RAY.get(), ExanimatedRayRenderer::new);
+        event.registerEntityRenderer(ModEntities.HYDRA_FIREBALL.get(), (context) -> new HydraMortarRenderer(context, 1.15f));
         event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
         event.registerEntityRenderer(ModEntities.ICE_CHUNK.get(), IceChunkRenderer::new);
@@ -74,6 +72,8 @@ public class ClientSetup {
         event.registerSpriteSet(ModParticles.EXANIMATED_SMOKE_PARTICLE.get(), ExanimatedSmokeParticle.Provider::new);
         event.registerSpriteSet(ModParticles.EXANIMATED_FIRE_PARTICLE.get(), ExanimatedFireParticle.Provider::new);
         event.registerSpriteSet(ModParticles.EXANIMATED_EMBER_PARTICLE.get(), ExanimatedEmbersParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.HYDRA_FIRE_PARTICLE.get(), HydraFireParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.HYDRA_EMBER_PARTICLE.get(), HydraEmbersParticle.Provider::new);
 
     }
 }

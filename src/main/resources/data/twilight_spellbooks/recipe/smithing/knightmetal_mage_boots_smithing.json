@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "twilightforest:knightmetal_ingot"
+  },
+  "base": {
+    "item": "irons_spellbooks:netherite_mage_boots"
+    },
+  "result": {
+    "components": {
+      "irons_spellbooks:spell_container": {
+        "data": [],
+        "maxSpells": 1,
+        "mustEquip": true,
+        "spellWheel": true
+      }
+    },
+    "count": 1,
+    "id": "twilight_spellbooks:knightmetal_mage_boots"
+  },
+  "template": {
+    "item": "irons_spellbooks:protection_rune"
+  }
+}

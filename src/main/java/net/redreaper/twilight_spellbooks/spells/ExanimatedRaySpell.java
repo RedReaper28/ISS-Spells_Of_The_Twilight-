@@ -4,7 +4,6 @@ package net.redreaper.twilight_spellbooks.spells;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
-import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
@@ -18,6 +17,7 @@ import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.level.Level;
@@ -25,6 +25,7 @@ import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.ExanimatedRayVisualEntity;
+import net.redreaper.twilight_spellbooks.init.ModMobEffects;
 import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
 import net.redreaper.twilight_spellbooks.particle.ModParticleHelper;
 
@@ -44,7 +45,7 @@ public class ExanimatedRaySpell  extends ExanimatedAbstractSpell {
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
                 Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 2)),
-                Component.translatable("ui.irons_spellbooks.freeze_time", Utils.timeFromTicks(getFreezeTime(spellLevel, caster), 2)),
+                Component.translatable("ui.irons_spellbooks.effect_length", Utils.stringTruncation(getDuration(spellLevel, caster), 1)),
                 Component.translatable("ui.irons_spellbooks.distance", Utils.stringTruncation(getRange(spellLevel, caster), 1))
         );
     }
@@ -92,9 +93,14 @@ public class ExanimatedRaySpell  extends ExanimatedAbstractSpell {
         level.addFreshEntity(new ExanimatedRayVisualEntity(level, entity.getEyePosition(), hitResult.getLocation(), entity));
         if (hitResult.getType() == HitResult.Type.ENTITY) {
             Entity target = ((EntityHitResult) hitResult).getEntity();
+            int i = getDuration(spellLevel, entity);
             //Set freeze time right here because it scales off of level and power
-            DamageSources.applyDamage(target, getDamage(spellLevel, entity), getDamageSource(entity).indirect().setFireTicks(target.getTicksRequiredToFreeze() + getFreezeTime(spellLevel, entity)));
-            MagicManager.spawnParticles(level, ParticleHelper.COMET_FOG, hitResult.getLocation().x, target.getY(), hitResult.getLocation().z, 4, 0, 0, 0, .3, true);
+            DamageSources.applyDamage(target, getDamage(spellLevel, entity), getDamageSource(entity).indirect());
+            if (target instanceof LivingEntity livingTarget) {
+                (livingTarget).addEffect(new MobEffectInstance(ModMobEffects.OMINOUS_BURN,i,0, false, true, true));
+
+            }
+                MagicManager.spawnParticles(level, ParticleHelper.COMET_FOG, hitResult.getLocation().x, target.getY(), hitResult.getLocation().z, 4, 0, 0, 0, .3, true);
         } else if (hitResult.getType() == HitResult.Type.BLOCK) {
             MagicManager.spawnParticles(level, ParticleHelper.COMET_FOG, hitResult.getLocation().x, hitResult.getLocation().y, hitResult.getLocation().z, 4, 0, 0, 0, .3, true);
         }
@@ -122,7 +128,7 @@ public class ExanimatedRaySpell  extends ExanimatedAbstractSpell {
         }
     }
 
-    private int getFreezeTime(int spellLevel, LivingEntity caster) {
-        return (int) (getSpellPower(spellLevel, caster) * 15);
+    public int getDuration(int spellLevel, LivingEntity caster) {
+        return (int) (5 + (getSpellPower(spellLevel, caster) * 20));
     }
 }
