@@ -1,11 +1,11 @@
 package net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot;
 
-import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.damage.DamageSources;
 import io.redspace.ironsspellbooks.entity.spells.AbstractMagicProjectile;
 import io.redspace.ironsspellbooks.network.particles.FieryExplosionParticlesPacket;
 import net.minecraft.core.Holder;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
@@ -28,7 +28,6 @@ import java.util.Optional;
 public class HydraMortarFireball  extends AbstractMagicProjectile {
     public HydraMortarFireball(EntityType<? extends Projectile> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
-        this.setNoGravity(true);
     }
 
     public HydraMortarFireball(Level pLevel, LivingEntity pShooter) {
@@ -72,6 +71,7 @@ public class HydraMortarFireball  extends AbstractMagicProjectile {
     @Override
     protected void onHit(@NotNull HitResult hitResult) {
         if (!this.level().isClientSide) {
+            createFireField(Utils.moveToRelativeGroundLevel(level(), hitResult.getLocation(), 2, 6));
             impactParticles(xOld, yOld, zOld);
             float explosionRadius = getExplosionRadius();
             var explosionRadiusSqr = explosionRadius * explosionRadius;
@@ -89,6 +89,44 @@ public class HydraMortarFireball  extends AbstractMagicProjectile {
             playSound(SoundEvents.GENERIC_EXPLODE.value(), 4.0F, (1.0F + (this.level().random.nextFloat() - this.level().random.nextFloat()) * 0.2F) * 0.7F);
             this.discardHelper(hitResult);
         }
+    }
+
+    public void createFireField(Vec3 location) {
+        if (!level().isClientSide) {
+            HydraPoisonField fire = new HydraPoisonField(level());
+            fire.setOwner(getOwner());
+            fire.setDuration(200);
+            fire.setDamage(aoeDamage);
+            fire.setRadius(getExplosionRadius());
+            fire.setCircular();
+            fire.moveTo(location);
+            level().addFreshEntity(fire);
+        }
+    }
+
+    float aoeDamage;
+
+    public void setAoeDamage(float damage) {
+        this.aoeDamage = damage;
+    }
+
+    public float getAoeDamage() {
+        return aoeDamage;
+    }
+
+    @Override
+    protected void addAdditionalSaveData(CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        tag.putFloat("AoeDamage", aoeDamage);
+
+
+    }
+
+    @Override
+    protected void readAdditionalSaveData(CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        this.aoeDamage = tag.getFloat("AoeDamage");
+
     }
 
 }

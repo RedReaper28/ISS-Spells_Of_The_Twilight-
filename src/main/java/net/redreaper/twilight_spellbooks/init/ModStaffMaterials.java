@@ -10,6 +10,8 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 public class ModStaffMaterials implements IronsWeaponTier {
     public static ModStaffMaterials KNIGHTMETAL;
     public static ModStaffMaterials STEELEAF;
+    public static ModStaffMaterials BOREAL;
+    public static ModStaffMaterials ULTIMATE_SCEPTER;
     float damage;
     float speed;
     AttributeContainer[] attributeContainers;
@@ -40,9 +42,26 @@ public class ModStaffMaterials implements IronsWeaponTier {
     }
 
     static {
+        BOREAL = new ModStaffMaterials(6.0F, -2.5F, new AttributeContainer[]{
+                new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.MANA_REGEN, 0.25, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
+    }
+
+    static {
         STEELEAF = new ModStaffMaterials(6.0F, -2.5F, new AttributeContainer[]{
                 new AttributeContainer(AttributeRegistry.NATURE_SPELL_POWER, 0.15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(ASAttributeRegistry.MAGIC_DAMAGE_CRIT_DAMAGE, 0.25, AttributeModifier.Operation.ADD_VALUE),
+                new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
+    }
+
+    static {
+        ULTIMATE_SCEPTER = new ModStaffMaterials(6.0F, -2.5F, new AttributeContainer[]{
+                new AttributeContainer(AttributeRegistry.BLOOD_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.ENDER_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(AttributeRegistry.HOLY_SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                new AttributeContainer(ASAttributeRegistry.MANA_STEAL, 0.25, AttributeModifier.Operation.ADD_VALUE),
                 new AttributeContainer(AttributeRegistry.SPELL_POWER, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE)});
     }
 }

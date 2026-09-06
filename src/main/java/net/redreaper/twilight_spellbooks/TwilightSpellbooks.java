@@ -1,5 +1,6 @@
 package net.redreaper.twilight_spellbooks;
 
+import mod.azure.azurelib.common.animation.cache.AzIdentityRegistry;
 import net.minecraft.resources.ResourceLocation;
 import net.redreaper.twilight_spellbooks.init.*;
 import org.jetbrains.annotations.NotNull;
@@ -41,6 +42,10 @@ public class TwilightSpellbooks {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
+        // Animation Registry
+        AzIdentityRegistry.register(
+                ModItems.ULTIMATE_SCEPTER.get()
+        );
      }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

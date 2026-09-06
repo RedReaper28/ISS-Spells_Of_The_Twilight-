@@ -224,7 +224,7 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
 
         this.goalSelector.addGoal(1, new FloatGoal(this));
         // Magic Spells
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.ELDRITCH_BLAST_SPELL.get(), 1, 3, 80, 150, 1));
+        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, ModSpells.EXANIMATED_RAY.get(), 1, 3, 80, 150, 1));
         this.goalSelector.addGoal(3, new WizardAttackGoal(this, 1.25f, 50, 75)
                 .setSpells(
                         // Attack
@@ -251,7 +251,7 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                         ),
                         // Movement
                         List.of(
-                                SpellRegistry.BLOOD_STEP_SPELL.get()
+                                ModSpells.EXANIMATED_STEP.get()
                         ),
                         // Support
                         List.of(
@@ -273,7 +273,8 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
 
         this.goalSelector.addGoal(1, new FloatGoal(this));
         // Magic Spells
-        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, SpellRegistry.ELDRITCH_BLAST_SPELL.get(), 1, 3, 50, 80, 3));
+        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, ModSpells.EXANIMATED_RAY.get(), 1, 3, 50, 80, 3));
+        this.goalSelector.addGoal(2, new SpellBarrageGoal(this, ModSpells.EXANIMATED_TRIDENTS.get(), 1, 3, 50, 80, 3));
         this.goalSelector.addGoal(3, new WizardSpellComboGoal(this,
                 List.of(
                         SpellRegistry.COUNTERSPELL_SPELL.get(),
@@ -519,7 +520,7 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
         this.setItemSlot(EquipmentSlot.LEGS, new ItemStack(ModItems.EXANIMATED_LICH_LEGGINGS.get()));
         this.setItemSlot(EquipmentSlot.FEET, new ItemStack(ModItems.EXANIMATED_LICH_BOOTS.get()));
         this.setItemSlot(EquipmentSlot.MAINHAND, new ItemStack(ModItems.LICH_GREATSWORD.get()));
-        this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(ModItems.KNIGHTMETAL_STAFF.get()));
+        this.setItemSlot(EquipmentSlot.OFFHAND, new ItemStack(ModItems.ULTIMATE_SCEPTER.get()));
         this.setDropChance(EquipmentSlot.HEAD, 0.0F);
         this.setDropChance(EquipmentSlot.CHEST, 0.0F);
         this.setDropChance(EquipmentSlot.LEGS, 0.0F);

@@ -14,6 +14,7 @@ import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulRendere
 import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.DeathTomeRenderer;
+import net.redreaper.twilight_spellbooks.entity.living.summon.MinotaurRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTridentRenderer;
@@ -43,6 +44,7 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.SUMMONED_DEATH_TOME.get(), DeathTomeRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), SummonedCarminiteGolemRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolfRenderer::new);
+        event.registerEntityRenderer(ModEntities.SUMMONED_MINOTAUR.get(), MinotaurRenderer::new);
 
         event.registerEntityRenderer(ModEntities.CARMINITE_PULL_PROJECTILE.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.EXTENDED_THROWN_ICE.get(), ThrownIceRenderer::new);
@@ -51,6 +53,7 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.EXANIMATED_FIREBALL.get(), (context) -> new ExanimatedFireballRenderer(context, 1.25f));
         event.registerEntityRenderer(ModEntities.EXANIMATED_RAY.get(), ExanimatedRayRenderer::new);
         event.registerEntityRenderer(ModEntities.HYDRA_FIREBALL.get(), (context) -> new HydraMortarRenderer(context, 1.15f));
+        event.registerEntityRenderer(ModEntities.HYDRA_FIRE_FIELD.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
         event.registerEntityRenderer(ModEntities.ICE_CHUNK.get(), IceChunkRenderer::new);

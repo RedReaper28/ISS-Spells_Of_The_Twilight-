@@ -28,8 +28,10 @@ import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbo
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
 import net.redreaper.twilight_spellbooks.item.misc.ExanimatedLichLootBagItem;
+import net.redreaper.twilight_spellbooks.item.staffs.BorealStaff;
 import net.redreaper.twilight_spellbooks.item.staffs.KnightmetalStaff;
 import net.redreaper.twilight_spellbooks.item.staffs.SteeleafStaff;
+import net.redreaper.twilight_spellbooks.item.staffs.ultimateScepter.UltimateScepterItem;
 import net.redreaper.twilight_spellbooks.item.weapon.LichGreatswordItem;
 import net.redreaper.twilight_spellbooks.item.weapon.MazeButcherItem;
 
@@ -93,10 +95,14 @@ public class ModItems {
     public static final DeferredHolder<Item, Item> STEELEAF_SHEATH = ITEMS.register("steeleaf_sheath",
             SteeleafSheath::new);
 
-    public static final DeferredHolder<Item, Item> KNIGHTMETAL_STAFF = ITEMS.register("knightmetal_staff",
-            KnightmetalStaff::new);
     public static final DeferredHolder<Item, Item> STEELEAF_STAFF = ITEMS.register("steeleaf_staff",
             SteeleafStaff::new);
+    public static final DeferredHolder<Item, Item> KNIGHTMETAL_STAFF = ITEMS.register("knightmetal_staff",
+            KnightmetalStaff::new);
+    public static final DeferredHolder<Item, Item> BOREAL_STAFF = ITEMS.register("boreal_staff",
+            BorealStaff::new);
+    public static final DeferredHolder<Item, Item> ULTIMATE_SCEPTER = ITEMS.register("ultimate_scepter",
+            UltimateScepterItem::new);
 
     public static final DeferredHolder<Item, Item> MAZE_BUTCHERER = ITEMS.register("maze_butcher",
             MazeButcherItem::new);

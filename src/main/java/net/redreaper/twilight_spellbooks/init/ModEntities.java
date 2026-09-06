@@ -1,5 +1,7 @@
 package net.redreaper.twilight_spellbooks.init;
 
+import io.redspace.ironsspellbooks.IronsSpellbooks;
+import io.redspace.ironsspellbooks.entity.spells.magma_ball.FireField;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.MobCategory;
@@ -14,6 +16,7 @@ import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichE
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolem;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedDeathTome;
+import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedMinotaur;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
@@ -21,6 +24,7 @@ import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.Exanim
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballEntity;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.ExanimatedRayVisualEntity;
 import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraMortarFireball;
+import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraPoisonField;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
 import net.redreaper.twilight_spellbooks.entity.spells.mosquito_swarm.MosquitoSwarmProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltProjectile;
@@ -56,6 +60,12 @@ public class ModEntities {
                     sized(1.4F, 1.9F).eyeHeight(1.45F)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_winter_wolf").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<SummonedMinotaur>> SUMMONED_MINOTAUR =
+            ENTITIES.register("summoned_minotaur", () -> EntityType.Builder.<SummonedMinotaur>of(SummonedMinotaur::new, MobCategory.MONSTER).
+                    sized(0.6F, 2.1F)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "summoned_minotaur").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<SummonedDeathTome>> SUMMONED_DEATH_TOME =
             ENTITIES.register("summoned_death_tome", () -> EntityType.Builder.<SummonedDeathTome>of(SummonedDeathTome::new, MobCategory.MONSTER).
@@ -136,6 +146,11 @@ public class ModEntities {
                     .clientTrackingRange(4)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "hydra_fireball").toString()));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<HydraPoisonField>> HYDRA_FIRE_FIELD =
+            ENTITIES.register("hydra_fire_field", () -> EntityType.Builder.<HydraPoisonField>of(HydraPoisonField::new, MobCategory.MISC)
+                    .sized(4f, 1.2f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "hydra_fire_field").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<IceChunkProjectile>> ICE_CHUNK =
             ENTITIES.register("ice_chunk", () -> EntityType.Builder.<IceChunkProjectile>of(IceChunkProjectile::new, MobCategory.MISC)

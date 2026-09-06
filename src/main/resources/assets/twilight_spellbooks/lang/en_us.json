@@ -44,6 +44,10 @@
   "item.twilight_spellbooks.steeleaf_staff": "Razor Leaf",
   "item.twilight_spellbooks.knightmetal_staff": "Knightmetal Staff",
   "item.twilight_spellbooks.knightmetal_staff.desc": "Deal 20% Extra spell Damage to Unarmored Targets",
+  "item.twilight_spellbooks.boreal_staff": "Boreal Staff",
+  "item.twilight_spellbooks.ultimate_scepter": "Ultimate Scepter",
+  "item.twilight_spellbooks.ultimate_scepter.desc": "+1 to all Scepter Based Spells",
+  "item.twilight_spellbooks.ultimate_scepter.desc2": "None",
 
   "item.twilight_spellbooks.maze_butcher": "Maze Butcher",
   "item.twilight_spellbooks.lich_greatsword": "Lich Greatsword",
@@ -115,9 +119,11 @@
   "spell.twilight_spellbooks.druid_bolt": "Druid Bolt",
   "spell.twilight_spellbooks.druid_bolt.guide": "Shot nature infused seeds that ,poisoning whatever it hits ",
   "spell.twilight_spellbooks.hydra_mortar": "Hydra Mortar Shot",
-  "spell.twilight_spellbooks.hydra_mortar.guide": "",
+  "spell.twilight_spellbooks.hydra_mortar.guide": "Launch 3 Poisonous Fireballs at the same time,creating a cloud of armor melting fire on impact.Damage scales with Fire and Nature Spell Power .Reaches its full potential if thr 2 Spell Powers are equal",
   "spell.twilight_spellbooks.minotaur_lunge": "Minotaur Lunge",
   "spell.twilight_spellbooks.minotaur_lunge.guide": "Quickly dash forward like a minotaur dealing damage to targets in front of you. Extra damage scales with movement speed",
+  "spell.twilight_spellbooks.summon_minotaurs": "Summon Minotaur Heard",
+  "spell.twilight_spellbooks.summon_minotaurs.guide": "Cast to summon a heard of Maze Minotaurs to follow and protect you ",
 
   "display.twilight_spellbooks.spawn": "Back to life once again",
   "display.twilight_spellbooks.phase_2": "Perish, Mortal",

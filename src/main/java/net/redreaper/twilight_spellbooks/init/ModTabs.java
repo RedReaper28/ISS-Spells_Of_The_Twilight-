@@ -27,6 +27,8 @@ public class ModTabs {
 
                         output.accept(ModItems.STEELEAF_STAFF.get());
                         output.accept(ModItems.KNIGHTMETAL_STAFF.get());
+                        output.accept(ModItems.BOREAL_STAFF.get());
+                        output.accept(ModItems.ULTIMATE_SCEPTER.get());
                         output.accept(ModItems.MAZE_BUTCHERER.get());
                         output.accept(ModItems.LICH_GREATSWORD.get());
 

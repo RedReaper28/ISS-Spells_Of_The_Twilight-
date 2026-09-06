@@ -13,6 +13,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.redreaper.twilight_spellbooks.init.ModItems;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookRenderer;
+import net.redreaper.twilight_spellbooks.item.staffs.ultimateScepter.UltimateScepterRenderer;
 import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 
 @Mod(value = TwilightSpellbooks.MOD_ID, dist = Dist.CLIENT)
@@ -35,6 +36,8 @@ public class TwilightSpellbooksClient {
             CuriosRendererRegistry.register(ModItems.FIERY_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
             CuriosRendererRegistry.register(ModItems.SNOW_QUEEN_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
         });
+
+        AzItemRendererRegistry.register(UltimateScepterRenderer::new, ModItems.ULTIMATE_SCEPTER.get());
 
         AzItemRendererRegistry.register(FierySpellbookRenderer::new, ModItems.FIERY_SPELL_BOOK.get());
 
