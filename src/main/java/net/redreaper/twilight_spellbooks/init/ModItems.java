@@ -41,22 +41,26 @@ public class ModItems {
     public static final DeferredRegister.Items ITEMS= DeferredRegister.createItems(TwilightSpellbooks.MOD_ID);
 
     public static final DeferredHolder<Item, Item> IRONWOOD_HELVE= ITEMS.register("ironwood_helve",
-            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.RARE).fireResistant()));
+            ()->new Item(new Item.Properties().rarity(Rarity.RARE).fireResistant()));
     public static final DeferredHolder<Item, Item> AURORA_SHARD= ITEMS.register("aurora_shard",
-            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+            ()->new Item(new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
     public static final DeferredHolder<Item, Item> DEATHS_ESSENCE= ITEMS.register("deaths_essence",
-            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+            ()->new Item(new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
 
     public static final DeferredHolder<Item, Item> FROST_ESSENCE = ITEMS.register("frost_essence",
-            () -> new Item(ItemPropertiesHelper.material()));
+            ()->new Item(new Item.Properties()));
     public static final DeferredHolder<Item, Item> SNOW_SILVER_INGOT = ITEMS.register("snow_silver_ingot",
-            () -> new Item(ItemPropertiesHelper.material()));
+            ()->new Item(new Item.Properties()));
 
 
     public static final DeferredHolder<Item, Item> LICH_PHYLACTERY= ITEMS.register("lich_phylactery",
-            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+            ()->new Item(new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
     public static final DeferredHolder<Item, Item> AURORA_PHYLACTERY= ITEMS.register("aurora_phylactery",
-            () -> new Item(ItemPropertiesHelper.material().rarity(Rarity.UNCOMMON).fireResistant()));
+            ()->new Item(new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final DeferredHolder<Item, Item> CARMINITE_HEART= ITEMS.register("carminite_heart",
+            ()->new Item(new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
+    public static final DeferredHolder<Item, Item> REGENERATING_CHOP= ITEMS.register("regenerating_chop",
+            ()->new Item(new Item.Properties().rarity(Rarity.UNCOMMON).fireResistant()));
 
     public static final DeferredHolder<Item, Item> IRONWOOD_SPELLBOOK = ITEMS.register("ironwood_spellbook",
             IronwoodSpellbookItem::new);

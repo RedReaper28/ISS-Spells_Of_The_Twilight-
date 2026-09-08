@@ -40,6 +40,7 @@ public class ModSpells  {
     public static final Supplier<AbstractSpell> FORTIFYING_SHIELDS = registerSpell(new FortifyingShieldsSpell());
 
     //ICE
+    public static final Supplier<AbstractSpell> AURORA_MISSILE = registerSpell(new AuroraMissileSpell());
     public static final Supplier<AbstractSpell> AVALANCHE = registerSpell(new AvalancheSpell());
     public static final Supplier<AbstractSpell> ICE_BOMB = registerSpell(new IceBombSpell());
     public static final Supplier<AbstractSpell> SUMMON_WINTER_WOLVES = registerSpell(new SummonWinterWolvesSpell());

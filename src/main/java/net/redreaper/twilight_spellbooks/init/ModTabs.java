@@ -60,6 +60,8 @@ public class ModTabs {
                         output.accept(ModItems.SNOW_SILVER_INGOT.get());
                         output.accept(ModItems.LICH_PHYLACTERY.get());
                         output.accept(ModItems.AURORA_PHYLACTERY.get());
+                        output.accept(ModItems.CARMINITE_HEART.get());
+                        output.accept(ModItems.REGENERATING_CHOP.get());
                         output.accept(ModItems.AURORA_SHARD.get());
                         output.accept(ModItems.DEATHS_ESSENCE.get());
 

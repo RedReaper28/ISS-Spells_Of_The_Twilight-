@@ -10,6 +10,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieEntity;
+import net.redreaper.twilight_spellbooks.entity.living.hydra_soul.HydraSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidEntity;
 import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichEntity;
@@ -18,6 +19,8 @@ import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteG
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedDeathTome;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedMinotaur;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedWinterWolf;
+import net.redreaper.twilight_spellbooks.entity.living.urghast_soul.UrGhastSoulEntity;
+import net.redreaper.twilight_spellbooks.entity.spells.aurora_missile.AuroraMissileProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.druid_bolt.ExtendedNatureBolt;
 import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTrident;
@@ -91,6 +94,17 @@ public class ModEntities {
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "snow_queen_soul").toString()));
 
+    public static final DeferredHolder<EntityType<?>, EntityType<UrGhastSoulEntity>> URGHAST_SOUL =
+            ENTITIES.register("urghast_soul", () -> EntityType.Builder.<UrGhastSoulEntity>of(UrGhastSoulEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "urghast_soul").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<HydraSoulEntity>> HYDRA_SOUL =
+            ENTITIES.register("hydra_soul", () -> EntityType.Builder.<HydraSoulEntity>of(HydraSoulEntity::new, MobCategory.MISC)
+                    .sized(0.5f, 0.5f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "hydra_soul").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<TwilightBoltProjectile>> TWILIGHT_BOLT =
             ENTITIES.register("twilight_bolt", () -> EntityType.Builder.<TwilightBoltProjectile>of(TwilightBoltProjectile::new, MobCategory.MISC)
@@ -157,6 +171,12 @@ public class ModEntities {
                     .sized(0.75F, 0.75F)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "ice_chunk").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<AuroraMissileProjectile>> AURORA_MISSILE =
+            ENTITIES.register("aurora_missile", () -> EntityType.Builder.<AuroraMissileProjectile>of(AuroraMissileProjectile::new, MobCategory.MISC)
+                    .sized(0.75F, 0.75F)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "aurora_missile").toString()));
 
     public static void register(IEventBus eventBus)
     {

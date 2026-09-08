@@ -8,6 +8,10 @@
   "item.twilight_spellbooks.lich_phylactery.guide": "Used to resurrect the Twilight Lich Boss.Use it while having Bad Omen to fight a stronger version of the Twilight Lich",
   "item.twilight_spellbooks.aurora_phylactery": "Aurora Phylactery",
   "item.twilight_spellbooks.aurora_phylactery.guide": "Used to resurrect the Snow Queen Boss",
+  "item.twilight_spellbooks.carminite_heart": "Carminite Heart",
+  "item.twilight_spellbooks.carminite_heart.guide": "Used to resurrect the Ur-Ghast Boss",
+  "item.twilight_spellbooks.regenerating_chop": "Regenerating Chop",
+  "item.twilight_spellbooks.regenerating_chop.guide": "Used to resurrect the Hydra Boss",
   "item.twilight_spellbooks.aurora_shard": "Aurora Shard",
   "item.twilight_spellbooks.aurora_shard.guide": "Dropped by the Snow Queen",
   "item.twilight_spellbooks.deaths_essence": "Deaths Essence",
@@ -69,6 +73,8 @@
   "entity.twilight_spellbooks.ominous_lich": "Exanimated Twilight Lich ",
   "entity.twilight_spellbooks.lich_soul": "Twilight Lich Soul",
   "entity.twilight_spellbooks.snow_queen_soul": "Snow Queen Soul",
+  "entity.twilight_spellbooks.urghast_soul": "Ur-Ghast Soul",
+  "entity.twilight_spellbooks.hydra_soul": "Hydra Soul",
   "entity.twilight_spellbooks.summoned_winter_wolf": "Summoned Winter Wolf",
   "entity.twilight_spellbooks.summoned_carminite_golem": "Summoned Carminite Golem",
   "entity.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
@@ -76,6 +82,7 @@
   "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS:Spellbooks Of Twilight",
 
   "effect.twilight_spellbooks.ominous_burn": "Exanimating Burn",
+  "effect.twilight_spellbooks.hydra_fire": "Hydra Fire",
 
   "spell.twilight_spellbooks.life_sacrifice": "Life Sacrifice",
   "spell.twilight_spellbooks.life_sacrifice.guide": "Target one of your magic summons to drain their life, killing them instantly and healing you a 100% of their remaining HP. Target another entity to deal 5% of their current HP and healing 50% of damage done",
@@ -104,6 +111,8 @@
   "spell.twilight_spellbooks.fortifying_shields": "Fortifying Shields",
   "spell.twilight_spellbooks.fortifying_shields.guide": "Cast to summon 6 Lich shields around you that block one hit per shield",
 
+  "spell.twilight_spellbooks.aurora_missile": "Aurora Missile",
+  "spell.twilight_spellbooks.aurora_missile.guide": "Shot a bolt of pure Aurora magic, which home towards your cursor, or the creature your cursor is targeting .Damage scales with Ice and Holy Spell Power .Reaches its full potential if thr 2 Spell Powers are equal",
   "spell.twilight_spellbooks.avalanche": "Avalanche",
   "spell.twilight_spellbooks.avalanche.guide": "Create an avalanche to force down ice chunks into any creature inside the spells radius",
   "spell.twilight_spellbooks.ice_bomb": "Ice Bomb",

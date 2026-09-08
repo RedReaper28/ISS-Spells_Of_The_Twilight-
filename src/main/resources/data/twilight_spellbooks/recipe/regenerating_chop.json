@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ANA",
+    "NLN",
+    "ANA"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:blaze_powder"
+    },
+    "N": {
+      "item": "irons_spellbooks:cinder_essence"
+    },
+    "L": {
+      "item": "twilightforest:hydra_chop"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:regenerating_chop",
+    "count": 1
+  }
+}

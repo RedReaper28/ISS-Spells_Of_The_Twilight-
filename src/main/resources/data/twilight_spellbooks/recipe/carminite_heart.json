@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "NNN",
+    "NLN",
+    "NNN"
+  ],
+  "key": {
+    "N": {
+      "item": "minecraft:iron_ingot"
+    },
+    "L": {
+      "item": "twilightforest:carminite"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:carminite_heart",
+    "count": 1
+  }
+}

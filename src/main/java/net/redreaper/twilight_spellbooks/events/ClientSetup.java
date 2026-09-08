@@ -1,5 +1,7 @@
 package net.redreaper.twilight_spellbooks.events;
 
+import io.redspace.ironsspellbooks.entity.spells.magic_missile.MagicMissileRenderer;
+import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -10,12 +12,16 @@ import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_druids.AdvancedDruidRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.advanced_loyal_zombie.AdvancedLoyalZombieRenderer;
+import net.redreaper.twilight_spellbooks.entity.living.hydra_soul.HydraSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.DeathTomeRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.MinotaurRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
+import net.redreaper.twilight_spellbooks.entity.living.urghast_soul.UrGhastSoulEntity;
+import net.redreaper.twilight_spellbooks.entity.living.urghast_soul.UrGhastSoulRenderer;
+import net.redreaper.twilight_spellbooks.entity.spells.aurora_missile.AuroraMissileRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.ExanimatedTridentRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballRenderer;
@@ -26,6 +32,7 @@ import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModParticles;
 import net.redreaper.twilight_spellbooks.particle.*;
 import twilightforest.client.renderer.entity.ThrownIceRenderer;
+import twilightforest.client.renderer.entity.UrGhastRenderer;
 import twilightforest.client.renderer.entity.WinterWolfRenderer;
 
 
@@ -57,9 +64,12 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
         event.registerEntityRenderer(ModEntities.ICE_CHUNK.get(), IceChunkRenderer::new);
+        event.registerEntityRenderer(ModEntities.AURORA_MISSILE.get(), AuroraMissileRenderer::new);
 
         event.registerEntityRenderer(ModEntities.LICH_SOUL.get(), LichSoulRenderer::new);
         event.registerEntityRenderer(ModEntities.SNOW_QUEEN_SOUL.get(), SnowQueenSoulRenderer::new);
+        event.registerEntityRenderer(ModEntities.URGHAST_SOUL.get(), UrGhastSoulRenderer::new);
+        event.registerEntityRenderer(ModEntities.HYDRA_SOUL.get(), HydraSoulRenderer::new);
     }
 
     @SubscribeEvent
