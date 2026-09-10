@@ -12,6 +12,7 @@ import net.redreaper.twilight_spellbooks.item.armor.ExanimatedLichArmorItem;
 import net.redreaper.twilight_spellbooks.item.armor.KnightmetalWarmageArmorItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
 import net.redreaper.twilight_spellbooks.item.armor.TarnishedQueenCrownItem;
+import net.redreaper.twilight_spellbooks.item.bow.BorealBowItem;
 import net.redreaper.twilight_spellbooks.item.curios.body.CarminiteMantle;
 import net.redreaper.twilight_spellbooks.item.curios.body.NagaMantle;
 import net.redreaper.twilight_spellbooks.item.curios.braces.KnightMetalBrace;
@@ -112,6 +113,9 @@ public class ModItems {
             MazeButcherItem::new);
     public static final DeferredHolder<Item, Item> LICH_GREATSWORD = ITEMS.register("lich_greatsword",
             LichGreatswordItem::new);
+
+    public static final DeferredHolder<Item, Item> BOREAL_BOW = ITEMS.register("boreal_bow",
+            BorealBowItem::new);
 
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_MAGE_HELMET = ITEMS.register("knightmetal_mage_helmet",
             () -> new KnightmetalWarmageArmorItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).durability(ArmorItem.Type.HELMET.getDurability(48))));

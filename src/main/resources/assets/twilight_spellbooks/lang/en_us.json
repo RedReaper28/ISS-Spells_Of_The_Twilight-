@@ -57,6 +57,11 @@
   "item.twilight_spellbooks.lich_greatsword": "Lich Greatsword",
   "item.twilight_spellbooks.lich_greatsword.desc": "+1 to all Exanimated Spells",
 
+  "item.twilight_spellbooks.boreal_bow": "Boreal Bow",
+  "item.twilight_spellbooks.boreal_bow.description": "Require mana to shoot. Damage depend on your Ice Spell Power and is multiplied by Arrow Damage",
+  "item.twilight_spellbooks.boreal_bow.description.damage": "Max damage: %s",
+  "item.twilight_spellbooks.boreal_bow.description.mana_cost": "Mana cost: %s",
+
   "item.twilight_spellbooks.tarnished_lich_crown": "Tarnished Mystical Crown",
   "item.twilight_spellbooks.tarnished_queen_crown": "Tarnished Aurora Crown",
   "item.twilight_spellbooks.knightmetal_mage_helmet": "Knightmetal Warmage Mask",
@@ -147,6 +152,7 @@
   "material.twilight_spellbooks.fiery": "Fiery",
   "material.twilight_spellbooks.snow_silver": "Snow Silver",
 
+  "ui.twilight_spellbooks.not_enough_mana": "Insufficient Mana",
   "ui.twilight_spellbooks.shields": "Shields",
   "ui.twilight_spellbooks.burn_time": "%s Burn Time",
 

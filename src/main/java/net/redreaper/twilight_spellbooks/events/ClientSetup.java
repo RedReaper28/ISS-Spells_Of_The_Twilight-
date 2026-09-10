@@ -1,5 +1,7 @@
 package net.redreaper.twilight_spellbooks.events;
 
+import io.redspace.ironsspellbooks.entity.spells.fire_arrow.FireArrowRenderer;
+import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -24,6 +26,7 @@ import net.redreaper.twilight_spellbooks.entity.spells.examinated_trident.Exanim
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.ExanimatedRayRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraMortarRenderer;
+import net.redreaper.twilight_spellbooks.entity.spells.ice_arrow.IceArrowRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltRenderer;
 import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModParticles;
@@ -75,6 +78,7 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.TWILIGHT_BOLT.get(), (context) -> new TwilightBoltRenderer(context, 0.75f));
         event.registerEntityRenderer(ModEntities.ICE_CHUNK.get(), IceChunkRenderer::new);
         event.registerEntityRenderer(ModEntities.AURORA_MISSILE.get(), AuroraMissileRenderer::new);
+        event.registerEntityRenderer(ModEntities.ICE_ARROW.get(), IceArrowRenderer::new);
 
         event.registerEntityRenderer(ModEntities.LICH_SOUL.get(), LichSoulRenderer::new);
         event.registerEntityRenderer(ModEntities.SNOW_QUEEN_SOUL.get(), SnowQueenSoulRenderer::new);

@@ -1,9 +1,12 @@
 package net.redreaper.twilight_spellbooks.init;
 
+import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
 import io.redspace.ironsspellbooks.item.weapons.ExtendedWeaponTier;
 import io.redspace.ironsspellbooks.item.weapons.IronsWeaponTier;
+import io.redspace.ironsspellbooks.registries.ItemRegistry;
+import net.acetheeldritchking.aces_spell_utils.registries.ASAttributeRegistry;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
@@ -24,6 +27,11 @@ public class ModExtendedWeaponTier implements Tier, IronsWeaponTier {
 
     public static ExtendedWeaponTier MAZE_BUTCHERER = new ExtendedWeaponTier(2031, 11, -3.2F, 12, BlockTags.INCORRECT_FOR_DIAMOND_TOOL, () -> Ingredient.of(TFItems.MAZE_SLIME_BALL),
             new AttributeContainer(Attributes.MOVEMENT_SPEED, .15, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+
+    public static ExtendedWeaponTier BOREAL_BOW = new ExtendedWeaponTier(951, .1f, -3, 25, BlockTags.INCORRECT_FOR_NETHERITE_TOOL, () -> Ingredient.of(ModItems.FROST_ESSENCE.get()),
+            new AttributeContainer(AttributeRegistry.ICE_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+            new AttributeContainer(ASAttributeRegistry.MAGIC_PROJECTILE_DAMAGE, 0.5, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+
 
     int uses;
     float damage;

@@ -32,6 +32,8 @@ public class ModTabs {
                         output.accept(ModItems.MAZE_BUTCHERER.get());
                         output.accept(ModItems.LICH_GREATSWORD.get());
 
+
+
                         output.accept(ModItems.TARNISHED_LICH_CROWN.get());
                         output.accept(ModItems.TARNISHED_QUEEN_CROWN.get());
                         output.accept(ModItems.KNIGHTMETAL_MAGE_HELMET.get());

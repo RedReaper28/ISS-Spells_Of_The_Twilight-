@@ -29,6 +29,7 @@ import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.Exanim
 import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.ExanimatedRayVisualEntity;
 import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraMortarFireball;
 import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraPoisonField;
+import net.redreaper.twilight_spellbooks.entity.spells.ice_arrow.IceArrowProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
 import net.redreaper.twilight_spellbooks.entity.spells.jet_eruption.FireJetEruption;
 import net.redreaper.twilight_spellbooks.entity.spells.mosquito_swarm.MosquitoSwarmProjectile;
@@ -185,6 +186,12 @@ public class ModEntities {
                     .sized(0.75F, 0.75F)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "aurora_missile").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<IceArrowProjectile>> ICE_ARROW =
+            ENTITIES.register("ice_arrow", () -> EntityType.Builder.<IceArrowProjectile>of(IceArrowProjectile::new, MobCategory.MISC)
+                    .sized(0.75F, 0.75F)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "ice_arrow").toString()));
 
     public static void register(IEventBus eventBus)
     {
