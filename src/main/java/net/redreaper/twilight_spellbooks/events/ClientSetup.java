@@ -16,6 +16,7 @@ import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichR
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.DeathTomeRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.MinotaurRenderer;
+import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.urghast_soul.UrGhastSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.aurora_missile.AuroraMissileRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRenderer;
@@ -58,6 +59,7 @@ public class ClientSetup {
 
         event.registerEntityRenderer(ModEntities.SUMMONED_DEATH_TOME.get(), DeathTomeRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolfRenderer::new);
+        event.registerEntityRenderer(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), SummonedCarminiteGolemRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_MINOTAUR.get(), MinotaurRenderer::new);
 
         event.registerEntityRenderer(ModEntities.CARMINITE_PULL_PROJECTILE.get(), NoopRenderer::new);

@@ -12,10 +12,6 @@ import twilightforest.client.model.entity.CarminiteGolemModel;
 public class SummonedCarminiteGolemRenderer <T extends SummonedCarminiteGolem, M extends CarminiteGolemModel<T>> extends MobRenderer<T, M> {
     public static final ResourceLocation TEXTURE = TwilightForestMod.getModelTexture("carminitegolem.png");
 
-    public SummonedCarminiteGolemRenderer(EntityRendererProvider.Context context, M model, float shadowSize) {
-        super(context, model, shadowSize);
-    }
-
     public SummonedCarminiteGolemRenderer(EntityRendererProvider.Context context) {
         super(context, (M) new CarminiteGolemModel(context.bakeLayer(TFModelLayers.CARMINITE_GOLEM)), 0.5F);
 
