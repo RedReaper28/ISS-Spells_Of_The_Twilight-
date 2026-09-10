@@ -8,7 +8,6 @@ import net.minecraft.resources.ResourceLocation;
 import twilightforest.TwilightForestMod;
 import twilightforest.client.model.TFModelLayers;
 import twilightforest.client.model.entity.CarminiteGolemModel;
-import twilightforest.client.model.entity.HostileWolfModel;
 
 public class SummonedCarminiteGolemRenderer <T extends SummonedCarminiteGolem, M extends CarminiteGolemModel<T>> extends MobRenderer<T, M> {
     public static final ResourceLocation TEXTURE = TwilightForestMod.getModelTexture("carminitegolem.png");

@@ -17,6 +17,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
@@ -24,6 +25,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.utils.ModUtils;
+import org.jetbrains.annotations.Nullable;
 import twilightforest.init.TFSounds;
 
 import java.util.Comparator;
@@ -49,7 +51,7 @@ public class MinotaurLungeSpell extends AbstractSpell {
         this.manaCostPerLevel = 15;
         this.baseSpellPower = 5;
         this.spellPowerPerLevel = 1;
-        this.castTime = 40;
+        this.castTime = 10;
         this.baseManaCost = 30;
     }
 
@@ -66,6 +68,17 @@ public class MinotaurLungeSpell extends AbstractSpell {
     @Override
     public ResourceLocation getSpellResource() {
         return spellId;
+    }
+
+    @Override
+    public boolean canBeInterrupted(@Nullable Player player) {
+        return false;
+    }
+
+    @Override
+    public int getEffectiveCastTime(int spellLevel, @Nullable LivingEntity entity) {
+        //due to animation timing, we do not want cast time attribute to affect this spell
+        return getCastTime(spellLevel);
     }
 
     @Override

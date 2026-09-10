@@ -133,10 +133,10 @@ public class ExanimatedTrident extends AbstractMagicProjectile implements GeoEnt
                     DamageSources.applyDamage(entity, damage, ModSpells.EXANIMATED_TRIDENTS.get().getDamageSource(this, getOwner()));
                 }
             }
+            PacketDistributor.sendToPlayersTrackingEntity(this, new ExanimatedExplosionParticlePacket(hitResult.getLocation().subtract(getDeltaMovement().scale(0.5)), getExplosionRadius()));
+            playSound(SoundEvents.GENERIC_EXPLODE.value(), 4.0F, (1.0F + (this.level().random.nextFloat() - this.level().random.nextFloat()) * 0.2F) * 0.7F);
+            pierceOrDiscard();
         }
-        PacketDistributor.sendToPlayersTrackingEntity(this, new ExanimatedExplosionParticlePacket(hitResult.getLocation().subtract(getDeltaMovement().scale(0.5)), getExplosionRadius()));
-        playSound(SoundEvents.GENERIC_EXPLODE.value(), 4.0F, (1.0F + (this.level().random.nextFloat() - this.level().random.nextFloat()) * 0.2F) * 0.7F);
-        pierceOrDiscard();
     }
 
     @Override

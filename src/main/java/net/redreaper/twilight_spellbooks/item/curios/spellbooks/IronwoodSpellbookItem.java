@@ -22,7 +22,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-@EventBusSubscriber
 public class IronwoodSpellbookItem extends PassiveAbilitySpellbook {
     public IronwoodSpellbookItem() {
         super(8, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(Rarity.RARE));
@@ -40,17 +39,6 @@ public class IronwoodSpellbookItem extends PassiveAbilitySpellbook {
         }
     }
 
-    @SubscribeEvent
-    public static void reduceDamage(LivingIncomingDamageEvent event) {
-        var entity = event.getEntity();
-        if (entity instanceof Player player) {
-            if (ASUtils.hasCurio(player, ModItems.IRONWOOD_SPELLBOOK.get())) {
-                float lvl = .15f;
-                float before = event.getAmount();
-                float multiplier = 1 - lvl;
-                event.setAmount(event.getAmount() * multiplier);
-            }
-        }
-    }
+
 
 }

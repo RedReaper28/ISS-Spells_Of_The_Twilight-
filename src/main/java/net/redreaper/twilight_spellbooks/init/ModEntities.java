@@ -1,6 +1,7 @@
 package net.redreaper.twilight_spellbooks.init;
 
 import io.redspace.ironsspellbooks.IronsSpellbooks;
+import io.redspace.ironsspellbooks.entity.spells.ice_spike.IceSpikeEntity;
 import io.redspace.ironsspellbooks.entity.spells.magma_ball.FireField;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -29,6 +30,7 @@ import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.Exanimated
 import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraMortarFireball;
 import net.redreaper.twilight_spellbooks.entity.spells.hydra_morter_shot.HydraPoisonField;
 import net.redreaper.twilight_spellbooks.entity.spells.ice_bomb.ExtendedIceBomb;
+import net.redreaper.twilight_spellbooks.entity.spells.jet_eruption.FireJetEruption;
 import net.redreaper.twilight_spellbooks.entity.spells.mosquito_swarm.MosquitoSwarmProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.twilight_bolt.TwilightBoltProjectile;
 import net.redreaper.twilight_spellbooks.entity.spells.carminite_trap_pull.CarminiteTrapPullProjectile;
@@ -153,6 +155,12 @@ public class ModEntities {
                     .sized(1f, 1f)
                     .clientTrackingRange(64)
                     .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "exanimated_ray").toString()));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<FireJetEruption>> JET_ERUPTION =
+            ENTITIES.register("jet_eruption", () -> EntityType.Builder.<FireJetEruption>of(FireJetEruption::new, MobCategory.MISC)
+                    .sized(1f, 2f)
+                    .clientTrackingRange(64)
+                    .build(ResourceLocation.fromNamespaceAndPath(TwilightSpellbooks.MOD_ID, "jet_eruption").toString()));
 
     public static final DeferredHolder<EntityType<?>, EntityType<HydraMortarFireball>> HYDRA_FIREBALL =
             ENTITIES.register("hydra_fireball", () -> EntityType.Builder.<HydraMortarFireball>of(HydraMortarFireball::new, MobCategory.MISC)

@@ -26,7 +26,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-@EventBusSubscriber
 public class KnightMetalSpellbookItem extends PassiveAbilitySpellbook {
     private static final float KNIGHTMETAL_MULT_DAMAGE = 0.20F;
     public KnightMetalSpellbookItem() {
@@ -47,29 +46,7 @@ public class KnightMetalSpellbookItem extends PassiveAbilitySpellbook {
 
 
 
-    @SubscribeEvent
-    public static void increaseDamage(LivingIncomingDamageEvent event) {
-        LivingEntity target = event.getEntity();
-        var attacker = event.getSource().getEntity();
-        if (attacker instanceof Player player) {
-            if (target instanceof LivingEntity living) {
-                if (event.getSource() instanceof SpellDamageSource) {
-                    if (ASUtils.hasCurio(player, ModItems.KNIGHTMETAL_SPELLBOOK.get())) {
-                        if (target.getArmorValue() > 0) {
-                            if (target.getArmorCoverPercentage() > 0) {
-                                    int moreBonus = (int) (KNIGHTMETAL_MULT_DAMAGE * target.getArmorCoverPercentage());
-                                    event.setAmount(event.getAmount() * moreBonus);
-                            } else {
-                                event.setAmount(event.getAmount() * KNIGHTMETAL_MULT_DAMAGE);
-                            }
-                            // enchantment attack sparkles
-                            ((ServerLevel) target.level()).getChunkSource().broadcastAndSend(target, new ClientboundAnimatePacket(target, 5));
-                        }
-                    }
-                }
-            }
-        }
-    }
+
 
 
 }

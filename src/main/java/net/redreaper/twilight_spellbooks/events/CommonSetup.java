@@ -18,8 +18,7 @@ import twilightforest.entity.monster.DeathTome;
 import twilightforest.entity.monster.Minotaur;
 import twilightforest.entity.monster.WinterWolf;
 
-@SuppressWarnings("removal")
-@EventBusSubscriber(modid = TwilightSpellbooks.MOD_ID, bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = TwilightSpellbooks.MOD_ID)
 public class CommonSetup {
 
     @SubscribeEvent
@@ -33,10 +32,7 @@ public class CommonSetup {
         event.put(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolf.registerAttributes().build());
         event.put(ModEntities.SUMMONED_MINOTAUR.get(), Minotaur.registerAttributes().build());
 
-
         event.put(ModEntities.MOSQUITO_SWARM.get(), WispEntity.prepareAttributes().build());
-
-
     }
 
     @SubscribeEvent

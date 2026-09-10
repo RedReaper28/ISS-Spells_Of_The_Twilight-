@@ -1,7 +1,5 @@
 package net.redreaper.twilight_spellbooks.events;
 
-import io.redspace.ironsspellbooks.entity.spells.magic_missile.MagicMissileRenderer;
-import io.redspace.ironsspellbooks.registries.EntityRegistry;
 import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -18,8 +16,6 @@ import net.redreaper.twilight_spellbooks.entity.living.ominous_lich.OminousLichR
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.DeathTomeRenderer;
 import net.redreaper.twilight_spellbooks.entity.living.summon.MinotaurRenderer;
-import net.redreaper.twilight_spellbooks.entity.living.summon.SummonedCarminiteGolemRenderer;
-import net.redreaper.twilight_spellbooks.entity.living.urghast_soul.UrGhastSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.urghast_soul.UrGhastSoulRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.aurora_missile.AuroraMissileRenderer;
 import net.redreaper.twilight_spellbooks.entity.spells.avalanche.IceChunkRenderer;
@@ -32,24 +28,35 @@ import net.redreaper.twilight_spellbooks.init.ModEntities;
 import net.redreaper.twilight_spellbooks.init.ModParticles;
 import net.redreaper.twilight_spellbooks.particle.*;
 import twilightforest.client.renderer.entity.ThrownIceRenderer;
-import twilightforest.client.renderer.entity.UrGhastRenderer;
 import twilightforest.client.renderer.entity.WinterWolfRenderer;
 
-
-
-@SuppressWarnings("removal")
-@EventBusSubscriber(modid = TwilightSpellbooks.MOD_ID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(modid = TwilightSpellbooks.MOD_ID, value = Dist.CLIENT)
 public class ClientSetup {
 
     @SubscribeEvent
-    public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event) {
+    public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+    event.registerLayerDefinition(LichSoulRenderer.MODEL_LAYER_LOCATION, LichSoulRenderer::createBodyLayer);
+    event.registerLayerDefinition(LichSoulRenderer.CROWN_CUBE_LAYER_LOCATION, LichSoulRenderer::createCrownCubeLayer);
+
+    event.registerLayerDefinition(SnowQueenSoulRenderer.MODEL_LAYER_LOCATION, SnowQueenSoulRenderer::createBodyLayer);
+    event.registerLayerDefinition(SnowQueenSoulRenderer.CROWN_CUBE_LAYER_LOCATION, SnowQueenSoulRenderer::createCrownCubeLayer);
+
+    event.registerLayerDefinition(UrGhastSoulRenderer.MODEL_LAYER_LOCATION, UrGhastSoulRenderer::createBodyLayer);
+    event.registerLayerDefinition(UrGhastSoulRenderer.CROWN_CUBE_LAYER_LOCATION, UrGhastSoulRenderer::createCrownCubeLayer);
+
+    event.registerLayerDefinition(HydraSoulRenderer.MODEL_LAYER_LOCATION, HydraSoulRenderer::createBodyLayer);
+    event.registerLayerDefinition(HydraSoulRenderer.CROWN_CUBE_LAYER_LOCATION, HydraSoulRenderer::createCrownCubeLayer);
+
+    event.registerLayerDefinition(ExanimatedRayRenderer.MODEL_LAYER_LOCATION, ExanimatedRayRenderer::createBodyLayer);
+}
+    @SubscribeEvent
+    public static void registerRenderer(EntityRenderersEvent.RegisterRenderers event){
 
         event.registerEntityRenderer(ModEntities.ADVANCED_DRUID.get(), AdvancedDruidRenderer::new);
         event.registerEntityRenderer(ModEntities.ADVANCED_LOYAL_ZOMBIE.get(), AdvancedLoyalZombieRenderer::new);
         event.registerEntityRenderer(ModEntities.OMINOUS_LICH.get(), OminousLichRenderer::new);
 
         event.registerEntityRenderer(ModEntities.SUMMONED_DEATH_TOME.get(), DeathTomeRenderer::new);
-        event.registerEntityRenderer(ModEntities.SUMMONED_CARMINITE_GOLEM.get(), SummonedCarminiteGolemRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_WINTER_WOLF.get(), WinterWolfRenderer::new);
         event.registerEntityRenderer(ModEntities.SUMMONED_MINOTAUR.get(), MinotaurRenderer::new);
 
@@ -59,6 +66,7 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.EXANIMATED_TRIDENT.get(), ExanimatedTridentRenderer::new);
         event.registerEntityRenderer(ModEntities.EXANIMATED_FIREBALL.get(), (context) -> new ExanimatedFireballRenderer(context, 1.25f));
         event.registerEntityRenderer(ModEntities.EXANIMATED_RAY.get(), ExanimatedRayRenderer::new);
+        event.registerEntityRenderer(ModEntities.JET_ERUPTION.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.HYDRA_FIREBALL.get(), (context) -> new HydraMortarRenderer(context, 1.15f));
         event.registerEntityRenderer(ModEntities.HYDRA_FIRE_FIELD.get(), NoopRenderer::new);
         event.registerEntityRenderer(ModEntities.MOSQUITO_SWARM.get(), NoopRenderer::new);
@@ -72,14 +80,11 @@ public class ClientSetup {
         event.registerEntityRenderer(ModEntities.HYDRA_SOUL.get(), HydraSoulRenderer::new);
     }
 
-    @SubscribeEvent
-    public static void onRegisterLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(ExanimatedRayRenderer.MODEL_LAYER_LOCATION, ExanimatedRayRenderer::createBodyLayer);
 
-    }
 
     @SubscribeEvent
-    public static void registerParticles(RegisterParticleProvidersEvent event) {
+    public static void registerParticles(RegisterParticleProvidersEvent event)
+    {
         event.registerSpriteSet(ModParticles.MOSQUITO_PARTICLE.get(), MosquitoParticle.Provider::new);
 
         event.registerSpriteSet(ModParticles.EXANIMATED_SMOKE_PARTICLE.get(), ExanimatedSmokeParticle.Provider::new);

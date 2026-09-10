@@ -68,12 +68,6 @@ public class AuroraMissileSpell extends AbstractSpell {
     @Override
     public void onCast(Level world, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         AuroraMissileProjectile magicMissileProjectile = new AuroraMissileProjectile(world, entity);
-        RibbonHandler.attach(magicMissileProjectile, new RibbonConfig(
-                new ColorRamp(new int[]{7601996, 5111662,4325317, 4325374, 5022207, 5003263, 5985791,14238207}, Easing.LINEAR),
-                new Curve(0.18F, 0.0F, Easing.EASE_OUT_QUAD),
-                new Curve(1.0F, 0.0F, Easing.LINEAR),
-                24,
-                true));
         magicMissileProjectile.setCursorHoming(true);
         magicMissileProjectile.setPos(entity.position().add(0, entity.getEyeHeight() - magicMissileProjectile.getBoundingBox().getYsize() * .5f, 0));
         magicMissileProjectile.shoot(entity.getLookAngle());

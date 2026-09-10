@@ -35,6 +35,7 @@ public class ModSpells  {
 
     //FIRE
     public static final Supplier<AbstractSpell> FIRE_BETTLE_SPIT = registerSpell(new FireBettleSpitSpell());
+    public static final Supplier<AbstractSpell> JET_ERUPTION = registerSpell(new JetEruptionSpell());
 
     //HOLY
     public static final Supplier<AbstractSpell> FORTIFYING_SHIELDS = registerSpell(new FortifyingShieldsSpell());
@@ -51,8 +52,8 @@ public class ModSpells  {
 
     //NATURE
     public static final Supplier<AbstractSpell> DRUID_BOLT = registerSpell(new DruidBoltSpell());
-    public static final Supplier<AbstractSpell> BEAST_LUNGE = registerSpell(new MinotaurLungeSpell());
     public static final Supplier<AbstractSpell> HYDRA_MORTAR_SHOT = registerSpell(new HydraMortarShotSpell());
+    public static final Supplier<AbstractSpell> MINOTAUR_LUNGE = registerSpell(new MinotaurLungeSpell());
     public static final Supplier<AbstractSpell> SUMMON_MINOTAURS = registerSpell(new SummonMinotaursSpell());
 
     public static void register(IEventBus eventBus)

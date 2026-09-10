@@ -24,7 +24,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
-@EventBusSubscriber
 public class FierySpellbookItem extends PassiveAbilitySpellbook {
     public FierySpellbookItem() {
         super(12, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(Rarity.UNCOMMON));
@@ -43,22 +42,4 @@ public class FierySpellbookItem extends PassiveAbilitySpellbook {
         }
     }
 
-    @SubscribeEvent
-    public static void livingDamageEventPost(LivingDamageEvent.Post event) {
-        var sourceEntity = event.getSource().getEntity();
-        var target = event.getEntity();
-        var projectile = event.getSource().getDirectEntity();
-        // Curios
-
-        if (sourceEntity != null) {
-            if (sourceEntity instanceof Player player) {
-                // FIERY RING
-                if (ASUtils.hasCurio(player, ModItems.FIERY_SPELL_BOOK.get())) {
-                    if (event.getSource() instanceof SpellDamageSource) {
-                        target.setRemainingFireTicks(2*20);
-                    }
-                }
-            }
-        }
-    }
 }

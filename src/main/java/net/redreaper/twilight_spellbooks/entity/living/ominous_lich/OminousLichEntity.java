@@ -72,7 +72,6 @@ import net.redreaper.twilight_spellbooks.init.ModItems;
 import net.redreaper.twilight_spellbooks.init.ModSpells;
 import software.bernie.geckolib.animation.RawAnimation;
 import twilightforest.entity.ai.goal.AlwaysWatchTargetGoal;
-import twilightforest.init.TFItems;
 
 import javax.annotation.Nullable;
 import java.util.List;

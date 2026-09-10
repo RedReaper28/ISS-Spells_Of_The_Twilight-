@@ -23,7 +23,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
-import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulEntity;
 import org.jetbrains.annotations.NotNull;
 
 public class SnowQueenSoulRenderer extends EntityRenderer<SnowQueenSoulEntity> {

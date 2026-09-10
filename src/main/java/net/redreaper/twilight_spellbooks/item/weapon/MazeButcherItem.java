@@ -4,10 +4,7 @@ import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.item.weapons.ExtendedSwordItem;
 import io.redspace.ironsspellbooks.api.item.weapons.MagicSwordItem;
 import io.redspace.ironsspellbooks.api.registry.SpellDataRegistryHolder;
-import io.redspace.ironsspellbooks.item.UniqueItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
-import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.protocol.game.ClientboundAnimatePacket;
@@ -23,7 +20,6 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.redreaper.twilight_spellbooks.init.ModExtendedWeaponTier;
 import net.redreaper.twilight_spellbooks.init.ModSpells;
 import org.jetbrains.annotations.NotNull;
-import twilightforest.item.MinotaurAxeItem;
 
 import java.util.List;
 
@@ -39,7 +35,7 @@ public class MazeButcherItem extends MagicSwordItem {
                         .attributes(ExtendedSwordItem.createAttributes(ModExtendedWeaponTier.MAZE_BUTCHERER)
                         ),
                 SpellDataRegistryHolder.of(
-                        new SpellDataRegistryHolder(ModSpells.BEAST_LUNGE, 3)
+                        new SpellDataRegistryHolder(ModSpells.MINOTAUR_LUNGE, 3)
                 )
         );
     }

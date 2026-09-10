@@ -24,7 +24,6 @@ import twilightforest.init.TFMobEffects;
 
 import java.util.List;
 
-@EventBusSubscriber
 public class SnowQueenSpellbookItem extends PassiveAbilitySpellbook {
     public static final int COOLDOWN = 10*20;
     public SnowQueenSpellbookItem() {
@@ -41,22 +40,6 @@ public class SnowQueenSpellbookItem extends PassiveAbilitySpellbook {
         if (!affinityData.affinityData().isEmpty()) {
             int i = TooltipsUtils.indexOfComponent(lines, "tooltip.irons_spellbooks.spellbook_spell_count");
             lines.addAll(i < 0 ? lines.size() : i + 1, affinityData.getDescriptionComponent());
-        }
-    }
-
-    @SubscribeEvent
-    public static void livingDamageEventPost(LivingDamageEvent.Post event) {
-        var sourceEntity = event.getSource().getEntity();
-        var target = event.getEntity();
-        if (sourceEntity != null) {
-            if (sourceEntity instanceof Player player) {
-                if (ASUtils.hasCurio(player, ModItems.SNOW_QUEEN_SPELL_BOOK.get()) && (!player.getCooldowns().isOnCooldown(ModItems.SNOW_QUEEN_SPELL_BOOK.get()))) {
-                    if (event.getSource().is(ISSDamageTypes.ICE_MAGIC)) {
-                        target.addEffect(new MobEffectInstance(TFMobEffects.FROSTY,5*20,2));
-                        player.getCooldowns().addCooldown(ModItems.SNOW_QUEEN_SPELL_BOOK.get(), SnowQueenSpellbookItem.COOLDOWN);
-                    }
-                }
-            }
         }
     }
 

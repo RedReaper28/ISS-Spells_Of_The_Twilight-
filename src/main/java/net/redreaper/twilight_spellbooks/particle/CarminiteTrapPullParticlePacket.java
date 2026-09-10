@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec3;
 import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
-import net.redreaper.twilight_spellbooks.client.ModClientSpellCastHelper;
+import net.redreaper.twilight_spellbooks.events.ModClientSpellCastHelper;
 
 public class CarminiteTrapPullParticlePacket implements CustomPacketPayload {
     private final Vec3 pos1;
