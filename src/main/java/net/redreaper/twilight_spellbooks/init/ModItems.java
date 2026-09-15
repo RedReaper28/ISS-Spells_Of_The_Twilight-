@@ -22,10 +22,7 @@ import net.redreaper.twilight_spellbooks.item.curios.ring.FieryRing;
 import net.redreaper.twilight_spellbooks.item.curios.ring.IronwoodRing;
 import net.redreaper.twilight_spellbooks.item.curios.ring.KnightMetalRing;
 import net.redreaper.twilight_spellbooks.item.curios.sheath.SteeleafSheath;
-import net.redreaper.twilight_spellbooks.item.curios.spellbooks.CarminiteSpellBookItem;
-import net.redreaper.twilight_spellbooks.item.curios.spellbooks.IronwoodSpellbookItem;
-import net.redreaper.twilight_spellbooks.item.curios.spellbooks.KnightMetalSpellbookItem;
-import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbookItem;
+import net.redreaper.twilight_spellbooks.item.curios.spellbooks.*;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.fierySpellbook.FierySpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.ring.ThornRoseRing;
 import net.redreaper.twilight_spellbooks.item.misc.ExanimatedLichLootBagItem;
@@ -73,6 +70,8 @@ public class ModItems {
             FierySpellbookItem::new);
     public static final DeferredHolder<Item, Item> SNOW_QUEEN_SPELL_BOOK = ITEMS.register("snow_queen_spell_book",
             SnowQueenSpellbookItem::new);
+    public static final DeferredHolder<Item, Item> EXANIMATED_SPELL_BOOK = ITEMS.register("exanimated_spell_book",
+            ExanimatedSpellbookItem::new);
 
     public static final DeferredHolder<Item, Item> EXANIMATED_LICH_LOOT_BAG = ITEMS.register("exanimated_lich_loot_bag",
             ExanimatedLichLootBagItem::new);

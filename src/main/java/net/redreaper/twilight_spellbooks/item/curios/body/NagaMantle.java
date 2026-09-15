@@ -5,7 +5,6 @@ import com.google.common.collect.Multimap;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.damage.ISSDamageTypes;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -27,7 +26,7 @@ import top.theillusivec4.curios.api.SlotContext;
 @EventBusSubscriber
 public class NagaMantle extends SimpleDescriptiveCurio {
     public NagaMantle() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.RARE));
+        super(new Properties().stacksTo(1).rarity(Rarity.RARE));
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {

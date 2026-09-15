@@ -20,13 +20,15 @@
 
   "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Rooted Spell Book",
   "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming Damage by 15%",
-  "item.twilight_spellbooks.knightmetal_spellbook": "Knights Honor Codex",
+  "item.twilight_spellbooks.knightmetal_spellbook": "Knight's Honor Codex",
   "item.twilight_spellbooks.knightmetal_spellbook.desc": "Deal 20% Extra Spell Damage to armored targets",
   "item.twilight_spellbooks.carminite_spell_book": "Carminite Golem Blueprint",
   "item.twilight_spellbooks.fiery_spell_book": "Fiery Chronicles",
   "item.twilight_spellbooks.fiery_spell_book.desc": "Dealing Spell Damage Inflict 2s of Burns",
   "item.twilight_spellbooks.snow_queen_spell_book": "Snow Queen Diary",
   "item.twilight_spellbooks.snow_queen_spell_book.desc": "Dealing Ice Spell Damage Inflict Frosted for 5s",
+  "item.twilight_spellbooks.exanimated_spell_book": "Exanimated Grimoire",
+  "item.twilight_spellbooks.exanimated_spell_book.desc": "WIP",
   "item.twilight_spellbooks.ironwood_ring": "Ironwood Ring",
   "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
   "item.twilight_spellbooks.thorn_rose_ring": "Thorn Rose Ring",
@@ -42,7 +44,7 @@
 
   "item.twilight_spellbooks.steeleaf_sheath": "Steeleaf Sheath",
   "item.twilight_spellbooks.steeleaf_sheath.desc": "25% Chance of Critting when dealing Nature Spell Damage for 50% Extra Damage. Enters cooldown when Crit",
-  "item.twilight_spellbooks.ominous_blazer": "Exanimated Blazer",
+  "item.twilight_spellbooks.ominous_blazer": "Exanimated Brazier",
   "item.twilight_spellbooks.ominous_blazer.desc": "Summons inflict Exanimating Burn on hit to reduce 50% of the targets healing and deal small damage over time",
 
   "item.twilight_spellbooks.steeleaf_staff": "Razor Leaf",

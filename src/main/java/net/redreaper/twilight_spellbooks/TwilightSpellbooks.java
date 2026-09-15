@@ -70,6 +70,7 @@ public class TwilightSpellbooks {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
+            ModItemProperties.addCustomItemProperties();
 
             event.enqueueWork(() -> {
                 ModItems.getSOTItems().stream().filter(item -> item.get() instanceof SheathCurioItem).forEach((item) -> CuriosRendererRegistry.register(item.get(), SheathCurioRenderer::new));
@@ -81,6 +82,7 @@ public class TwilightSpellbooks {
                 CuriosRendererRegistry.register(ModItems.CARMINITE_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
                 CuriosRendererRegistry.register(ModItems.FIERY_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
                 CuriosRendererRegistry.register(ModItems.SNOW_QUEEN_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
+                CuriosRendererRegistry.register(ModItems.EXANIMATED_SPELL_BOOK.get(), SpellBookCurioRenderer::new);
             });
 
             AzItemRendererRegistry.register(UltimateScepterRenderer::new, ModItems.ULTIMATE_SCEPTER.get());

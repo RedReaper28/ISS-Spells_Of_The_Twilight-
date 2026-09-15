@@ -2,7 +2,6 @@ package net.redreaper.twilight_spellbooks.item.curios.ring;
 
 import io.redspace.ironsspellbooks.compat.Curios;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.entity.player.Player;
@@ -15,7 +14,7 @@ import net.redreaper.twilight_spellbooks.init.ModItems;
 @EventBusSubscriber
 public class FieryRing extends SimpleDescriptiveCurio {
     public FieryRing() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), Curios.RING_SLOT);
+        super(new Properties().stacksTo(1).rarity(Rarity.UNCOMMON), Curios.RING_SLOT);
     }
 
     @SubscribeEvent

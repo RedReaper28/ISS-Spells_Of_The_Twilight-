@@ -3,7 +3,6 @@ package net.redreaper.twilight_spellbooks.spells;
 import io.redspace.ironsspellbooks.api.config.DefaultConfig;
 import io.redspace.ironsspellbooks.api.magic.MagicData;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
-import io.redspace.ironsspellbooks.api.spells.AbstractSpell;
 import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
@@ -39,10 +38,10 @@ public class TwilightBoltSpell extends AbstractScepterSpell {
 
     public TwilightBoltSpell() {
         this.manaCostPerLevel = 5;
-        this.baseSpellPower = 20;
+        this.baseSpellPower = 10;
         this.spellPowerPerLevel = 1;
         this.castTime = 0;
-        this.baseManaCost = 25;
+        this.baseManaCost = 30;
     }
 
     @Override

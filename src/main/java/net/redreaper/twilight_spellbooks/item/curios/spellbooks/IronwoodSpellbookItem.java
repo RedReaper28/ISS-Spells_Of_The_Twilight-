@@ -3,28 +3,20 @@ package net.redreaper.twilight_spellbooks.item.curios.spellbooks;
 import io.redspace.ironsspellbooks.api.item.curios.AffinityData;
 import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.item.weapons.AttributeContainer;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import io.redspace.ironsspellbooks.util.TooltipsUtils;
 import net.acetheeldritchking.aces_spell_utils.items.curios.PassiveAbilitySpellbook;
-import net.acetheeldritchking.aces_spell_utils.utils.ASRarities;
-import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
-import net.redreaper.twilight_spellbooks.init.ModItems;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 
 public class IronwoodSpellbookItem extends PassiveAbilitySpellbook {
     public IronwoodSpellbookItem() {
-        super(8, ItemPropertiesHelper.equipment().fireResistant().stacksTo(1).rarity(Rarity.RARE));
+        super(8, new Properties().fireResistant().stacksTo(1).rarity(Rarity.RARE));
         withSpellbookAttributes(new AttributeContainer(AttributeRegistry.NATURE_MAGIC_RESIST, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 150, AttributeModifier.Operation.ADD_VALUE));
     }

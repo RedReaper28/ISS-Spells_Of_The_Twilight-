@@ -4,7 +4,6 @@ import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
 import io.redspace.ironslib.registry.IronsLibRegistries;
 import io.redspace.ironsspellbooks.item.curios.CurioBaseItem;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.ai.attributes.Attribute;
@@ -14,7 +13,7 @@ import top.theillusivec4.curios.api.SlotContext;
 
 public class KnightMetalBrace extends CurioBaseItem {
     public KnightMetalBrace() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1));
+        super(new Properties().stacksTo(1));
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {

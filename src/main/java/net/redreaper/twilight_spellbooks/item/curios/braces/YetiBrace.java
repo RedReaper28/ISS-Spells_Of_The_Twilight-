@@ -2,7 +2,6 @@ package net.redreaper.twilight_spellbooks.item.curios.braces;
 
 import com.google.common.collect.LinkedHashMultimap;
 import com.google.common.collect.Multimap;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.items.curios.FlatCooldownPassiveAbilityCurio;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
 import net.minecraft.core.Holder;
@@ -26,7 +25,7 @@ import top.theillusivec4.curios.api.SlotContext;
 public class YetiBrace extends FlatCooldownPassiveAbilityCurio {
     public static final int COOLDOWN_IN_TICKS = 5 * 20;
     public YetiBrace() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.RARE), null);
+        super(new Properties().stacksTo(1).rarity(Rarity.RARE), null);
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {

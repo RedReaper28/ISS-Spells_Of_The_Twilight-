@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.compat.Curios;
 import io.redspace.ironsspellbooks.entity.mobs.IMagicSummon;
 import io.redspace.ironsspellbooks.item.curios.SimpleDescriptiveCurio;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
@@ -29,13 +28,14 @@ import top.theillusivec4.curios.api.SlotContext;
 @EventBusSubscriber
 public class OminousBlazer extends SimpleDescriptiveCurio {
     public OminousBlazer() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).rarity(Rarity.UNCOMMON), Curios.NECKLACE_SLOT);
+        super(new Properties().stacksTo(1).rarity(Rarity.UNCOMMON), Curios.NECKLACE_SLOT);
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext slotContext, ResourceLocation id, ItemStack stack) {
         Multimap<Holder<Attribute>, AttributeModifier> attr = LinkedHashMultimap.create();
-        attr.put(AttributeRegistry.FIRE_SPELL_POWER, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
-        attr.put(AttributeRegistry.ENDER_SPELL_POWER, new AttributeModifier(id, 0.1, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(AttributeRegistry.BLOOD_SPELL_POWER, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(AttributeRegistry.ENDER_SPELL_POWER, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
+        attr.put(AttributeRegistry.FIRE_SPELL_POWER, new AttributeModifier(id, 0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE));
         attr.put(AttributeRegistry.SUMMON_DAMAGE, new AttributeModifier(id, 0.10F, AttributeModifier.Operation.ADD_VALUE));
         return attr;
     }

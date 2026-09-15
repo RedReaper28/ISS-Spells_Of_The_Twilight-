@@ -1,0 +1,35 @@
+{
+  "format_version": "1.21.11",
+  "credit": "Made with Blockbench",
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "twilight_spellbooks:item/boreal_bow"
+  },
+  "overrides": [
+    {"model": "twilight_spellbooks:item/boreal_bow_pulling_0", "predicate": {"pulling": 1}},
+    {"model": "twilight_spellbooks:item/boreal_bow_pulling_1", "predicate": {"pulling": 1, "pull": 0.65}},
+    {"model": "twilight_spellbooks:item/boreal_bow_pulling_2", "predicate": {"pulling": 1, "p0ull": 0.9}}
+  ],
+  "display": {
+    "thirdperson_righthand": {
+      "rotation": [-80, -100, -40],
+      "translation": [-1, -2, 2.5]
+    },
+    "thirdperson_lefthand": {
+      "rotation": [-80, 80, 40],
+      "translation": [-1, -2, 2.5]
+    },
+    "firstperson_righthand": {
+      "rotation": [0, -90, 25],
+      "translation": [2.13, 3.2, 1.13]
+    },
+    "firstperson_lefthand": {
+      "rotation": [0, 90, -25],
+      "translation": [2.13, 3.2, 1.13]
+    },
+    "ground": {
+      "translation": [0, 2.75, 0],
+      "scale": [0.6, 0.6, 0.6]
+    }
+  }
+}

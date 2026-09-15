@@ -43,8 +43,8 @@ public class ExanimatedFireballSpell extends AbstractExanimatedSpell {
 
     public ExanimatedFireballSpell() {
         this.manaCostPerLevel = 15;
-        this.baseSpellPower = 1;
-        this.spellPowerPerLevel = 1;
+        this.baseSpellPower = 2;
+        this.spellPowerPerLevel = 2;
         this.castTime = 40;
         this.baseManaCost = 60;
     }
@@ -93,10 +93,10 @@ public class ExanimatedFireballSpell extends AbstractExanimatedSpell {
             double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
             double enderPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
             if (firePower == bloodPower && bloodPower == enderPower) {
-                return (float)((double)5+ 5  * ((double)1.5F * firePower + (double)1.5F * enderPower + (double)1.5F * bloodPower));
+                return (float)((double)5+ 5  * ((double)2 * firePower + (double)2 * enderPower + (double)2 * bloodPower));
             }
             else {
-                return (float)((double)5+ 5  * (firePower + enderPower + bloodPower));
+                return (float)((double)5+ 5 * (firePower + enderPower + bloodPower));
             }
         }
     }

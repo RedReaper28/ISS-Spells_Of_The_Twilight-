@@ -124,7 +124,7 @@ public class BorealBowItem extends ExtendedBowItem {
     }
 
     public int getUseDuration(ItemStack stack, LivingEntity livingEntity) {
-        return 7200;
+        return 12000;
     }
 
     @Override

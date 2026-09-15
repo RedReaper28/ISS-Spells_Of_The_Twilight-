@@ -24,6 +24,7 @@ public class ModTabs {
                         output.accept(ModItems.CARMINITE_SPELL_BOOK.get());
                         output.accept(ModItems.FIERY_SPELL_BOOK.get());
                         output.accept(ModItems.SNOW_QUEEN_SPELL_BOOK.get());
+                        output.accept(ModItems.EXANIMATED_SPELL_BOOK.get());
 
                         output.accept(ModItems.STEELEAF_STAFF.get());
                         output.accept(ModItems.KNIGHTMETAL_STAFF.get());
@@ -31,8 +32,7 @@ public class ModTabs {
                         output.accept(ModItems.ULTIMATE_SCEPTER.get());
                         output.accept(ModItems.MAZE_BUTCHERER.get());
                         output.accept(ModItems.LICH_GREATSWORD.get());
-
-
+                        output.accept(ModItems.BOREAL_BOW.get());
 
                         output.accept(ModItems.TARNISHED_LICH_CROWN.get());
                         output.accept(ModItems.TARNISHED_QUEEN_CROWN.get());

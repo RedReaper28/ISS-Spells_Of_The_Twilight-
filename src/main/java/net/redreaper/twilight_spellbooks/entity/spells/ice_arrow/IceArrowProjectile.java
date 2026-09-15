@@ -104,7 +104,7 @@ public class IceArrowProjectile extends AbstractMagicProjectile {
         if (level().isClientSide)
             return;
         Entity entity = entityHitResult.getEntity();
-        boolean hit = DamageSources.applyDamage(entity, getDamage(), SpellRegistry.POISON_ARROW_SPELL.get().getDamageSource(this, getOwner()));
+        boolean hit = DamageSources.applyDamage(entity, getDamage(), SpellRegistry.ICICLE_SPELL.get().getDamageSource(this, getOwner()));
         //TODO: add evasion and stuff. Also do this for all other projectiles?
         boolean ignore = entity.getType() == EntityType.ENDERMAN;
         if (hit) {

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CD",
+    "CBA",
+    " CD"
+  ],
+  "key": {
+    "A": {
+      "item": "twilight_spellbooks:aurora_shard"
+    },
+    "B": {
+      "item": "twilightforest:ice_bow"
+    },
+    "C": {
+      "item": "irons_spellbooks:frosted_helve"
+    },
+    "D": {
+      "item": "irons_spellbooks:mithril_weave"
+    }
+  },
+  "result": {
+    "id": "twilight_spellbooks:boreal_bow",
+    "count": 1
+  }
+}

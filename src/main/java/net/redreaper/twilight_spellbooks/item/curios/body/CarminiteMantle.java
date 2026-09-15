@@ -7,7 +7,6 @@ import io.redspace.ironsspellbooks.api.registry.AttributeRegistry;
 import io.redspace.ironsspellbooks.api.registry.SchoolRegistry;
 import io.redspace.ironsspellbooks.api.registry.SpellRegistry;
 import io.redspace.ironsspellbooks.registries.MobEffectRegistry;
-import io.redspace.ironsspellbooks.util.ItemPropertiesHelper;
 import net.acetheeldritchking.aces_spell_utils.items.curios.FlatCooldownPassiveAbilityCurio;
 import net.acetheeldritchking.aces_spell_utils.utils.ASUtils;
 import net.minecraft.core.Holder;
@@ -27,7 +26,7 @@ import top.theillusivec4.curios.api.SlotContext;
 public class CarminiteMantle  extends FlatCooldownPassiveAbilityCurio {
     public static final int COOLDOWN_IN_TICKS = 4 * 20;
     public CarminiteMantle() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1), null);
+        super(new Properties().stacksTo(1), null);
     }
 
     public Multimap<Holder<Attribute>, AttributeModifier> getAttributeModifiers(SlotContext

@@ -17,7 +17,7 @@ import twilightforest.init.TFDamageTypes;
 @EventBusSubscriber
 public class ThornRoseRing extends SimpleDescriptiveCurio {
     public ThornRoseRing() {
-        super(ItemPropertiesHelper.equipment().stacksTo(1).fireResistant().rarity(ASRarities.VERDANT_RARITY_PROXY.getValue()), Curios.RING_SLOT);
+        super(new Properties().stacksTo(1).fireResistant().rarity(ASRarities.VERDANT_RARITY_PROXY.getValue()), Curios.RING_SLOT);
     }
 
     @SubscribeEvent

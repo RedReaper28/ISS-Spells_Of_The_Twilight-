@@ -60,8 +60,8 @@ public class ExanimatedStepSpell extends AbstractExanimatedSpell {
             .build();
 
     public ExanimatedStepSpell() {
-        this.baseSpellPower = 8;
-        this.spellPowerPerLevel = 1;
+        this.baseSpellPower = 10;
+        this.spellPowerPerLevel = 2;
         this.baseManaCost = 30;
         this.manaCostPerLevel = 10;
         this.castTime = 0;

@@ -46,7 +46,7 @@ public class ExanimatedTridentsSpell extends AbstractExanimatedSpell {
         this.manaCostPerLevel = 10;
         this.baseSpellPower = 14;
         this.spellPowerPerLevel = 2;
-        this.castTime = 40;
+        this.castTime = 35;
         this.baseManaCost = 50;
     }
 
@@ -82,7 +82,7 @@ public class ExanimatedTridentsSpell extends AbstractExanimatedSpell {
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         if (!playerMagicData.getPlayerRecasts().hasRecastForSpell(getSpellId())) {
-            playerMagicData.getPlayerRecasts().addRecast(new RecastInstance(getSpellId(), spellLevel, getRecastCount(spellLevel, entity), 80, castSource, null), playerMagicData);
+            playerMagicData.getPlayerRecasts().addRecast(new RecastInstance(getSpellId(), spellLevel, getRecastCount(spellLevel, entity), 5*20, castSource, null), playerMagicData);
         }
 
         ExanimatedTrident magicArrow = new ExanimatedTrident(level, entity);
@@ -102,7 +102,7 @@ public class ExanimatedTridentsSpell extends AbstractExanimatedSpell {
             double bloodPower = caster.getAttributeValue(AttributeRegistry.BLOOD_SPELL_POWER);
             double enderPower = caster.getAttributeValue(AttributeRegistry.ENDER_SPELL_POWER);
             if (firePower == bloodPower && bloodPower == enderPower) {
-                return (float)((double)5 * ((double)0.75F * firePower + (double)0.75F * enderPower + (double)0.75F * bloodPower));
+                return (float)((double)5 * ((double).75F * firePower + (double)0.75F * enderPower + (double)0.75F * bloodPower));
             }
             else {
                 return (float)((double)5 * ((double)0.5F * firePower + (double)0.5F * enderPower + (double)0.5F * bloodPower));
