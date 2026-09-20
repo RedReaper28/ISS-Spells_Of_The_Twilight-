@@ -40,6 +40,12 @@ public class ModTabs {
                         output.accept(ModItems.KNIGHTMETAL_MAGE_CHESTPLATE.get());
                         output.accept(ModItems.KNIGHTMETAL_MAGE_LEGGINGS.get());
                         output.accept(ModItems.KNIGHTMETAL_MAGE_BOOTS.get());
+
+                        output.accept(ModItems.FIERY_MAGE_HELMET.get());
+                        output.accept(ModItems.FIERY_MAGE_CHESTPLATE.get());
+                        output.accept(ModItems.FIERY_MAGE_LEGGINGS.get());
+                        output.accept(ModItems.FIERY_MAGE_BOOTS.get());
+
                         output.accept(ModItems.EXANIMATED_LICH_HELMET.get());
                         output.accept(ModItems.EXANIMATED_LICH_CHESTPLATE.get());
                         output.accept(ModItems.EXANIMATED_LICH_LEGGINGS.get());

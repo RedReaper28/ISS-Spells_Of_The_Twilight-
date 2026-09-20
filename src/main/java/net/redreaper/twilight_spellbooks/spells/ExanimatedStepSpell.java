@@ -13,6 +13,7 @@ import io.redspace.ironsspellbooks.api.util.CameraShakeManager;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.particle.BlastwaveParticleOptions;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.spells.ender.TeleportSpell;
@@ -35,6 +36,7 @@ import net.redreaper.twilight_spellbooks.init.ModMobEffects;
 import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
 import net.redreaper.twilight_spellbooks.particle.ExanimatedStepParticlePacket;
 import net.redreaper.twilight_spellbooks.particle.ModParticleHelper;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
@@ -194,6 +196,10 @@ public class ExanimatedStepSpell extends AbstractExanimatedSpell {
         }
     }
 
+    @Override
+    public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
+        return super.getDamageSource(projectile, attacker).setLifestealPercent(.10f);
+    }
 
     @Override
     public AnimationHolder getCastStartAnimation() {

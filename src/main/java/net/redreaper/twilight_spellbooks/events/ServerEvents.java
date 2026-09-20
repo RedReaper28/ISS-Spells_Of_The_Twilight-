@@ -21,6 +21,8 @@ import net.redreaper.twilight_spellbooks.entity.living.lich_soul.LichSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.snow_queen_soul.SnowQueenSoulEntity;
 import net.redreaper.twilight_spellbooks.entity.living.urghast_soul.UrGhastSoulEntity;
 import net.redreaper.twilight_spellbooks.init.ModItems;
+import net.redreaper.twilight_spellbooks.init.ModMobEffects;
+import net.redreaper.twilight_spellbooks.item.curios.spellbooks.ExanimatedSpellbookItem;
 import net.redreaper.twilight_spellbooks.item.curios.spellbooks.SnowQueenSpellbookItem;
 import twilightforest.entity.boss.Hydra;
 import twilightforest.entity.boss.Lich;
@@ -112,8 +114,10 @@ public class ServerEvents {
 
     @SubscribeEvent
     public static void livingIncomingDamage(LivingIncomingDamageEvent event) {
-        var entity = event.getEntity();
-        if (entity instanceof Player player) {
+        var target = event.getEntity();
+        var attacker = event.getSource().getEntity();
+
+        if (target instanceof Player player) {
             if (ASUtils.hasCurio(player, ModItems.IRONWOOD_SPELLBOOK.get())) {
                 float lvl = .15f;
                 float before = event.getAmount();
@@ -121,14 +125,25 @@ public class ServerEvents {
                 event.setAmount(event.getAmount() * multiplier);
             }
         }
-    }
 
-    @SubscribeEvent
-    public static void increaseDamage(LivingIncomingDamageEvent event) {
-        LivingEntity target = event.getEntity();
-        var attacker = event.getSource().getEntity();
         if (attacker instanceof Player player) {
             if (target instanceof LivingEntity living) {
+                if (ASUtils.hasCurio(player, ModItems.EXANIMATED_SPELL_BOOK.get()) && (!player.getCooldowns().isOnCooldown(ModItems.EXANIMATED_SPELL_BOOK.get()))) {
+                    if (event.getSource().is(ISSDamageTypes.BLOOD_MAGIC) || event.getSource().is(ISSDamageTypes.ENDER_MAGIC)) {
+                        target.addEffect(new MobEffectInstance(ModMobEffects.OMINOUS_BURN,5*20,0));
+                        player.getCooldowns().addCooldown(ModItems.EXANIMATED_SPELL_BOOK.get(), ExanimatedSpellbookItem.COOLDOWN/2);
+                    }
+
+                    if (event.getSource().is(ISSDamageTypes.FIRE_MAGIC) || event.getSource().is(ISSDamageTypes.ENDER_MAGIC)) {
+                        float heal = event.getAmount()* 0.25f;
+                        player.heal(heal);
+                        player.getCooldowns().addCooldown(ModItems.EXANIMATED_SPELL_BOOK.get(), ExanimatedSpellbookItem.COOLDOWN);
+                    }
+
+                }
+
+
+
                 if (event.getSource() instanceof SpellDamageSource) {
                     if (ASUtils.hasCurio(player, ModItems.KNIGHTMETAL_SPELLBOOK.get())) {
                         if (target.getArmorValue() > 0) {
@@ -146,6 +161,7 @@ public class ServerEvents {
             }
         }
     }
+
 
 }
 

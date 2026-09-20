@@ -7,6 +7,7 @@ import io.redspace.ironsspellbooks.api.spells.CastSource;
 import io.redspace.ironsspellbooks.api.spells.CastType;
 import io.redspace.ironsspellbooks.api.spells.SpellRarity;
 import io.redspace.ironsspellbooks.api.util.Utils;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
@@ -19,6 +20,7 @@ import net.minecraft.world.phys.Vec3;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 import net.redreaper.twilight_spellbooks.entity.spells.exanimate_fireball.ExanimatedFireballEntity;
 import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
@@ -99,6 +101,11 @@ public class ExanimatedFireballSpell extends AbstractExanimatedSpell {
                 return (float)((double)5+ 5 * (firePower + enderPower + bloodPower));
             }
         }
+    }
+
+    @Override
+    public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
+        return super.getDamageSource(projectile, attacker).setLifestealPercent(.10f);
     }
 
     public int getRadius(int spellLevel, LivingEntity caster) {

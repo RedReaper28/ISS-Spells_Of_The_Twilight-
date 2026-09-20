@@ -17,6 +17,7 @@
   "item.twilight_spellbooks.deaths_essence": "Deaths Essence",
 
   "item.twilight_spellbooks.exanimated_lich_loot_bag": "Exanimated Lich Loot Bag",
+  "item.twilight_spellbooks.exanimated_lich_loot_bag.desc": "Contains loot from The Exanimated Lich",
 
   "item.twilight_spellbooks.ironwood_spellbook": "Ironwood Rooted Spell Book",
   "item.twilight_spellbooks.ironwood_spellbook.desc": "Reduces incoming Damage by 15%",
@@ -28,7 +29,7 @@
   "item.twilight_spellbooks.snow_queen_spell_book": "Snow Queen Diary",
   "item.twilight_spellbooks.snow_queen_spell_book.desc": "Dealing Ice Spell Damage Inflict Frosted for 5s",
   "item.twilight_spellbooks.exanimated_spell_book": "Exanimated Grimoire",
-  "item.twilight_spellbooks.exanimated_spell_book.desc": "WIP",
+  "item.twilight_spellbooks.exanimated_spell_book.desc": "Blood and Ender Spell Damage inflict Exanimated Burn, Ender and Fire Spells heal 25% of damage done",
   "item.twilight_spellbooks.ironwood_ring": "Ironwood Ring",
   "item.twilight_spellbooks.fiery_ring": "Fiery Ring",
   "item.twilight_spellbooks.thorn_rose_ring": "Thorn Rose Ring",
@@ -70,6 +71,12 @@
   "item.twilight_spellbooks.knightmetal_mage_chestplate": "Knightmetal Warmage Chestplate",
   "item.twilight_spellbooks.knightmetal_mage_leggings": "Knightmetal Warmage Leggings ",
   "item.twilight_spellbooks.knightmetal_mage_boots": "Knightmetal Warmage Boots",
+
+  "item.twilight_spellbooks.fiery_mage_helmet": "Fiery Warmage Mask",
+  "item.twilight_spellbooks.fiery_mage_chestplate": "Fiery Warmage Chestplate",
+  "item.twilight_spellbooks.fiery_mage_leggings": "Fiery Warmage Leggings ",
+  "item.twilight_spellbooks.fiery_mage_boots": "Fiery Warmage Boots",
+
   "item.twilight_spellbooks.exanimated_lich_helmet": "Exanimated Lich Crown",
   "item.twilight_spellbooks.exanimated_lich_chestplate": "Exanimated Lich Robe",
   "item.twilight_spellbooks.exanimated_lich_leggings": "Exanimated Lich Pants ",
@@ -86,10 +93,11 @@
   "entity.twilight_spellbooks.summoned_carminite_golem": "Summoned Carminite Golem",
   "entity.twilight_spellbooks.mosquito_swarm": "Mosquito Swarm",
 
-  "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS:Spellbooks Of Twilight",
+  "creative_tab.twilight_spellbooks.twilight_spellbooks": "ISS: Spellbooks Of Twilight",
 
   "effect.twilight_spellbooks.ominous_burn": "Exanimating Burn",
   "effect.twilight_spellbooks.hydra_fire": "Hydra Fire",
+  "effect.twilight_spellbooks.hydra_revenge": "Hydra Revenge",
 
   "spell.twilight_spellbooks.life_sacrifice": "Life Sacrifice",
   "spell.twilight_spellbooks.life_sacrifice.guide": "Target one of your magic summons to drain their life, killing them instantly and healing you a 100% of their remaining HP. Target another entity to deal 5% of their current HP and healing 50% of damage done",
@@ -104,13 +112,13 @@
   "spell.twilight_spellbooks.twilight_bolt.guide": "An upgraded version of the Twilight Scepter´s orbs",
 
   "spell.twilight_spellbooks.exanimated_fireball": "Exanimated Fireball",
-  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich.  Damage scales with Fire, Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
+  "spell.twilight_spellbooks.exanimated_fireball.guide": "An upgraded version of the Fireball spell made with the undead flames of the Twilight Lich and healing 10% of damage done. Damage scales with Fire, Blood and Ender Spell Power. Reaches its full potential if thr 3 Spell Powers are equal",
   "spell.twilight_spellbooks.exanimated_ray": "Exanimated Ray",
-  "spell.twilight_spellbooks.exanimated_ray.guide": "Fire a beam of pure Exanimated Flames dealing damage and applying Exanimated Burn. Damage scales with Fire, Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
+  "spell.twilight_spellbooks.exanimated_ray.guide": "Fire a beam of pure Exanimated Flames dealing damage and applying Exanimated Burn and healing 25% of damage done. Damage scales with Fire, Blood and Ender Spell Power. Reaches its full potential if thr 3 Spell Powers are equal",
   "spell.twilight_spellbooks.exanimated_step": "Exanimated Step",
-  "spell.twilight_spellbooks.exanimated_step.guide": "Teleport to where you are looking, producing a explosion where you appear that ignites enemies and inflicts Exanimated Burn for 5s. Damage scales with Fire, Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
+  "spell.twilight_spellbooks.exanimated_step.guide": "Teleport to where you are looking, producing a explosion where you appear that ignites enemies and inflicts Exanimated Burn for 5s and healing 10% of damage done. Damage scales with Fire, Blood and Ender Spell Power. Reaches its full potential if thr 3 Spell Powers are equal",
   "spell.twilight_spellbooks.exanimated_trident": "Exanimated Trident",
-  "spell.twilight_spellbooks.exanimated_trident.guide": "Teleport to where you are looking, producing a explosion where you appear that ignites enemies and inflicts Exanimated Burn for 5s.  Damage scales with Fire, Blood and Ender Spell Power .Reaches its full potential if thr 3 Spell Powers are equal",
+  "spell.twilight_spellbooks.exanimated_trident.guide": "Teleport to where you are looking, producing a explosion where you appear that ignites enemies and inflicts Exanimated Burn for 5s and healing 5% of damage done. Damage scales with Fire, Blood and Ender Spell Power. Reaches its full potential if thr 3 Spell Powers are equal",
 
   "spell.twilight_spellbooks.fire_bettle_spit": "Fire Bette Spit",
   "spell.twilight_spellbooks.fire_bettle_spit.guide": "Spit a thin line of flammable fluid to ignite the targets for a long time",
@@ -157,6 +165,9 @@
   "ui.twilight_spellbooks.not_enough_mana": "Insufficient Mana",
   "ui.twilight_spellbooks.shields": "Shields",
   "ui.twilight_spellbooks.burn_time": "%s Burn Time",
+
+  "tooltip.twilight_spellbooks.on_full_set": "On Full Set:",
+  "tooltip.twilight_spellbooks.hydra_set_passive": "Returns 25% of damage received as Fire Spell Damage",
 
   "school.twilight_spellbooks.exanimated": "Exanimated Flame"
 }

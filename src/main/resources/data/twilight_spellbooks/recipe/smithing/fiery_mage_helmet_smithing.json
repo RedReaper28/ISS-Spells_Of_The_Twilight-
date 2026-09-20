@@ -1,16 +1,16 @@
 {
   "type": "minecraft:smithing_transform",
   "addition": {
-    "item": "twilightforest:knightmetal_ingot"
+    "tag": "twilightforest:fiery_vial"
   },
   "base": {
     "item": "irons_spellbooks:netherite_mage_helmet"
     },
   "result": {
     "count": 1,
-    "id": "twilight_spellbooks:knightmetal_mage_helmet"
+    "id": "twilight_spellbooks:fiery_mage_helmet"
   },
   "template": {
-    "item": "irons_spellbooks:protection_rune"
+    "item": "irons_spellbooks:fire_rune"
   }
 }

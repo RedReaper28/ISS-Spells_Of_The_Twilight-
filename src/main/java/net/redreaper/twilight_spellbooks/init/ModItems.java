@@ -8,10 +8,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
-import net.redreaper.twilight_spellbooks.item.armor.ExanimatedLichArmorItem;
-import net.redreaper.twilight_spellbooks.item.armor.KnightmetalWarmageArmorItem;
-import net.redreaper.twilight_spellbooks.item.armor.TarnishedLichCrownItem;
-import net.redreaper.twilight_spellbooks.item.armor.TarnishedQueenCrownItem;
+import net.redreaper.twilight_spellbooks.item.armor.*;
 import net.redreaper.twilight_spellbooks.item.bow.BorealBowItem;
 import net.redreaper.twilight_spellbooks.item.curios.body.CarminiteMantle;
 import net.redreaper.twilight_spellbooks.item.curios.body.NagaMantle;
@@ -124,6 +121,15 @@ public class ModItems {
             () -> new KnightmetalWarmageArmorItem(   ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).durability(ArmorItem.Type.LEGGINGS.getDurability(48))));
     public static final DeferredHolder<Item, Item> KNIGHTMETAL_MAGE_BOOTS = ITEMS.register("knightmetal_mage_boots",
             () -> new KnightmetalWarmageArmorItem(   ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).durability(ArmorItem.Type.BOOTS.getDurability(48))));
+
+    public static final DeferredHolder<Item, Item> FIERY_MAGE_HELMET = ITEMS.register("fiery_mage_helmet",
+            () -> new FieryWarmageArmorItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.HELMET.getDurability(48))));
+    public static final DeferredHolder<Item, Item> FIERY_MAGE_CHESTPLATE = ITEMS.register("fiery_mage_chestplate",
+            () -> new FieryWarmageArmorItem(   ArmorItem.Type.CHESTPLATE, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.CHESTPLATE.getDurability(48))));
+    public static final DeferredHolder<Item, Item> FIERY_MAGE_LEGGINGS = ITEMS.register("fiery_mage_leggings",
+            () -> new FieryWarmageArmorItem(   ArmorItem.Type.LEGGINGS, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.LEGGINGS.getDurability(48))));
+    public static final DeferredHolder<Item, Item> FIERY_MAGE_BOOTS = ITEMS.register("fiery_mage_boots",
+            () -> new FieryWarmageArmorItem(   ArmorItem.Type.BOOTS, ItemPropertiesHelper.equipment(1).rarity(Rarity.UNCOMMON).durability(ArmorItem.Type.BOOTS.getDurability(48))));
 
     public static final DeferredHolder<Item, Item> EXANIMATED_LICH_HELMET = ITEMS.register("exanimated_lich_helmet",
             () -> new ExanimatedLichArmorItem(   ArmorItem.Type.HELMET, ItemPropertiesHelper.equipment(1).rarity(Rarity.EPIC).durability(ArmorItem.Type.HELMET.getDurability(48))));

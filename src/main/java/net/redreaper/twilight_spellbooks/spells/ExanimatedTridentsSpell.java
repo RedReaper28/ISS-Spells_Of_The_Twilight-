@@ -121,7 +121,7 @@ public class ExanimatedTridentsSpell extends AbstractExanimatedSpell {
 
     @Override
     public SpellDamageSource getDamageSource(Entity projectile, Entity attacker) {
-        return super.getDamageSource(projectile, attacker).setFireTicks(60).setIFrames(0).indirect();
+        return super.getDamageSource(projectile, attacker).setFireTicks(60).setLifestealPercent(.05f).indirect();
     }
 }
 

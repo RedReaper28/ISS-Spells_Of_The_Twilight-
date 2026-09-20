@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": {
+    "irons_spellbooks:necromancer": {
+      "transform_to": "twilight_spellbooks:advanced_druid"
+    }
+  }
+}

@@ -11,6 +11,7 @@ import io.redspace.ironsspellbooks.api.util.RaycastBuilder;
 import io.redspace.ironsspellbooks.api.util.Utils;
 import io.redspace.ironsspellbooks.capabilities.magic.MagicManager;
 import io.redspace.ironsspellbooks.damage.DamageSources;
+import io.redspace.ironsspellbooks.damage.SpellDamageSource;
 import io.redspace.ironsspellbooks.registries.SoundRegistry;
 import io.redspace.ironsspellbooks.util.ParticleHelper;
 import net.minecraft.network.chat.Component;
@@ -28,6 +29,7 @@ import net.redreaper.twilight_spellbooks.entity.spells.exanimated_ray.Exanimated
 import net.redreaper.twilight_spellbooks.init.ModMobEffects;
 import net.redreaper.twilight_spellbooks.init.ModSpellSubSchool;
 import net.redreaper.twilight_spellbooks.particle.ModParticleHelper;
+import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 import java.util.Optional;
@@ -45,7 +47,7 @@ public class ExanimatedRaySpell  extends AbstractExanimatedSpell {
     public List<MutableComponent> getUniqueInfo(int spellLevel, LivingEntity caster) {
         return List.of(
                 Component.translatable("ui.irons_spellbooks.damage", Utils.stringTruncation(getDamage(spellLevel, caster), 2)),
-                Component.translatable("ui.irons_spellbooks.effect_length", Utils.stringTruncation(getDuration(spellLevel, caster), 2)),
+                Component.translatable("ui.irons_spellbooks.effect_length", Utils.timeFromTicks(getDuration(spellLevel, caster), 2)),
                 Component.translatable("ui.irons_spellbooks.distance", Utils.stringTruncation(getRange(spellLevel, caster), 1))
         );
     }
@@ -128,7 +130,12 @@ public class ExanimatedRaySpell  extends AbstractExanimatedSpell {
         }
     }
 
+    @Override
+    public SpellDamageSource getDamageSource(@Nullable Entity projectile, Entity attacker) {
+        return super.getDamageSource(projectile, attacker).setLifestealPercent(.25f);
+    }
+
     public int getDuration(int spellLevel, LivingEntity caster) {
-        return (int) (5 + (getSpellPower(spellLevel, caster) * 20));
+        return (int) (getSpellPower(spellLevel, caster) * 20);
     }
 }
