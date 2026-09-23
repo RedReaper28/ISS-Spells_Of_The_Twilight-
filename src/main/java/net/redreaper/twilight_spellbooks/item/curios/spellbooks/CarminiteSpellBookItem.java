@@ -8,7 +8,7 @@ import net.minecraft.world.item.Rarity;
 
 public class CarminiteSpellBookItem extends SpellBook {
     public CarminiteSpellBookItem() {
-        super(10,new Properties().fireResistant().stacksTo(1).rarity(Rarity.UNCOMMON));
+        super(10, new Properties().fireResistant().stacksTo(1).rarity(Rarity.UNCOMMON));
         withSpellbookAttributes(new AttributeContainer(AttributeRegistry.LIGHTNING_SPELL_POWER, 0.10, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                 new AttributeContainer(AttributeRegistry.MAX_MANA, 200, AttributeModifier.Operation.ADD_VALUE));
     }
