@@ -59,7 +59,7 @@ public class SummonedMinotaur extends Minotaur implements IMagicSummon {
 
     // Attacks and Death
     public boolean hurt(DamageSource pSource, float pAmount) {
-        return this.shouldIgnoreDamage(pSource) ? false : super.hurt(pSource, pAmount);
+        return !this.shouldIgnoreDamage(pSource) && super.hurt(pSource, pAmount);
     }
 
     @Override

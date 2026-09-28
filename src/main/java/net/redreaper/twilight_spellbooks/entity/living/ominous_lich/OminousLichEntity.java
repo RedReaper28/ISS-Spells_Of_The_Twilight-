@@ -373,8 +373,8 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
 
                 secondPhaseGoals();
 
-                this.getAttributes().getInstance(AttributeRegistry.SPELL_POWER).setBaseValue(1.1F);
-                this.getAttributes().getInstance(AttributeRegistry.SPELL_RESIST).setBaseValue(1.5F);
+                Objects.requireNonNull(this.getAttributes().getInstance(AttributeRegistry.SPELL_POWER)).setBaseValue(2F);
+                Objects.requireNonNull(this.getAttributes().getInstance(AttributeRegistry.SPELL_RESIST)).setBaseValue(2F);
 
                 var player = level().getNearestPlayer(this, 16);
             }
@@ -542,12 +542,12 @@ public class OminousLichEntity extends GenericBossEntity implements IAnimatedAtt
                 .add(Attributes.ATTACK_DAMAGE, 10.0)
                 .add(Attributes.ATTACK_KNOCKBACK, 0.5)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 1)
-                .add(Attributes.MAX_HEALTH, 500.0)
-                .add(Attributes.ARMOR, 15)
+                .add(Attributes.MAX_HEALTH, 600.0)
+                .add(Attributes.ARMOR, 20)
                 .add(Attributes.ARMOR_TOUGHNESS, 10)
                 .add(Attributes.FOLLOW_RANGE, 80.0)
-                .add(Attributes.ENTITY_INTERACTION_RANGE, 4.0)
-                .add(Attributes.MOVEMENT_SPEED, .10)
+                .add(Attributes.ENTITY_INTERACTION_RANGE, 5.0)
+                .add(Attributes.MOVEMENT_SPEED, .30)
                 .add(AttributeRegistry.SPELL_POWER, 1.5)
                 .add(AttributeRegistry.SPELL_RESIST, 2)
                 .add(AttributeRegistry.MAX_MANA, 1000)

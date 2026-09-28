@@ -52,10 +52,6 @@ public class SummonLoyalZombieSpell extends AbstractScepterSpell {
         return spellId;
     }
 
-    public int getSummonCount(int spellLevel, LivingEntity caster) {
-        return spellLevel;
-    }
-
     @Override
     public DefaultConfig getDefaultConfig() {
         return defaultConfig;
@@ -68,7 +64,11 @@ public class SummonLoyalZombieSpell extends AbstractScepterSpell {
 
     @Override
     public int getRecastCount(int spellLevel, @Nullable LivingEntity entity) {
-        return 2;
+        return 5;
+    }
+
+    public int getSummonCount(int spellLevel, LivingEntity caster) {
+        return spellLevel;
     }
 
     @Override
@@ -86,12 +86,12 @@ public class SummonLoyalZombieSpell extends AbstractScepterSpell {
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         PlayerRecasts recasts = playerMagicData.getPlayerRecasts();
+        SummonedEntitiesCastData summonedEntitiesCastData = new SummonedEntitiesCastData();
+        int summonTimer = 20 * 5;
+        int summonTotalTimer = 20 * 60 * 10;
 
-        if (!recasts.hasRecastsActive())
+        if (playerMagicData.getPlayerRecasts().hasRecastForSpell(this))
         {
-            SummonedEntitiesCastData summonedEntitiesCastData = new SummonedEntitiesCastData();
-            int summonTimer = 20 * 20;
-
             for (int i = 0; i < spellLevel; i++)
             {
                 Vec3 vec = entity.getEyePosition();
@@ -102,7 +102,21 @@ public class SummonLoyalZombieSpell extends AbstractScepterSpell {
                 spawnKoboleton(randomNearbyX, vec.y, randomNearbyZ, entity, level, summonTimer, spellLevel, summonedEntitiesCastData);
             }
 
-            RecastInstance recastInstance = new RecastInstance(this.getSpellId(), spellLevel, getRecastCount(spellLevel, entity), summonTimer, castSource, summonedEntitiesCastData);
+            RecastInstance recastInstance = new RecastInstance(this.getSpellId(), spellLevel, getRecastCount(spellLevel, entity), summonTotalTimer, castSource, summonedEntitiesCastData);
+            recasts.addRecast(recastInstance, playerMagicData);
+        }
+        else {
+            for (int i = 0; i < spellLevel; i++)
+            {
+                Vec3 vec = entity.getEyePosition();
+
+                double randomNearbyX = vec.x + entity.getRandom().nextGaussian() * 3;
+                double randomNearbyZ = vec.z + entity.getRandom().nextGaussian() * 3;
+
+                spawnKoboleton(randomNearbyX, vec.y, randomNearbyZ, entity, level, summonTimer, spellLevel, summonedEntitiesCastData);
+            }
+
+            RecastInstance recastInstance = new RecastInstance(this.getSpellId(), spellLevel, getRecastCount(spellLevel, entity), summonTotalTimer, castSource, summonedEntitiesCastData);
             recasts.addRecast(recastInstance, playerMagicData);
         }
 

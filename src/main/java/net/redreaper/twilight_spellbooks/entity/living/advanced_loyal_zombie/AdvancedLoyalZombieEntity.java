@@ -143,8 +143,23 @@ public class AdvancedLoyalZombieEntity extends AbstractSpellCastingMob implement
     }
 
     @Override
-    public boolean isAlliedTo(Entity pEntity) {
-        return super.isAlliedTo(pEntity) || this.isAlliedHelper(pEntity);
+    public boolean isAlliedTo(Entity entityIn) {
+        if (entityIn == this)
+        {
+            return true;
+        }
+        else if (entityIn == getSummoner() || this.isAlliedHelper(entityIn))
+        {
+            return true;
+        }
+        else if (getSummoner() != null && !entityIn.isAlliedTo(getSummoner()))
+        {
+            return false;
+        }
+        else
+        {
+            return this.getTeam() == null && entityIn.getTeam() == null;
+        }
     }
 
     @Override
@@ -183,9 +198,8 @@ public class AdvancedLoyalZombieEntity extends AbstractSpellCastingMob implement
 
     @Override
     public boolean hurt(DamageSource pSource, float pAmount) {
-        return super.hurt(pSource, pAmount);
+        return !this.shouldIgnoreDamage(pSource) && super.hurt(pSource, pAmount);
     }
-
     protected SoundEvent getAmbientSound() {
         return SoundEvents.ZOMBIE_AMBIENT;
     }

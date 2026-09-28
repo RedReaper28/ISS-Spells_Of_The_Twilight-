@@ -9,10 +9,10 @@ import net.redreaper.twilight_spellbooks.TwilightSpellbooks;
 public class ExanimatedFireballRenderer extends FireballRenderer {
     private final static ResourceLocation BASE_TEXTURE = TwilightSpellbooks.id("textures/entity/exanimated_fireball/comet.png");
     private final static ResourceLocation FIRE_TEXTURES[] = {
+            TwilightSpellbooks.id("textures/entity/exanimated_fireball/fire_0.png"),
             TwilightSpellbooks.id("textures/entity/exanimated_fireball/fire_1.png"),
             TwilightSpellbooks.id("textures/entity/exanimated_fireball/fire_2.png"),
-            TwilightSpellbooks.id("textures/entity/exanimated_fireball/fire_3.png"),
-            TwilightSpellbooks.id("textures/entity/exanimated_fireball/fire_4.png")
+            TwilightSpellbooks.id("textures/entity/exanimated_fireball/fire_3.png")
     };
 
     public ExanimatedFireballRenderer(EntityRendererProvider.Context context, float scale) {
