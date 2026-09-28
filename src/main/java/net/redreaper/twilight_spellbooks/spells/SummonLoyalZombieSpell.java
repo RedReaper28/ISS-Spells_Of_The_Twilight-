@@ -86,7 +86,18 @@ public class SummonLoyalZombieSpell extends AbstractScepterSpell {
     @Override
     public void onCast(Level level, int spellLevel, LivingEntity entity, CastSource castSource, MagicData playerMagicData) {
         PlayerRecasts recasts = playerMagicData.getPlayerRecasts();
-        SummonedEntitiesCastData summonedEntitiesCastData = new SummonedEntitiesCastData();
+        SummonedEntitiesCastData summonedEntitiesCastData;
+        if(!recasts.hasRecastForSpell(getSpellId())) { //if first cast
+            summonedEntitiesCastData = new SummonedEntitiesCastData();
+            playerMagicData.setAdditionalCastData(summonedEntitiesCastData);
+        }else { //if not first cast
+            if (playerMagicData.getAdditionalCastData() instanceof SummonedEntitiesCastData data) {
+                summonedEntitiesCastData = data;
+            }else{
+                summonedEntitiesCastData = new SummonedEntitiesCastData();
+            }
+        }
+
         int summonTimer = 20 * 5;
         int summonTotalTimer = 20 * 60 * 10;
 
